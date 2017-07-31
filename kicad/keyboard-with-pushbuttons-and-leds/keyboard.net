@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /Media/frajtonarca/midiatonerca/kicad/keyboard-with-pushbuttons-and-leds/keyboard.sch)
-    (date "ponedeljek, 31. julij 2017 23:58:19")
+    (date "torek, 01. avgust 2017 00:21:17")
     (tool "Eeschema 4.0.6")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
