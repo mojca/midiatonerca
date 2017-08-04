@@ -6,6 +6,9 @@ static const int noteOFF = 128; // 10000000
 static const bool USE_TILT = false;
 static const int instrumentSelect = 192; // 11000000
 
+static const int PATCH_COUNT = 14;
+int patch = 1;
+
 // Test optical gates
 // Output: D2..D7 for column 0..5
 // Input: A0..A5, D11, D12 for sensor 0..7
@@ -92,11 +95,16 @@ void sensorToCoordinate(int bank, int inputNr, int& row, int& column)
 }
 
 void setup() {
+  pinMode(8,INPUT_PULLUP); // tilt sensor
+  pinMode(9,INPUT_PULLUP); // direction pushbutton
   if (MIDI) {
-    //Serial.begin(31250); // for midi instrument
-    Serial.begin(115200); // for Hairless MIDI
-    
-    MIDImessage2(instrumentSelect,21);
+    if (!digitalRead(9)) {
+      Serial.begin(115200); // for Hairless MIDI
+    } else {
+      Serial.begin(31250); // for midi instrument
+    }
+
+    MIDImessage2(instrumentSelect,patch);
   } else {
     Serial.begin(9600);
   }
@@ -110,8 +118,6 @@ void setup() {
   for (int i=0;i<8;i++) {
     pinMode(inputPinNr[i],INPUT);
   }
-  pinMode(8,INPUT_PULLUP); // tilt sensor
-  pinMode(9,INPUT_PULLUP); // direction pushbutton
   for (int i=0;i<48;i++) {
     buttonState[i]=0;
   }
@@ -127,12 +133,13 @@ void setup() {
 }
 
 void loop() {
+  //oldMojcaMode = mojcaMode;
   mojcaMode = analogRead(6)<512;
-  if (MIDI) {
+  //if (MIDI) {
     sendMidi();
-  } else {
-    updateButtonState();
-  }
+  //} else {
+  //  updateButtonState();
+  //}
   //showAllButtons();
   //showAnalog();  
 }
@@ -176,6 +183,7 @@ void showAllButtons() {
 }
 
 // writes to console
+/*
 void updateButtonState() {
   bool pull;
   if (USE_TILT) {
@@ -205,7 +213,7 @@ void updateButtonState() {
           noteNumber = pullNoteNumber[3-row][column];
         } else {
           noteNumber = pushNoteNumber[3-row][column];
-        }*/
+        }* /
 
         if (false) {
           Serial.print("Bank ");
@@ -254,7 +262,7 @@ void updateButtonState() {
     }
     digitalWrite(outputPinNr[bankNr],LOW);
   }
-}
+}*/
 
 
 // writes to midi
@@ -267,8 +275,8 @@ void sendMidi() {
   }
   if (pull != pullState) {
     // Switch detected
-    // all notes off
-    MIDImessage3(176,123,0);
+    // all notes off? No, doesn't work with all synths...
+    //MIDImessage3(176,123,0);
     
     for (int buttonNr=0; buttonNr<48; buttonNr++) {
       if (buttonState[buttonNr]) {
@@ -277,7 +285,11 @@ void sendMidi() {
         int inputNr = buttonNr%8;
         int row, column;
         sensorToCoordinate(bankNr, inputNr, row, column);
-        int noteNumber = getNoteNumber(pull,row,column);
+
+        int noteNumber = getNoteNumber(!pull,row,column);
+        MIDImessage(noteOFF, noteNumber, 100);
+        
+        noteNumber = getNoteNumber(pull,row,column);
         MIDImessage(noteON, noteNumber, 100);
       }
     }
@@ -305,6 +317,27 @@ void sendMidi() {
             MIDImessage(noteON, noteNumber, 100);
           } else {
             MIDImessage(noteOFF, noteNumber, 127);
+          }
+        } else {
+          // special keys
+          // change patch
+          if (digitalValue) {
+            if (row == 0 && (10 <= column && column <= 11)) {
+              if (column == 10) {
+                patch = (patch-2+PATCH_COUNT)%PATCH_COUNT+1;
+              } else {
+                patch=(patch)%PATCH_COUNT+1;
+              }
+//              MIDImessage2(instrumentSelect,0);
+              // indicate patch by number of blinks (+1)
+              for (int i=0;i<patch-1;i++) {
+//                MIDImessage3(noteON,60,100);
+//                delay(100);
+                MIDImessage3(noteOFF,60,100);
+                delay(200);
+              }             
+              MIDImessage2(instrumentSelect,patch);
+            }
           }
         }
       }

@@ -9,8 +9,8 @@ static const int instrumentSelect = 192; // 11000000
 
 
 void setup() {
-  //Serial.begin(31250); // for midi instrument
-  Serial.begin(115200); // for Hairless MIDI
+  Serial.begin(31250); // for midi instrument
+  //Serial.begin(115200); // for Hairless MIDI
   MIDImessage2(instrumentSelect,21);
   
   pinMode(9,INPUT_PULLUP); // direction pushbutton
