@@ -30,7 +30,7 @@ bool mojcaMode = true;
    {c0,e0,g0,c1,e1,g1,c2,e2,g2,c3,e3,g3,--}
 */
 byte pushNoteNumber[4][13]={
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    { 0, 0, 0,54,63, 0, 0, 0, 0, 0, 0, 0, 0},
    {41,46,50,53,58,62,65,70,74,77,82,86, 0},
   {36,41,45,48,53,57,60,65,69,72,77,81,84},
    {36,40,43,48,52,55,60,64,67,72,76,79, 0}
@@ -46,7 +46,7 @@ byte pushNoteNumber[4][13]={
 
 // MIDI note numbers: octave+3
 byte pullNoteNumber[4][13]={
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+    { 0, 0, 0,49,61, 0, 0, 0, 0, 0, 0, 0, 0},
    {45,51,53,57,60,63,65,69,72,75,79,81, 0},
   {40,46,48,52,55,58,60,64,67,70,72,76,79},
    {41,43,47,50,53,57,59,62,65,69,71,74, 0}
@@ -310,7 +310,7 @@ void sendMidi() {
 /*        if (pull) {
           noteNumber = pullNoteNumber[3-row][column];
         } else {
-          noteNumber = pushNoteNumber[3-row][column];
+          noteNumber = pushNoteNumberse[3-row][column];
         }*/
         if (noteNumber>0) {
           if (digitalValue) {
