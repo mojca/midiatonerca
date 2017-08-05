@@ -7,6 +7,7 @@ static const int noteOFF = 128; // 10000000
 static const bool USE_TILT = false;
 static const int instrumentSelect = 192; // 11000000
 static const int midiInstrumentAccordion = 21;
+static const unsigned long debounceTimeMs = 100;
 
 static const int nButtons = 44;
 int inputPinNr[] = {
@@ -109,9 +110,11 @@ void setup() {
     Serial.begin(9600);
   }
 
+  unsigned long timestamp = millis();
   for(int i=0; i<nButtons; i++) {
     pinMode(inputPinNr[i],INPUT_PULLUP);
     buttonState[i]=0;
+    lastChangeTimestamp[i] = timestamp;
   }
   pullState = 0;
 }
@@ -127,6 +130,8 @@ void loop() {
 void updateButtonState() {
   // TODO
   bool pull = false;
+  unsigned long timestamp = millis();
+
 
   /*
   bool pull = difitalRead(xxx);
@@ -140,6 +145,8 @@ void updateButtonState() {
     int oldstate = buttonState[i];
     buttonState[i] = !digitalRead(inputPinNr[i]);
     if (buttonState[i] != oldstate) {
+      //if (timestamp < lastChangeTimestamp[i] || (timestamp - lastChangeTimestamp[i] > debounceTimeMs)) {
+
       int row, column;
       sensorToCoordinate(i, row, column);
       int noteNumber = getNoteNumber(pull,row,column);
@@ -158,6 +165,8 @@ void updateButtonState() {
 // writes to midi
 void sendMidi() {
   bool pull = false;
+  unsigned long timestamp = millis();
+
   //pull = digitalRead(9);
   if (pull != pullState) {
     // Switch detected
@@ -179,15 +188,18 @@ void sendMidi() {
     int oldstate = buttonState[i];
     buttonState[i] = !digitalRead(inputPinNr[i]);
     if (buttonState[i] != oldstate) {
-      int row, column;
-      sensorToCoordinate(i, row, column);
-      int noteNumber = getNoteNumber(pull,row,column);
+      if (timestamp < lastChangeTimestamp[i] || (timestamp - lastChangeTimestamp[i] > debounceTimeMs)) {
+        int row, column;
+        sensorToCoordinate(i, row, column);
+        int noteNumber = getNoteNumber(pull,row,column);
+        lastChangeTimestamp[i] = timestamp;
 
-      if (noteNumber>0) {
-        if (buttonState[i]) {
-          MIDImessage(noteON, noteNumber, 100);
-        } else {
-          MIDImessage(noteOFF, noteNumber, 127);
+        if (noteNumber>0) {
+          if (buttonState[i]) {
+            MIDImessage(noteON, noteNumber, 100);
+          } else {
+            MIDImessage(noteOFF, noteNumber, 127);
+          }
         }
       }
     }
