@@ -1,7 +1,15 @@
 // code for diatonic accordion with 3 rows (12+13+12) buttons
 // plus 7 semitones
 
+// for driving the LEDs
+#include <Adafruit_NeoPixel.h>
+
 static const bool MIDI = true;
+
+// 31250 // for midi instrument
+//115200 // for Hairless MIDI
+
+static const unsigned long serialSpeed = 115200;
 static const int noteON = 144;  // 10010000
 static const int noteOFF = 128; // 10000000
 static const bool USE_TILT = false;
@@ -9,6 +17,8 @@ static const int instrumentSelect = 192; // 11000000
 static const int midiInstrumentAccordion = 21;
 static const unsigned long debounceTimeMs = 100;
 
+static const int pinPixel = 2;
+static const int pinPushPull = A8;
 static const int nButtons = 44;
 int inputPinNr[] = {
   3, 4, 5, 6, 7,
@@ -21,6 +31,13 @@ int inputPinNr[] = {
 unsigned long lastChangeTimestamp[nButtons];
 bool buttonState[nButtons];
 bool pullState;
+
+//Adafruit_NeoPixel leds = Adafruit_NeoPixel(nButtons, pinPixel, NEO_GRB + NEO_KHZ800);
+Adafruit_NeoPixel leds = Adafruit_NeoPixel(nButtons+100, pinPixel, NEO_GRB + NEO_KHZ800);
+// red color for push
+uint32_t color_push = leds.Color(255, 0, 0);
+// blue color for pull
+uint32_t color_pull = leds.Color(0, 0, 255);
 
 bool mojcaMode = true;
 
@@ -103,20 +120,45 @@ void sensorToCoordinate(int button, int& row, int& column)
 void setup() {
   if (MIDI) {
     //Serial.begin(31250); // for midi instrument
-    Serial.begin(115200); // for Hairless MIDI
+    Serial.begin(serialSpeed); // for Hairless MIDI
     
     MIDImessage2(instrumentSelect,midiInstrumentAccordion);
   } else {
     Serial.begin(9600);
   }
 
+  leds.begin();
+  leds.show(); // Initialize all pixels to 'off'
   unsigned long timestamp = millis();
+
   for(int i=0; i<nButtons; i++) {
-    pinMode(inputPinNr[i],INPUT_PULLUP);
+    pinMode(inputPinNr[i], INPUT_PULLUP);
     buttonState[i]=0;
     lastChangeTimestamp[i] = timestamp;
+    leds.setPixelColor(i, leds.Color(0, 0, 0));
   }
+  pinMode(pinPushPull, INPUT_PULLUP);
   pullState = 0;
+
+  leds.setPixelColor(18, leds.Color(0, 255, 0));
+  leds.show();
+
+  /*
+  delay(1000);
+  leds.show();
+120
+  leds.setPixelColor(25, leds.Color(0, 255, 0));
+  leds.setPixelColor(26, leds.Color(255, 0, 0));
+  leds.setPixelColor(27, leds.Color(0, 0, 255));
+  delay(1000);
+  leds.show();
+
+  leds.setPixelColor(37, leds.Color(0, 255, 0));
+  leds.setPixelColor(38, leds.Color(255, 0, 0));
+  leds.setPixelColor(39, leds.Color(0, 0, 255));
+  delay(1000);
+  leds.show();
+  */
 }
 
 void loop() {
@@ -164,7 +206,7 @@ void updateButtonState() {
 
 // writes to midi
 void sendMidi() {
-  bool pull = false;
+  bool pull = digitalRead(pinPushPull);;
   unsigned long timestamp = millis();
 
   //pull = digitalRead(9);
@@ -172,7 +214,8 @@ void sendMidi() {
     // Switch detected
     // all notes off
     MIDImessage3(176,123,0);
-    
+    MIDImessage3(176,120,0); // doesn't seem to help either
+
     for (int i=0; i<nButtons; i++) {
       if (buttonState[i]) {
         int row, column;
@@ -186,13 +229,14 @@ void sendMidi() {
 
   for(int i=0; i<nButtons; i++) {
     int oldstate = buttonState[i];
-    buttonState[i] = !digitalRead(inputPinNr[i]);
-    if (buttonState[i] != oldstate) {
+    int newstate = !digitalRead(inputPinNr[i]);
+    if (newstate != oldstate) {
       if (timestamp < lastChangeTimestamp[i] || (timestamp - lastChangeTimestamp[i] > debounceTimeMs)) {
+        buttonState[i] = newstate;
+        lastChangeTimestamp[i] = timestamp;
         int row, column;
         sensorToCoordinate(i, row, column);
         int noteNumber = getNoteNumber(pull,row,column);
-        lastChangeTimestamp[i] = timestamp;
 
         if (noteNumber>0) {
           if (buttonState[i]) {
