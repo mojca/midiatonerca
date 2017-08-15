@@ -5,11 +5,19 @@
 #include <Adafruit_NeoPixel.h>
 
 static const bool MIDI = true;
+static const bool SERIAL_SPEED_MIDI = false;
 
 // 31250 // for midi instrument
 //115200 // for Hairless MIDI
 
-static const unsigned long serialSpeed = 115200;
+static const unsigned long serialSpeedMidi = 31250;
+static const unsigned long serialSpeedMax  = 115200;
+
+#if SERIAL_SPEED_MIDI
+static const unsigned long serialSpeed = serialSpeedMidi;
+#else
+static const unsigned long serialSpeed = serialSpeedMax;
+#endif
 static const int noteON = 144;  // 10010000
 static const int noteOFF = 128; // 10000000
 static const bool USE_TILT = false;
