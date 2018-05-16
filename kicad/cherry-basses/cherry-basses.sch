@@ -234,10 +234,10 @@ F 3 "" H 2100 2750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L pspice:DIODE D?
+L pspice:DIODE D2.4
 U 1 1 5AFCA762
 P 2700 2750
-F 0 "D?" V 2654 2878 50  0000 L CNN
+F 0 "D2.4" V 2654 2878 50  0000 L CNN
 F 1 "DIODE" V 2745 2878 50  0000 L CNN
 F 2 "" H 2700 2750 50  0001 C CNN
 F 3 "" H 2700 2750 50  0001 C CNN
@@ -245,10 +245,10 @@ F 3 "" H 2700 2750 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L pspice:DIODE D?
+L pspice:DIODE D2.5
 U 1 1 5AFCA7ED
 P 3300 2750
-F 0 "D?" V 3254 2878 50  0000 L CNN
+F 0 "D2.5" V 3254 2878 50  0000 L CNN
 F 1 "DIODE" V 3345 2878 50  0000 L CNN
 F 2 "" H 3300 2750 50  0001 C CNN
 F 3 "" H 3300 2750 50  0001 C CNN
@@ -356,4 +356,117 @@ Wire Wire Line
 	3100 2350 3100 2450
 Wire Wire Line
 	3700 2350 3700 2450
+Text GLabel 4950 2550 0    50   Input ~ 0
+pin6
+Text GLabel 4950 2450 0    50   Input ~ 0
+pin5
+Text GLabel 4950 2350 0    50   Input ~ 0
+pin4
+Text GLabel 4950 2250 0    50   Input ~ 0
+pin3
+Text GLabel 4950 2150 0    50   Input ~ 0
+pin2
+Text GLabel 4950 2050 0    50   Input ~ 0
+pin1
+Text GLabel 4950 1950 0    50   Input ~ 0
+pinB
+Text GLabel 4950 1850 0    50   Input ~ 0
+pinA
+NoConn ~ 4950 2650
+NoConn ~ 4950 1750
+NoConn ~ 4950 1650
+NoConn ~ 4950 1550
+NoConn ~ 4950 1450
+NoConn ~ 4950 1350
+NoConn ~ 5550 950 
+NoConn ~ 5650 950 
+NoConn ~ 5950 1350
+NoConn ~ 5950 1450
+NoConn ~ 5950 1950
+NoConn ~ 5950 1750
+NoConn ~ 5950 2050
+NoConn ~ 5950 2150
+NoConn ~ 5950 2250
+NoConn ~ 5950 2350
+NoConn ~ 5950 2450
+NoConn ~ 5950 2550
+NoConn ~ 5950 2650
+$Comp
+L modules:Arduino_Nano_v3.x A1
+U 1 1 5AFCFE4E
+P 5450 1950
+F 0 "A1" H 5450 864 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 5450 773 50  0000 C CNN
+F 2 "Modules:Arduino_Nano" H 5600 1000 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5450 950 50  0001 C CNN
+	1    5450 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5AFD7E26
+P 6600 900
+F 0 "#FLG0101" H 6600 975 50  0001 C CNN
+F 1 "PWR_FLAG" H 6600 1074 50  0000 C CNN
+F 2 "" H 6600 900 50  0001 C CNN
+F 3 "" H 6600 900 50  0001 C CNN
+	1    6600 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5AFD7E94
+P 6900 900
+F 0 "#FLG0102" H 6900 975 50  0001 C CNN
+F 1 "PWR_FLAG" H 6900 1074 50  0000 C CNN
+F 2 "" H 6900 900 50  0001 C CNN
+F 3 "" H 6900 900 50  0001 C CNN
+	1    6900 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0101
+U 1 1 5AFD7F09
+P 6600 900
+F 0 "#PWR0101" H 6600 650 50  0001 C CNN
+F 1 "GND" H 6605 727 50  0000 C CNN
+F 2 "" H 6600 900 50  0001 C CNN
+F 3 "" H 6600 900 50  0001 C CNN
+	1    6600 900 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5AFD80F9
+P 5550 2950
+F 0 "#PWR0102" H 5550 2700 50  0001 C CNN
+F 1 "GND" V 5555 2822 50  0000 R CNN
+F 2 "" H 5550 2950 50  0001 C CNN
+F 3 "" H 5550 2950 50  0001 C CNN
+	1    5550 2950
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5AFD8492
+P 6900 900
+F 0 "#PWR0103" H 6900 750 50  0001 C CNN
+F 1 "VCC" H 6918 1073 50  0000 C CNN
+F 2 "" H 6900 900 50  0001 C CNN
+F 3 "" H 6900 900 50  0001 C CNN
+	1    6900 900 
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR0104
+U 1 1 5AFD8546
+P 5350 950
+F 0 "#PWR0104" H 5350 800 50  0001 C CNN
+F 1 "VCC" H 5367 1123 50  0000 C CNN
+F 2 "" H 5350 950 50  0001 C CNN
+F 3 "" H 5350 950 50  0001 C CNN
+	1    5350 950 
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5450 2950
 $EndSCHEMATC
