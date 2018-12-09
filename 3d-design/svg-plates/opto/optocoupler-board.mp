@@ -27,18 +27,22 @@ def drawResistorV(expr loc) =
     draw fullcircle scaled pinR shifted loc shifted (0,-0.5resistorH);
     draw fullcircle scaled pinR shifted loc shifted (0, 0.5resistorH);
 enddef;
-def drawOptoCoupler(expr locSet, locUnit, shouldDraw) =
+def drawOptoCoupler(expr locSet, locUnit, shouldDraw, name, num) =
     if shouldDraw:
         pair loc; loc := locSet shifted locUnit;
         pair optoCouplerDim; optoCouplerDim = (6mm, 13mm);
         pair optoCouplerPinDim; optoCouplerPinDim = (2.54mm, 10mm);
         path optoCouplerPinSquare;
+        path optoCouplerSquare;
 
         pair resistorLoc; resistorLoc := (xpart loc, ypart locSet + 42.5mm - (.5 * ypart optoCouplerDim) + .5resistorH);
 
         optoCouplerPinSquare := fullsquare xyscaled optoCouplerPinDim shifted loc;
+        optoCouplerSquare    := fullsquare xyscaled optoCouplerDim    shifted loc;
+        
+        draw textext(name & decimal(num)) scaled 0.8 shifted .5[llcorner optoCouplerSquare, urcorner optoCouplerSquare] withcolor blue;
 
-        %draw fullsquare xyscaled optoCouplerDim shifted loc;
+        draw optoCouplerSquare;
 
         draw fullcircle scaled pinR shifted (llcorner optoCouplerPinSquare);
         draw fullcircle scaled pinR shifted (lrcorner optoCouplerPinSquare);
@@ -57,7 +61,10 @@ def drawTransistor(expr loc) =
     draw fullcircle scaled pinR shifted locE;
     draw fullcircle scaled pinR shifted locC;
 enddef;
-def drawOptoCouplerSet(expr loc, a, b, c, d, tr, rr) =
+vardef optoCouplerSetLoc(expr i) =
+    (22.5mm + i*2cm, 15mm + 0.5*13mm)
+enddef;
+def drawOptoCouplerSet(expr loc, a, b, c, d, tr, rr, li) =
     pair distA; distA = (16mm,28mm);
     pair distB; distB = (0mm,14mm);
     pair distC; distC = (12mm,7mm);
@@ -70,11 +77,11 @@ def drawOptoCouplerSet(expr loc, a, b, c, d, tr, rr) =
 
     boolean e; e = false;
 
-    drawOptoCoupler(loc, distA, a);
-    drawOptoCoupler(loc, distB, b);
-    drawOptoCoupler(loc, distC, c);
-    drawOptoCoupler(loc, distD, d);
-    drawOptoCoupler(loc, distE, false);
+    drawOptoCoupler(loc, distA, a, "A", li);
+    drawOptoCoupler(loc, distB, b, "B", li);
+    drawOptoCoupler(loc, distC, c, "C", li);
+    drawOptoCoupler(loc, distD, d, "D", li - 1);
+    drawOptoCoupler(loc, distE, false, "E", li - 2);
 
     %pair resistiorLoc; resistiorLoc := loc shifted distR;
     if tr:
@@ -88,30 +95,30 @@ def drawOptoCouplerSet(expr loc, a, b, c, d, tr, rr) =
     numeric transistorD;
 
 enddef;
-vardef optoCouplerSetLoc(expr i) =
-    (22.5mm + i*2cm, 15mm + 0.5*13mm)
-enddef;
+
 def drawOptoCouplers =
     boolean t, F; t = true; F = false;
-    drawOptoCouplerSet(optoCouplerSetLoc( 0), t,t,t,F,F,t);
-    drawOptoCouplerSet(optoCouplerSetLoc( 1), t,t,t,F,t,t);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 0), t,t,t,F,F,t, 0);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 1), t,t,t,F,t,t, 1);
 
-    drawOptoCouplerSet(optoCouplerSetLoc( 2), t,t,t,t,t,t);
-    drawOptoCouplerSet(optoCouplerSetLoc( 3), t,t,t,t,t,t);
-    drawOptoCouplerSet(optoCouplerSetLoc( 4), t,t,t,t,t,t);
-    drawOptoCouplerSet(optoCouplerSetLoc( 5), t,t,t,t,t,t);
-    drawOptoCouplerSet(optoCouplerSetLoc( 6), t,t,t,t,t,t);
-    drawOptoCouplerSet(optoCouplerSetLoc( 7), t,t,t,t,t,t);
-    drawOptoCouplerSet(optoCouplerSetLoc( 8), t,t,t,t,t,t);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 2), t,t,t,t,t,t, 2);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 3), t,t,t,t,t,t, 3);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 4), t,t,t,t,t,t, 4);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 5), t,t,t,t,t,t, 5);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 6), t,t,t,t,t,t, 6);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 7), t,t,t,t,t,t, 7);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 8), t,t,t,t,t,t, 8);
 
-    drawOptoCouplerSet(optoCouplerSetLoc( 9), t,t,t,F,t,t);
-    drawOptoCouplerSet(optoCouplerSetLoc(10), t,t,t,F,t,t);
-    drawOptoCouplerSet(optoCouplerSetLoc(11), t,t,t,F,t,t);
-    drawOptoCouplerSet(optoCouplerSetLoc(12), F,t,F,F,F,F);
+%    drawOptoCouplerSet(optoCouplerSetLoc( 9), t,t,t,F,t,t, 9);
+%    drawOptoCouplerSet(optoCouplerSetLoc(10), t,t,t,F,t,t, 10);
+%    drawOptoCouplerSet(optoCouplerSetLoc(11), t,t,t,F,t,t, 11);
+%    drawOptoCouplerSet(optoCouplerSetLoc(12), F,t,F,F,F,F, 12);
 
-    %for i = 0 upto  1: drawOptoCouplerSet(optoCouplerSetLoc(i), t,t,t,F); endfor
-    %for i = 2 upto  8: drawOptoCouplerSet(optoCouplerSetLoc(i), t,t,t,t); endfor
-    %for i = 9 upto 11: drawOptoCouplerSet(optoCouplerSetLoc(i), t,t,t,F); endfor
+    for i =  0 upto  0: drawOptoCouplerSet(optoCouplerSetLoc(i), t,t,t,F,F,t, i); endfor
+    for i =  1 upto  1: drawOptoCouplerSet(optoCouplerSetLoc(i), t,t,t,F,t,t, i); endfor
+    for i =  2 upto  8: drawOptoCouplerSet(optoCouplerSetLoc(i), t,t,t,t,t,t, i); endfor
+    for i =  9 upto 11: drawOptoCouplerSet(optoCouplerSetLoc(i), t,t,t,F,t,t, i); endfor
+    for i = 12 upto 12: drawOptoCouplerSet(optoCouplerSetLoc(i), F,t,F,F,F,F, i); endfor
 enddef;
 
 draw plate;
