@@ -28,12 +28,12 @@ $EndComp
 Text GLabel 2000 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L optocouplers-rescue:R R_A1
+L optocouplers-rescue:R R_A2
 U 1 1 59826295
 P 1200 1500
-F 0 "R_A1" V 1280 1500 50  0000 C CNN
+F 0 "R_A2" V 1280 1500 50  0000 C CNN
 F 1 "270R" V 1200 1500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1130 1500 50  0001 C CNN
 F 3 "" H 1200 1500 50  0001 C CNN
 	1    1200 1500
 	0    1    1    0   
@@ -79,7 +79,7 @@ U 1 1 598263CC
 P 1200 1000
 F 0 "R_A0" V 1280 1000 50  0000 C CNN
 F 1 "270R" V 1200 1000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1130 1000 50  0001 C CNN
 F 3 "" H 1200 1000 50  0001 C CNN
 	1    1200 1000
 	0    1    1    0   
@@ -113,12 +113,12 @@ $EndComp
 Text GLabel 2000 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L optocouplers-rescue:R R_A3
+L optocouplers-rescue:R R_A6
 U 1 1 598265E2
 P 1200 2500
-F 0 "R_A3" V 1280 2500 50  0000 C CNN
+F 0 "R_A6" V 1280 2500 50  0000 C CNN
 F 1 "270R" V 1200 2500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1130 2500 50  0001 C CNN
 F 3 "" H 1200 2500 50  0001 C CNN
 	1    1200 2500
 	0    1    1    0   
@@ -148,12 +148,12 @@ $EndComp
 Text GLabel 2000 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L optocouplers-rescue:R R_A2
+L optocouplers-rescue:R R_A4
 U 1 1 598265FB
 P 1200 2000
-F 0 "R_A2" V 1280 2000 50  0000 C CNN
+F 0 "R_A4" V 1280 2000 50  0000 C CNN
 F 1 "270R" V 1200 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1130 2000 50  0001 C CNN
 F 3 "" H 1200 2000 50  0001 C CNN
 	1    1200 2000
 	0    1    1    0   
@@ -188,12 +188,12 @@ $EndComp
 Text GLabel 2000 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L optocouplers-rescue:R R_A5
+L optocouplers-rescue:R R_A10
 U 1 1 59826C49
 P 1200 3500
-F 0 "R_A5" V 1280 3500 50  0000 C CNN
+F 0 "R_A10" V 1280 3500 50  0000 C CNN
 F 1 "270R" V 1200 3500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1130 3500 50  0001 C CNN
 F 3 "" H 1200 3500 50  0001 C CNN
 	1    1200 3500
 	0    1    1    0   
@@ -223,12 +223,12 @@ $EndComp
 Text GLabel 2000 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L optocouplers-rescue:R R_A4
+L optocouplers-rescue:R R_A8
 U 1 1 59826C62
 P 1200 3000
-F 0 "R_A4" V 1280 3000 50  0000 C CNN
+F 0 "R_A8" V 1280 3000 50  0000 C CNN
 F 1 "270R" V 1200 3000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1130 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1130 3000 50  0001 C CNN
 F 3 "" H 1200 3000 50  0001 C CNN
 	1    1200 3000
 	0    1    1    0   
@@ -281,7 +281,7 @@ U 1 1 5982D566
 P 1250 4400
 F 0 "R1" V 1330 4400 50  0000 C CNN
 F 1 "1k" V 1250 4400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1180 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 1180 4400 50  0001 C CNN
 F 3 "" H 1250 4400 50  0001 C CNN
 	1    1250 4400
 	0    1    1    0   
@@ -309,10 +309,10 @@ F 3 "" H 1000 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A1
+L optocouplers-rescue:ITR9608 U_A2
 U 1 1 59CC4C3B
 P 1650 1600
-F 0 "U_A1" H 1450 1800 50  0000 L CNN
+F 0 "U_A2" H 1450 1800 50  0000 L CNN
 F 1 "ITR9608" H 1550 1400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 1450 1400 50  0001 L CIN
 F 3 "" H 1650 1600 50  0001 L CNN
@@ -320,10 +320,10 @@ F 3 "" H 1650 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A2
+L optocouplers-rescue:ITR9608 U_A4
 U 1 1 59CC4C77
 P 1650 2100
-F 0 "U_A2" H 1450 2300 50  0000 L CNN
+F 0 "U_A4" H 1450 2300 50  0000 L CNN
 F 1 "ITR9608" H 1550 1900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 1450 1900 50  0001 L CIN
 F 3 "" H 1650 2100 50  0001 L CNN
@@ -331,10 +331,10 @@ F 3 "" H 1650 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A3
+L optocouplers-rescue:ITR9608 U_A6
 U 1 1 59CC4CB4
 P 1650 2600
-F 0 "U_A3" H 1450 2800 50  0000 L CNN
+F 0 "U_A6" H 1450 2800 50  0000 L CNN
 F 1 "ITR9608" H 1550 2400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 1450 2400 50  0001 L CIN
 F 3 "" H 1650 2600 50  0001 L CNN
@@ -342,10 +342,10 @@ F 3 "" H 1650 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A4
+L optocouplers-rescue:ITR9608 U_A8
 U 1 1 59CC4F32
 P 1650 3100
-F 0 "U_A4" H 1450 3300 50  0000 L CNN
+F 0 "U_A8" H 1450 3300 50  0000 L CNN
 F 1 "ITR9608" H 1550 2900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 1450 2900 50  0001 L CIN
 F 3 "" H 1650 3100 50  0001 L CNN
@@ -353,10 +353,10 @@ F 3 "" H 1650 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A5
+L optocouplers-rescue:ITR9608 U_A10
 U 1 1 59CC4F76
 P 1650 3600
-F 0 "U_A5" H 1450 3800 50  0000 L CNN
+F 0 "U_A10" H 1450 3800 50  0000 L CNN
 F 1 "ITR9608" H 1550 3400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 1450 3400 50  0001 L CIN
 F 3 "" H 1650 3600 50  0001 L CNN
@@ -377,12 +377,12 @@ $EndComp
 Text GLabel 3800 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L optocouplers-rescue:R R_A7
+L optocouplers-rescue:R R_A3
 U 1 1 5A3B00FE
 P 3000 1500
-F 0 "R_A7" V 3080 1500 50  0000 C CNN
+F 0 "R_A3" V 3080 1500 50  0000 C CNN
 F 1 "270R" V 3000 1500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2930 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2930 1500 50  0001 C CNN
 F 3 "" H 3000 1500 50  0001 C CNN
 	1    3000 1500
 	0    1    1    0   
@@ -399,10 +399,10 @@ F 3 "" H 2850 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A6
+L optocouplers-rescue:ITR9608 U_A1
 U 1 1 5A3B010A
 P 3450 1100
-F 0 "U_A6" H 3250 1300 50  0000 L CNN
+F 0 "U_A1" H 3250 1300 50  0000 L CNN
 F 1 "ITR9608" H 3350 900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 3250 900 50  0001 L CIN
 F 3 "" H 3450 1100 50  0001 L CNN
@@ -423,12 +423,12 @@ $EndComp
 Text GLabel 3800 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L optocouplers-rescue:R R_A6
+L optocouplers-rescue:R R_A1
 U 1 1 5A3B0117
 P 3000 1000
-F 0 "R_A6" V 3080 1000 50  0000 C CNN
+F 0 "R_A1" V 3080 1000 50  0000 C CNN
 F 1 "270R" V 3000 1000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2930 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2930 1000 50  0001 C CNN
 F 3 "" H 3000 1000 50  0001 C CNN
 	1    3000 1000
 	0    1    1    0   
@@ -462,12 +462,12 @@ $EndComp
 Text GLabel 3800 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L optocouplers-rescue:R R_A9
+L optocouplers-rescue:R R_A7
 U 1 1 5A3B012C
 P 3000 2500
-F 0 "R_A9" V 3080 2500 50  0000 C CNN
+F 0 "R_A7" V 3080 2500 50  0000 C CNN
 F 1 "270R" V 3000 2500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2930 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2930 2500 50  0001 C CNN
 F 3 "" H 3000 2500 50  0001 C CNN
 	1    3000 2500
 	0    1    1    0   
@@ -497,12 +497,12 @@ $EndComp
 Text GLabel 3800 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L optocouplers-rescue:R R_A8
+L optocouplers-rescue:R R_A5
 U 1 1 5A3B013F
 P 3000 2000
-F 0 "R_A8" V 3080 2000 50  0000 C CNN
+F 0 "R_A5" V 3080 2000 50  0000 C CNN
 F 1 "270R" V 3000 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2930 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2930 2000 50  0001 C CNN
 F 3 "" H 3000 2000 50  0001 C CNN
 	1    3000 2000
 	0    1    1    0   
@@ -543,7 +543,7 @@ U 1 1 5A3B0156
 P 3000 3500
 F 0 "R_A11" V 3080 3500 50  0000 C CNN
 F 1 "270R" V 3000 3500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2930 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2930 3500 50  0001 C CNN
 F 3 "" H 3000 3500 50  0001 C CNN
 	1    3000 3500
 	0    1    1    0   
@@ -573,12 +573,12 @@ $EndComp
 Text GLabel 3800 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L optocouplers-rescue:R R_A10
+L optocouplers-rescue:R R_A9
 U 1 1 5A3B0169
 P 3000 3000
-F 0 "R_A10" V 3080 3000 50  0000 C CNN
+F 0 "R_A9" V 3080 3000 50  0000 C CNN
 F 1 "270R" V 3000 3000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2930 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2930 3000 50  0001 C CNN
 F 3 "" H 3000 3000 50  0001 C CNN
 	1    3000 3000
 	0    1    1    0   
@@ -631,16 +631,16 @@ U 1 1 5A3B01B2
 P 3050 4400
 F 0 "R2" V 3130 4400 50  0000 C CNN
 F 1 "1k" V 3050 4400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 2980 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 2980 4400 50  0001 C CNN
 F 3 "" H 3050 4400 50  0001 C CNN
 	1    3050 4400
 	0    1    1    0   
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A7
+L optocouplers-rescue:ITR9608 U_A3
 U 1 1 5A3B01B8
 P 3450 1600
-F 0 "U_A7" H 3250 1800 50  0000 L CNN
+F 0 "U_A3" H 3250 1800 50  0000 L CNN
 F 1 "ITR9608" H 3350 1400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 3250 1400 50  0001 L CIN
 F 3 "" H 3450 1600 50  0001 L CNN
@@ -648,10 +648,10 @@ F 3 "" H 3450 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A8
+L optocouplers-rescue:ITR9608 U_A5
 U 1 1 5A3B01BE
 P 3450 2100
-F 0 "U_A8" H 3250 2300 50  0000 L CNN
+F 0 "U_A5" H 3250 2300 50  0000 L CNN
 F 1 "ITR9608" H 3350 1900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 3250 1900 50  0001 L CIN
 F 3 "" H 3450 2100 50  0001 L CNN
@@ -659,10 +659,10 @@ F 3 "" H 3450 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A9
+L optocouplers-rescue:ITR9608 U_A7
 U 1 1 5A3B01C4
 P 3450 2600
-F 0 "U_A9" H 3250 2800 50  0000 L CNN
+F 0 "U_A7" H 3250 2800 50  0000 L CNN
 F 1 "ITR9608" H 3350 2400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 3250 2400 50  0001 L CIN
 F 3 "" H 3450 2600 50  0001 L CNN
@@ -670,10 +670,10 @@ F 3 "" H 3450 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_A10
+L optocouplers-rescue:ITR9608 U_A9
 U 1 1 5A3B01CA
 P 3450 3100
-F 0 "U_A10" H 3250 3300 50  0000 L CNN
+F 0 "U_A9" H 3250 3300 50  0000 L CNN
 F 1 "ITR9608" H 3350 2900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 3250 2900 50  0001 L CIN
 F 3 "" H 3450 3100 50  0001 L CNN
@@ -710,7 +710,7 @@ U 1 1 5A3B068D
 P 4800 1500
 F 0 "R_B2" V 4880 1500 50  0000 C CNN
 F 1 "270R" V 4800 1500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4730 1500 50  0001 C CNN
 F 3 "" H 4800 1500 50  0001 C CNN
 	1    4800 1500
 	0    1    1    0   
@@ -727,10 +727,10 @@ F 3 "" H 4650 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B1
+L optocouplers-rescue:ITR9608 U_B0
 U 1 1 5A3B0699
 P 5250 1100
-F 0 "U_B1" H 5050 1300 50  0000 L CNN
+F 0 "U_B0" H 5050 1300 50  0000 L CNN
 F 1 "ITR9608" H 5150 900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 5050 900 50  0001 L CIN
 F 3 "" H 5250 1100 50  0001 L CNN
@@ -751,12 +751,12 @@ $EndComp
 Text GLabel 5600 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L optocouplers-rescue:R R_B1
+L optocouplers-rescue:R R_B0
 U 1 1 5A3B06A6
 P 4800 1000
-F 0 "R_B1" V 4880 1000 50  0000 C CNN
+F 0 "R_B0" V 4880 1000 50  0000 C CNN
 F 1 "270R" V 4800 1000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4730 1000 50  0001 C CNN
 F 3 "" H 4800 1000 50  0001 C CNN
 	1    4800 1000
 	0    1    1    0   
@@ -790,12 +790,12 @@ $EndComp
 Text GLabel 5600 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L optocouplers-rescue:R R_B4
+L optocouplers-rescue:R R_B6
 U 1 1 5A3B06BB
 P 4800 2500
-F 0 "R_B4" V 4880 2500 50  0000 C CNN
+F 0 "R_B6" V 4880 2500 50  0000 C CNN
 F 1 "270R" V 4800 2500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4730 2500 50  0001 C CNN
 F 3 "" H 4800 2500 50  0001 C CNN
 	1    4800 2500
 	0    1    1    0   
@@ -825,12 +825,12 @@ $EndComp
 Text GLabel 5600 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L optocouplers-rescue:R R_B3
+L optocouplers-rescue:R R_B4
 U 1 1 5A3B06CE
 P 4800 2000
-F 0 "R_B3" V 4880 2000 50  0000 C CNN
+F 0 "R_B4" V 4880 2000 50  0000 C CNN
 F 1 "270R" V 4800 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4730 2000 50  0001 C CNN
 F 3 "" H 4800 2000 50  0001 C CNN
 	1    4800 2000
 	0    1    1    0   
@@ -866,12 +866,12 @@ $EndComp
 Text GLabel 5600 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L optocouplers-rescue:R R_B6
+L optocouplers-rescue:R R_B10
 U 1 1 5A3B06E5
 P 4800 3500
-F 0 "R_B6" V 4880 3500 50  0000 C CNN
+F 0 "R_B10" V 4880 3500 50  0000 C CNN
 F 1 "270R" V 4800 3500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4730 3500 50  0001 C CNN
 F 3 "" H 4800 3500 50  0001 C CNN
 	1    4800 3500
 	0    1    1    0   
@@ -901,12 +901,12 @@ $EndComp
 Text GLabel 5600 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L optocouplers-rescue:R R_B5
+L optocouplers-rescue:R R_B8
 U 1 1 5A3B06F8
 P 4800 3000
-F 0 "R_B5" V 4880 3000 50  0000 C CNN
+F 0 "R_B8" V 4880 3000 50  0000 C CNN
 F 1 "270R" V 4800 3000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4730 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4730 3000 50  0001 C CNN
 F 3 "" H 4800 3000 50  0001 C CNN
 	1    4800 3000
 	0    1    1    0   
@@ -959,7 +959,7 @@ U 1 1 5A3B0741
 P 4850 4400
 F 0 "R3" V 4930 4400 50  0000 C CNN
 F 1 "1k" V 4850 4400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4780 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 4780 4400 50  0001 C CNN
 F 3 "" H 4850 4400 50  0001 C CNN
 	1    4850 4400
 	0    1    1    0   
@@ -976,10 +976,10 @@ F 3 "" H 5250 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B3
+L optocouplers-rescue:ITR9608 U_B4
 U 1 1 5A3B074D
 P 5250 2100
-F 0 "U_B3" H 5050 2300 50  0000 L CNN
+F 0 "U_B4" H 5050 2300 50  0000 L CNN
 F 1 "ITR9608" H 5150 1900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 5050 1900 50  0001 L CIN
 F 3 "" H 5250 2100 50  0001 L CNN
@@ -987,10 +987,10 @@ F 3 "" H 5250 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B4
+L optocouplers-rescue:ITR9608 U_B6
 U 1 1 5A3B0753
 P 5250 2600
-F 0 "U_B4" H 5050 2800 50  0000 L CNN
+F 0 "U_B6" H 5050 2800 50  0000 L CNN
 F 1 "ITR9608" H 5150 2400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 5050 2400 50  0001 L CIN
 F 3 "" H 5250 2600 50  0001 L CNN
@@ -998,10 +998,10 @@ F 3 "" H 5250 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B5
+L optocouplers-rescue:ITR9608 U_B8
 U 1 1 5A3B0759
 P 5250 3100
-F 0 "U_B5" H 5050 3300 50  0000 L CNN
+F 0 "U_B8" H 5050 3300 50  0000 L CNN
 F 1 "ITR9608" H 5150 2900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 5050 2900 50  0001 L CIN
 F 3 "" H 5250 3100 50  0001 L CNN
@@ -1009,10 +1009,10 @@ F 3 "" H 5250 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B6
+L optocouplers-rescue:ITR9608 U_B10
 U 1 1 5A3B075F
 P 5250 3600
-F 0 "U_B6" H 5050 3800 50  0000 L CNN
+F 0 "U_B10" H 5050 3800 50  0000 L CNN
 F 1 "ITR9608" H 5150 3400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 5050 3400 50  0001 L CIN
 F 3 "" H 5250 3600 50  0001 L CNN
@@ -1033,12 +1033,12 @@ $EndComp
 Text GLabel 7400 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L optocouplers-rescue:R R_B8
+L optocouplers-rescue:R R_B3
 U 1 1 5A3B0778
 P 6600 1500
-F 0 "R_B8" V 6680 1500 50  0000 C CNN
+F 0 "R_B3" V 6680 1500 50  0000 C CNN
 F 1 "270R" V 6600 1500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6530 1500 50  0001 C CNN
 F 3 "" H 6600 1500 50  0001 C CNN
 	1    6600 1500
 	0    1    1    0   
@@ -1055,10 +1055,10 @@ F 3 "" H 6450 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B7
+L optocouplers-rescue:ITR9608 U_B1
 U 1 1 5A3B0784
 P 7050 1100
-F 0 "U_B7" H 6850 1300 50  0000 L CNN
+F 0 "U_B1" H 6850 1300 50  0000 L CNN
 F 1 "ITR9608" H 6950 900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 6850 900 50  0001 L CIN
 F 3 "" H 7050 1100 50  0001 L CNN
@@ -1079,12 +1079,12 @@ $EndComp
 Text GLabel 7400 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L optocouplers-rescue:R R_B7
+L optocouplers-rescue:R R_B1
 U 1 1 5A3B0791
 P 6600 1000
-F 0 "R_B7" V 6680 1000 50  0000 C CNN
+F 0 "R_B1" V 6680 1000 50  0000 C CNN
 F 1 "270R" V 6600 1000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6530 1000 50  0001 C CNN
 F 3 "" H 6600 1000 50  0001 C CNN
 	1    6600 1000
 	0    1    1    0   
@@ -1118,12 +1118,12 @@ $EndComp
 Text GLabel 7400 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L optocouplers-rescue:R R_B10
+L optocouplers-rescue:R R_B7
 U 1 1 5A3B07A6
 P 6600 2500
-F 0 "R_B10" V 6680 2500 50  0000 C CNN
+F 0 "R_B7" V 6680 2500 50  0000 C CNN
 F 1 "270R" V 6600 2500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6530 2500 50  0001 C CNN
 F 3 "" H 6600 2500 50  0001 C CNN
 	1    6600 2500
 	0    1    1    0   
@@ -1153,12 +1153,12 @@ $EndComp
 Text GLabel 7400 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L optocouplers-rescue:R R_B9
+L optocouplers-rescue:R R_B5
 U 1 1 5A3B07B9
 P 6600 2000
-F 0 "R_B9" V 6680 2000 50  0000 C CNN
+F 0 "R_B5" V 6680 2000 50  0000 C CNN
 F 1 "270R" V 6600 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6530 2000 50  0001 C CNN
 F 3 "" H 6600 2000 50  0001 C CNN
 	1    6600 2000
 	0    1    1    0   
@@ -1194,12 +1194,12 @@ $EndComp
 Text GLabel 7400 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L optocouplers-rescue:R R_B12
+L optocouplers-rescue:R R_B11
 U 1 1 5A3B07D0
 P 6600 3500
-F 0 "R_B12" V 6680 3500 50  0000 C CNN
+F 0 "R_B11" V 6680 3500 50  0000 C CNN
 F 1 "270R" V 6600 3500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6530 3500 50  0001 C CNN
 F 3 "" H 6600 3500 50  0001 C CNN
 	1    6600 3500
 	0    1    1    0   
@@ -1229,12 +1229,12 @@ $EndComp
 Text GLabel 7400 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L optocouplers-rescue:R R_B11
+L optocouplers-rescue:R R_B9
 U 1 1 5A3B07E3
 P 6600 3000
-F 0 "R_B11" V 6680 3000 50  0000 C CNN
+F 0 "R_B9" V 6680 3000 50  0000 C CNN
 F 1 "270R" V 6600 3000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6530 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6530 3000 50  0001 C CNN
 F 3 "" H 6600 3000 50  0001 C CNN
 	1    6600 3000
 	0    1    1    0   
@@ -1287,16 +1287,16 @@ U 1 1 5A3B082C
 P 6650 4400
 F 0 "R4" V 6730 4400 50  0000 C CNN
 F 1 "1k" V 6650 4400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6580 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 6580 4400 50  0001 C CNN
 F 3 "" H 6650 4400 50  0001 C CNN
 	1    6650 4400
 	0    1    1    0   
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B8
+L optocouplers-rescue:ITR9608 U_B3
 U 1 1 5A3B0832
 P 7050 1600
-F 0 "U_B8" H 6850 1800 50  0000 L CNN
+F 0 "U_B3" H 6850 1800 50  0000 L CNN
 F 1 "ITR9608" H 6950 1400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 6850 1400 50  0001 L CIN
 F 3 "" H 7050 1600 50  0001 L CNN
@@ -1304,10 +1304,10 @@ F 3 "" H 7050 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B9
+L optocouplers-rescue:ITR9608 U_B5
 U 1 1 5A3B0838
 P 7050 2100
-F 0 "U_B9" H 6850 2300 50  0000 L CNN
+F 0 "U_B5" H 6850 2300 50  0000 L CNN
 F 1 "ITR9608" H 6950 1900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 6850 1900 50  0001 L CIN
 F 3 "" H 7050 2100 50  0001 L CNN
@@ -1315,10 +1315,10 @@ F 3 "" H 7050 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B10
+L optocouplers-rescue:ITR9608 U_B7
 U 1 1 5A3B083E
 P 7050 2600
-F 0 "U_B10" H 6850 2800 50  0000 L CNN
+F 0 "U_B7" H 6850 2800 50  0000 L CNN
 F 1 "ITR9608" H 6950 2400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 6850 2400 50  0001 L CIN
 F 3 "" H 7050 2600 50  0001 L CNN
@@ -1326,10 +1326,10 @@ F 3 "" H 7050 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B11
+L optocouplers-rescue:ITR9608 U_B9
 U 1 1 5A3B0844
 P 7050 3100
-F 0 "U_B11" H 6850 3300 50  0000 L CNN
+F 0 "U_B9" H 6850 3300 50  0000 L CNN
 F 1 "ITR9608" H 6950 2900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 6850 2900 50  0001 L CIN
 F 3 "" H 7050 3100 50  0001 L CNN
@@ -1337,10 +1337,10 @@ F 3 "" H 7050 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B12
+L optocouplers-rescue:ITR9608 U_B11
 U 1 1 5A3B084A
 P 7050 3600
-F 0 "U_B12" H 6850 3800 50  0000 L CNN
+F 0 "U_B11" H 6850 3800 50  0000 L CNN
 F 1 "ITR9608" H 6950 3400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 6850 3400 50  0001 L CIN
 F 3 "" H 7050 3600 50  0001 L CNN
@@ -1361,12 +1361,12 @@ $EndComp
 Text GLabel 9200 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L optocouplers-rescue:R R_C1
+L optocouplers-rescue:R R_C2
 U 1 1 5A3B2483
 P 8400 1500
-F 0 "R_C1" V 8480 1500 50  0000 C CNN
+F 0 "R_C2" V 8480 1500 50  0000 C CNN
 F 1 "270R" V 8400 1500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8330 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8330 1500 50  0001 C CNN
 F 3 "" H 8400 1500 50  0001 C CNN
 	1    8400 1500
 	0    1    1    0   
@@ -1412,7 +1412,7 @@ U 1 1 5A3B249C
 P 8400 1000
 F 0 "R_C0" V 8480 1000 50  0000 C CNN
 F 1 "270R" V 8400 1000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8330 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8330 1000 50  0001 C CNN
 F 3 "" H 8400 1000 50  0001 C CNN
 	1    8400 1000
 	0    1    1    0   
@@ -1446,12 +1446,12 @@ $EndComp
 Text GLabel 9200 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L optocouplers-rescue:R R_C3
+L optocouplers-rescue:R R_C6
 U 1 1 5A3B24B1
 P 8400 2500
-F 0 "R_C3" V 8480 2500 50  0000 C CNN
+F 0 "R_C6" V 8480 2500 50  0000 C CNN
 F 1 "270R" V 8400 2500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8330 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8330 2500 50  0001 C CNN
 F 3 "" H 8400 2500 50  0001 C CNN
 	1    8400 2500
 	0    1    1    0   
@@ -1481,12 +1481,12 @@ $EndComp
 Text GLabel 9200 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L optocouplers-rescue:R R_C2
+L optocouplers-rescue:R R_C4
 U 1 1 5A3B24C4
 P 8400 2000
-F 0 "R_C2" V 8480 2000 50  0000 C CNN
+F 0 "R_C4" V 8480 2000 50  0000 C CNN
 F 1 "270R" V 8400 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8330 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8330 2000 50  0001 C CNN
 F 3 "" H 8400 2000 50  0001 C CNN
 	1    8400 2000
 	0    1    1    0   
@@ -1522,12 +1522,12 @@ $EndComp
 Text GLabel 9200 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L optocouplers-rescue:R R_C5
+L optocouplers-rescue:R R_C10
 U 1 1 5A3B24DB
 P 8400 3500
-F 0 "R_C5" V 8480 3500 50  0000 C CNN
+F 0 "R_C10" V 8480 3500 50  0000 C CNN
 F 1 "270R" V 8400 3500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8330 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8330 3500 50  0001 C CNN
 F 3 "" H 8400 3500 50  0001 C CNN
 	1    8400 3500
 	0    1    1    0   
@@ -1557,12 +1557,12 @@ $EndComp
 Text GLabel 9200 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L optocouplers-rescue:R R_C4
+L optocouplers-rescue:R R_C8
 U 1 1 5A3B24EE
 P 8400 3000
-F 0 "R_C4" V 8480 3000 50  0000 C CNN
+F 0 "R_C8" V 8480 3000 50  0000 C CNN
 F 1 "270R" V 8400 3000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8330 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8330 3000 50  0001 C CNN
 F 3 "" H 8400 3000 50  0001 C CNN
 	1    8400 3000
 	0    1    1    0   
@@ -1615,16 +1615,16 @@ U 1 1 5A3B2537
 P 8450 4400
 F 0 "R5" V 8530 4400 50  0000 C CNN
 F 1 "1k" V 8450 4400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 8380 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 8380 4400 50  0001 C CNN
 F 3 "" H 8450 4400 50  0001 C CNN
 	1    8450 4400
 	0    1    1    0   
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C1
+L optocouplers-rescue:ITR9608 U_C2
 U 1 1 5A3B253D
 P 8850 1600
-F 0 "U_C1" H 8650 1800 50  0000 L CNN
+F 0 "U_C2" H 8650 1800 50  0000 L CNN
 F 1 "ITR9608" H 8750 1400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 8650 1400 50  0001 L CIN
 F 3 "" H 8850 1600 50  0001 L CNN
@@ -1632,10 +1632,10 @@ F 3 "" H 8850 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C2
+L optocouplers-rescue:ITR9608 U_C4
 U 1 1 5A3B2543
 P 8850 2100
-F 0 "U_C2" H 8650 2300 50  0000 L CNN
+F 0 "U_C4" H 8650 2300 50  0000 L CNN
 F 1 "ITR9608" H 8750 1900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 8650 1900 50  0001 L CIN
 F 3 "" H 8850 2100 50  0001 L CNN
@@ -1643,10 +1643,10 @@ F 3 "" H 8850 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C3
+L optocouplers-rescue:ITR9608 U_C6
 U 1 1 5A3B2549
 P 8850 2600
-F 0 "U_C3" H 8650 2800 50  0000 L CNN
+F 0 "U_C6" H 8650 2800 50  0000 L CNN
 F 1 "ITR9608" H 8750 2400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 8650 2400 50  0001 L CIN
 F 3 "" H 8850 2600 50  0001 L CNN
@@ -1654,10 +1654,10 @@ F 3 "" H 8850 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C4
+L optocouplers-rescue:ITR9608 U_C8
 U 1 1 5A3B254F
 P 8850 3100
-F 0 "U_C4" H 8650 3300 50  0000 L CNN
+F 0 "U_C8" H 8650 3300 50  0000 L CNN
 F 1 "ITR9608" H 8750 2900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 8650 2900 50  0001 L CIN
 F 3 "" H 8850 3100 50  0001 L CNN
@@ -1665,10 +1665,10 @@ F 3 "" H 8850 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C5
+L optocouplers-rescue:ITR9608 U_C10
 U 1 1 5A3B2555
 P 8850 3600
-F 0 "U_C5" H 8650 3800 50  0000 L CNN
+F 0 "U_C10" H 8650 3800 50  0000 L CNN
 F 1 "ITR9608" H 8750 3400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 8650 3400 50  0001 L CIN
 F 3 "" H 8850 3600 50  0001 L CNN
@@ -1689,12 +1689,12 @@ $EndComp
 Text GLabel 11000 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L optocouplers-rescue:R R_C7
+L optocouplers-rescue:R R_C3
 U 1 1 5A3B256E
 P 10200 1500
-F 0 "R_C7" V 10280 1500 50  0000 C CNN
+F 0 "R_C3" V 10280 1500 50  0000 C CNN
 F 1 "270R" V 10200 1500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10130 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10130 1500 50  0001 C CNN
 F 3 "" H 10200 1500 50  0001 C CNN
 	1    10200 1500
 	0    1    1    0   
@@ -1711,10 +1711,10 @@ F 3 "" H 10050 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C6
+L optocouplers-rescue:ITR9608 U_C1
 U 1 1 5A3B257A
 P 10650 1100
-F 0 "U_C6" H 10450 1300 50  0000 L CNN
+F 0 "U_C1" H 10450 1300 50  0000 L CNN
 F 1 "ITR9608" H 10550 900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 10450 900 50  0001 L CIN
 F 3 "" H 10650 1100 50  0001 L CNN
@@ -1735,12 +1735,12 @@ $EndComp
 Text GLabel 11000 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L optocouplers-rescue:R R_C6
+L optocouplers-rescue:R R_C1
 U 1 1 5A3B2587
 P 10200 1000
-F 0 "R_C6" V 10280 1000 50  0000 C CNN
+F 0 "R_C1" V 10280 1000 50  0000 C CNN
 F 1 "270R" V 10200 1000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10130 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10130 1000 50  0001 C CNN
 F 3 "" H 10200 1000 50  0001 C CNN
 	1    10200 1000
 	0    1    1    0   
@@ -1774,12 +1774,12 @@ $EndComp
 Text GLabel 11000 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L optocouplers-rescue:R R_C9
+L optocouplers-rescue:R R_C7
 U 1 1 5A3B259C
 P 10200 2500
-F 0 "R_C9" V 10280 2500 50  0000 C CNN
+F 0 "R_C7" V 10280 2500 50  0000 C CNN
 F 1 "270R" V 10200 2500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10130 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10130 2500 50  0001 C CNN
 F 3 "" H 10200 2500 50  0001 C CNN
 	1    10200 2500
 	0    1    1    0   
@@ -1809,12 +1809,12 @@ $EndComp
 Text GLabel 11000 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L optocouplers-rescue:R R_C8
+L optocouplers-rescue:R R_C5
 U 1 1 5A3B25AF
 P 10200 2000
-F 0 "R_C8" V 10280 2000 50  0000 C CNN
+F 0 "R_C5" V 10280 2000 50  0000 C CNN
 F 1 "270R" V 10200 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10130 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10130 2000 50  0001 C CNN
 F 3 "" H 10200 2000 50  0001 C CNN
 	1    10200 2000
 	0    1    1    0   
@@ -1855,7 +1855,7 @@ U 1 1 5A3B25C6
 P 10200 3500
 F 0 "R_C11" V 10280 3500 50  0000 C CNN
 F 1 "270R" V 10200 3500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10130 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10130 3500 50  0001 C CNN
 F 3 "" H 10200 3500 50  0001 C CNN
 	1    10200 3500
 	0    1    1    0   
@@ -1885,12 +1885,12 @@ $EndComp
 Text GLabel 11000 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L optocouplers-rescue:R R_C10
+L optocouplers-rescue:R R_C9
 U 1 1 5A3B25D9
 P 10200 3000
-F 0 "R_C10" V 10280 3000 50  0000 C CNN
+F 0 "R_C9" V 10280 3000 50  0000 C CNN
 F 1 "270R" V 10200 3000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10130 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10130 3000 50  0001 C CNN
 F 3 "" H 10200 3000 50  0001 C CNN
 	1    10200 3000
 	0    1    1    0   
@@ -1943,16 +1943,16 @@ U 1 1 5A3B2622
 P 10250 4400
 F 0 "R6" V 10330 4400 50  0000 C CNN
 F 1 "1k" V 10250 4400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 10180 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 10180 4400 50  0001 C CNN
 F 3 "" H 10250 4400 50  0001 C CNN
 	1    10250 4400
 	0    1    1    0   
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C7
+L optocouplers-rescue:ITR9608 U_C3
 U 1 1 5A3B2628
 P 10650 1600
-F 0 "U_C7" H 10450 1800 50  0000 L CNN
+F 0 "U_C3" H 10450 1800 50  0000 L CNN
 F 1 "ITR9608" H 10550 1400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 10450 1400 50  0001 L CIN
 F 3 "" H 10650 1600 50  0001 L CNN
@@ -1960,10 +1960,10 @@ F 3 "" H 10650 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C8
+L optocouplers-rescue:ITR9608 U_C5
 U 1 1 5A3B262E
 P 10650 2100
-F 0 "U_C8" H 10450 2300 50  0000 L CNN
+F 0 "U_C5" H 10450 2300 50  0000 L CNN
 F 1 "ITR9608" H 10550 1900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 10450 1900 50  0001 L CIN
 F 3 "" H 10650 2100 50  0001 L CNN
@@ -1971,10 +1971,10 @@ F 3 "" H 10650 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C9
+L optocouplers-rescue:ITR9608 U_C7
 U 1 1 5A3B2634
 P 10650 2600
-F 0 "U_C9" H 10450 2800 50  0000 L CNN
+F 0 "U_C7" H 10450 2800 50  0000 L CNN
 F 1 "ITR9608" H 10550 2400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 10450 2400 50  0001 L CIN
 F 3 "" H 10650 2600 50  0001 L CNN
@@ -1982,10 +1982,10 @@ F 3 "" H 10650 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_C10
+L optocouplers-rescue:ITR9608 U_C9
 U 1 1 5A3B263A
 P 10650 3100
-F 0 "U_C10" H 10450 3300 50  0000 L CNN
+F 0 "U_C9" H 10450 3300 50  0000 L CNN
 F 1 "ITR9608" H 10550 2900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 10450 2900 50  0001 L CIN
 F 3 "" H 10650 3100 50  0001 L CNN
@@ -2017,12 +2017,12 @@ $EndComp
 Text GLabel 12800 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L optocouplers-rescue:R R_D0
+L optocouplers-rescue:R R_D2
 U 1 1 5A3B2659
 P 12000 1500
-F 0 "R_D0" V 12080 1500 50  0000 C CNN
+F 0 "R_D2" V 12080 1500 50  0000 C CNN
 F 1 "270R" V 12000 1500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11930 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11930 1500 50  0001 C CNN
 F 3 "" H 12000 1500 50  0001 C CNN
 	1    12000 1500
 	0    1    1    0   
@@ -2039,10 +2039,10 @@ F 3 "" H 11850 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_B0
+L optocouplers-rescue:ITR9608 U_D0
 U 1 1 5A3B2665
 P 12450 1100
-F 0 "U_B0" H 12250 1300 50  0000 L CNN
+F 0 "U_D0" H 12250 1300 50  0000 L CNN
 F 1 "ITR9608" H 12350 900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 12250 900 50  0001 L CIN
 F 3 "" H 12450 1100 50  0001 L CNN
@@ -2063,12 +2063,12 @@ $EndComp
 Text GLabel 12800 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L optocouplers-rescue:R R_B0
+L optocouplers-rescue:R R_D0
 U 1 1 5A3B2672
 P 12000 1000
-F 0 "R_B0" V 12080 1000 50  0000 C CNN
+F 0 "R_D0" V 12080 1000 50  0000 C CNN
 F 1 "270R" V 12000 1000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11930 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11930 1000 50  0001 C CNN
 F 3 "" H 12000 1000 50  0001 C CNN
 	1    12000 1000
 	0    1    1    0   
@@ -2102,12 +2102,12 @@ $EndComp
 Text GLabel 12800 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L optocouplers-rescue:R R_D2
+L optocouplers-rescue:R R_D6
 U 1 1 5A3B2687
 P 12000 2500
-F 0 "R_D2" V 12080 2500 50  0000 C CNN
+F 0 "R_D6" V 12080 2500 50  0000 C CNN
 F 1 "270R" V 12000 2500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11930 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11930 2500 50  0001 C CNN
 F 3 "" H 12000 2500 50  0001 C CNN
 	1    12000 2500
 	0    1    1    0   
@@ -2137,12 +2137,12 @@ $EndComp
 Text GLabel 12800 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L optocouplers-rescue:R R_D1
+L optocouplers-rescue:R R_D4
 U 1 1 5A3B269A
 P 12000 2000
-F 0 "R_D1" V 12080 2000 50  0000 C CNN
+F 0 "R_D4" V 12080 2000 50  0000 C CNN
 F 1 "270R" V 12000 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11930 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11930 2000 50  0001 C CNN
 F 3 "" H 12000 2000 50  0001 C CNN
 	1    12000 2000
 	0    1    1    0   
@@ -2178,12 +2178,12 @@ $EndComp
 Text GLabel 12800 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L optocouplers-rescue:R R_D4
+L optocouplers-rescue:R R_D10
 U 1 1 5A3B26B1
 P 12000 3500
-F 0 "R_D4" V 12080 3500 50  0000 C CNN
+F 0 "R_D10" V 12080 3500 50  0000 C CNN
 F 1 "270R" V 12000 3500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11930 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11930 3500 50  0001 C CNN
 F 3 "" H 12000 3500 50  0001 C CNN
 	1    12000 3500
 	0    1    1    0   
@@ -2213,12 +2213,12 @@ $EndComp
 Text GLabel 12800 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L optocouplers-rescue:R R_D3
+L optocouplers-rescue:R R_D8
 U 1 1 5A3B26C4
 P 12000 3000
-F 0 "R_D3" V 12080 3000 50  0000 C CNN
+F 0 "R_D8" V 12080 3000 50  0000 C CNN
 F 1 "270R" V 12000 3000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11930 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11930 3000 50  0001 C CNN
 F 3 "" H 12000 3000 50  0001 C CNN
 	1    12000 3000
 	0    1    1    0   
@@ -2271,16 +2271,16 @@ U 1 1 5A3B270D
 P 12050 4400
 F 0 "R7" V 12130 4400 50  0000 C CNN
 F 1 "1k" V 12050 4400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 11980 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 11980 4400 50  0001 C CNN
 F 3 "" H 12050 4400 50  0001 C CNN
 	1    12050 4400
 	0    1    1    0   
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D0
+L optocouplers-rescue:ITR9608 U_D2
 U 1 1 5A3B2713
 P 12450 1600
-F 0 "U_D0" H 12250 1800 50  0000 L CNN
+F 0 "U_D2" H 12250 1800 50  0000 L CNN
 F 1 "ITR9608" H 12350 1400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 12250 1400 50  0001 L CIN
 F 3 "" H 12450 1600 50  0001 L CNN
@@ -2288,10 +2288,10 @@ F 3 "" H 12450 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D1
+L optocouplers-rescue:ITR9608 U_D4
 U 1 1 5A3B2719
 P 12450 2100
-F 0 "U_D1" H 12250 2300 50  0000 L CNN
+F 0 "U_D4" H 12250 2300 50  0000 L CNN
 F 1 "ITR9608" H 12350 1900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 12250 1900 50  0001 L CIN
 F 3 "" H 12450 2100 50  0001 L CNN
@@ -2299,10 +2299,10 @@ F 3 "" H 12450 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D2
+L optocouplers-rescue:ITR9608 U_D6
 U 1 1 5A3B271F
 P 12450 2600
-F 0 "U_D2" H 12250 2800 50  0000 L CNN
+F 0 "U_D6" H 12250 2800 50  0000 L CNN
 F 1 "ITR9608" H 12350 2400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 12250 2400 50  0001 L CIN
 F 3 "" H 12450 2600 50  0001 L CNN
@@ -2310,10 +2310,10 @@ F 3 "" H 12450 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D3
+L optocouplers-rescue:ITR9608 U_D8
 U 1 1 5A3B2725
 P 12450 3100
-F 0 "U_D3" H 12250 3300 50  0000 L CNN
+F 0 "U_D8" H 12250 3300 50  0000 L CNN
 F 1 "ITR9608" H 12350 2900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 12250 2900 50  0001 L CIN
 F 3 "" H 12450 3100 50  0001 L CNN
@@ -2321,10 +2321,10 @@ F 3 "" H 12450 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D4
+L optocouplers-rescue:ITR9608 U_D10
 U 1 1 5A3B272B
 P 12450 3600
-F 0 "U_D4" H 12250 3800 50  0000 L CNN
+F 0 "U_D10" H 12250 3800 50  0000 L CNN
 F 1 "ITR9608" H 12350 3400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 12250 3400 50  0001 L CIN
 F 3 "" H 12450 3600 50  0001 L CNN
@@ -2345,12 +2345,12 @@ $EndComp
 Text GLabel 14600 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L optocouplers-rescue:R R_D6
+L optocouplers-rescue:R R_D3
 U 1 1 5A3B2744
 P 13800 1500
-F 0 "R_D6" V 13880 1500 50  0000 C CNN
+F 0 "R_D3" V 13880 1500 50  0000 C CNN
 F 1 "270R" V 13800 1500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 13730 1500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 13730 1500 50  0001 C CNN
 F 3 "" H 13800 1500 50  0001 C CNN
 	1    13800 1500
 	0    1    1    0   
@@ -2367,10 +2367,10 @@ F 3 "" H 13650 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D5
+L optocouplers-rescue:ITR9608 U_D1
 U 1 1 5A3B2750
 P 14250 1100
-F 0 "U_D5" H 14050 1300 50  0000 L CNN
+F 0 "U_D1" H 14050 1300 50  0000 L CNN
 F 1 "ITR9608" H 14150 900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 14050 900 50  0001 L CIN
 F 3 "" H 14250 1100 50  0001 L CNN
@@ -2391,12 +2391,12 @@ $EndComp
 Text GLabel 14600 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L optocouplers-rescue:R R_D5
+L optocouplers-rescue:R R_D1
 U 1 1 5A3B275D
 P 13800 1000
-F 0 "R_D5" V 13880 1000 50  0000 C CNN
+F 0 "R_D1" V 13880 1000 50  0000 C CNN
 F 1 "270R" V 13800 1000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 13730 1000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 13730 1000 50  0001 C CNN
 F 3 "" H 13800 1000 50  0001 C CNN
 	1    13800 1000
 	0    1    1    0   
@@ -2430,12 +2430,12 @@ $EndComp
 Text GLabel 14600 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L optocouplers-rescue:R R_D8
+L optocouplers-rescue:R R_D7
 U 1 1 5A3B2772
 P 13800 2500
-F 0 "R_D8" V 13880 2500 50  0000 C CNN
+F 0 "R_D7" V 13880 2500 50  0000 C CNN
 F 1 "270R" V 13800 2500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 13730 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 13730 2500 50  0001 C CNN
 F 3 "" H 13800 2500 50  0001 C CNN
 	1    13800 2500
 	0    1    1    0   
@@ -2465,12 +2465,12 @@ $EndComp
 Text GLabel 14600 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L optocouplers-rescue:R R_D7
+L optocouplers-rescue:R R_D5
 U 1 1 5A3B2785
 P 13800 2000
-F 0 "R_D7" V 13880 2000 50  0000 C CNN
+F 0 "R_D5" V 13880 2000 50  0000 C CNN
 F 1 "270R" V 13800 2000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 13730 2000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 13730 2000 50  0001 C CNN
 F 3 "" H 13800 2000 50  0001 C CNN
 	1    13800 2000
 	0    1    1    0   
@@ -2506,12 +2506,12 @@ $EndComp
 Text GLabel 14600 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L optocouplers-rescue:R R_D10
+L optocouplers-rescue:R R_B12
 U 1 1 5A3B279C
 P 13800 3500
-F 0 "R_D10" V 13880 3500 50  0000 C CNN
+F 0 "R_B12" V 13880 3500 50  0000 C CNN
 F 1 "270R" V 13800 3500 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 13730 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 13730 3500 50  0001 C CNN
 F 3 "" H 13800 3500 50  0001 C CNN
 	1    13800 3500
 	0    1    1    0   
@@ -2546,7 +2546,7 @@ U 1 1 5A3B27AF
 P 13800 3000
 F 0 "R_D9" V 13880 3000 50  0000 C CNN
 F 1 "270R" V 13800 3000 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 13730 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 13730 3000 50  0001 C CNN
 F 3 "" H 13800 3000 50  0001 C CNN
 	1    13800 3000
 	0    1    1    0   
@@ -2599,16 +2599,16 @@ U 1 1 5A3B27F8
 P 13850 4400
 F 0 "R8" V 13930 4400 50  0000 C CNN
 F 1 "1k" V 13850 4400 50  0000 C CNN
-F 2 "Resistors_ThroughHole:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 13780 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" V 13780 4400 50  0001 C CNN
 F 3 "" H 13850 4400 50  0001 C CNN
 	1    13850 4400
 	0    1    1    0   
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D6
+L optocouplers-rescue:ITR9608 U_D3
 U 1 1 5A3B27FE
 P 14250 1600
-F 0 "U_D6" H 14050 1800 50  0000 L CNN
+F 0 "U_D3" H 14050 1800 50  0000 L CNN
 F 1 "ITR9608" H 14150 1400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 14050 1400 50  0001 L CIN
 F 3 "" H 14250 1600 50  0001 L CNN
@@ -2616,10 +2616,10 @@ F 3 "" H 14250 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D7
+L optocouplers-rescue:ITR9608 U_D5
 U 1 1 5A3B2804
 P 14250 2100
-F 0 "U_D7" H 14050 2300 50  0000 L CNN
+F 0 "U_D5" H 14050 2300 50  0000 L CNN
 F 1 "ITR9608" H 14150 1900 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 14050 1900 50  0001 L CIN
 F 3 "" H 14250 2100 50  0001 L CNN
@@ -2627,10 +2627,10 @@ F 3 "" H 14250 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D8
+L optocouplers-rescue:ITR9608 U_D7
 U 1 1 5A3B280A
 P 14250 2600
-F 0 "U_D8" H 14050 2800 50  0000 L CNN
+F 0 "U_D7" H 14050 2800 50  0000 L CNN
 F 1 "ITR9608" H 14150 2400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 14050 2400 50  0001 L CIN
 F 3 "" H 14250 2600 50  0001 L CNN
@@ -2649,10 +2649,10 @@ F 3 "" H 14250 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:ITR9608 U_D10
+L optocouplers-rescue:ITR9608 U_B12
 U 1 1 5A3B2816
 P 14250 3600
-F 0 "U_D10" H 14050 3800 50  0000 L CNN
+F 0 "U_B12" H 14050 3800 50  0000 L CNN
 F 1 "ITR9608" H 14150 3400 50  0000 L CNN
 F 2 "ITR9608:ITR9608" H 14050 3400 50  0001 L CIN
 F 3 "" H 14250 3600 50  0001 L CNN
