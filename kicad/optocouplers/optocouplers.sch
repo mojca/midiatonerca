@@ -1,96 +1,4 @@
-EESchema Schematic File Version 3
-LIBS:power
-LIBS:device
-LIBS:transistors
-LIBS:conn
-LIBS:linear
-LIBS:regul
-LIBS:74xx
-LIBS:cmos4000
-LIBS:adc-dac
-LIBS:memory
-LIBS:xilinx
-LIBS:microcontrollers
-LIBS:dsp
-LIBS:microchip
-LIBS:analog_switches
-LIBS:motorola
-LIBS:texas
-LIBS:intel
-LIBS:audio
-LIBS:interface
-LIBS:digital-audio
-LIBS:philips
-LIBS:display
-LIBS:cypress
-LIBS:siliconi
-LIBS:opto
-LIBS:atmel
-LIBS:contrib
-LIBS:valves
-LIBS:74xgxx
-LIBS:ac-dc
-LIBS:actel
-LIBS:allegro
-LIBS:Altera
-LIBS:analog_devices
-LIBS:battery_management
-LIBS:bbd
-LIBS:bosch
-LIBS:brooktre
-LIBS:cmos_ieee
-LIBS:dc-dc
-LIBS:diode
-LIBS:elec-unifil
-LIBS:ESD_Protection
-LIBS:ftdi
-LIBS:gennum
-LIBS:graphic
-LIBS:hc11
-LIBS:intersil
-LIBS:ir
-LIBS:Lattice
-LIBS:leds
-LIBS:maxim
-LIBS:mechanical
-LIBS:microchip_dspic33dsc
-LIBS:microchip_pic10mcu
-LIBS:microchip_pic12mcu
-LIBS:microchip_pic16mcu
-LIBS:microchip_pic18mcu
-LIBS:microchip_pic24mcu
-LIBS:microchip_pic32mcu
-LIBS:modules
-LIBS:motor_drivers
-LIBS:motors
-LIBS:msp430
-LIBS:nordicsemi
-LIBS:nxp_armmcu
-LIBS:nxp
-LIBS:onsemi
-LIBS:Oscillators
-LIBS:Power_Management
-LIBS:powerint
-LIBS:pspice
-LIBS:references
-LIBS:relays
-LIBS:rfcom
-LIBS:sensors
-LIBS:silabs
-LIBS:stm8
-LIBS:stm32
-LIBS:supertex
-LIBS:switches
-LIBS:transf
-LIBS:triac_thyristor
-LIBS:ttl_ieee
-LIBS:video
-LIBS:wiznet
-LIBS:Worldsemi
-LIBS:Xicor
-LIBS:zetex
-LIBS:Zilog
-LIBS:ITR9608-new
+EESchema Schematic File Version 4
 LIBS:optocouplers-cache
 EELAYER 26 0
 EELAYER END
@@ -107,7 +15,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L GND #PWR01
+L optocouplers-rescue:GND #PWR01
 U 1 1 59825E5F
 P 2000 1500
 F 0 "#PWR01" H 2000 1250 50  0001 C CNN
@@ -120,7 +28,7 @@ $EndComp
 Text GLabel 2000 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L R R_A1
+L optocouplers-rescue:R R_A1
 U 1 1 59826295
 P 1200 1500
 F 0 "R_A1" V 1280 1500 50  0000 C CNN
@@ -131,7 +39,7 @@ F 3 "" H 1200 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR02
+L optocouplers-rescue:+5V #PWR02
 U 1 1 598262DA
 P 1050 1500
 F 0 "#PWR02" H 1050 1350 50  0001 C CNN
@@ -142,7 +50,7 @@ F 3 "" H 1050 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A0
+L optocouplers-rescue:ITR9608 U_A0
 U 1 1 598263BF
 P 1650 1100
 F 0 "U_A0" H 1450 1300 50  0000 L CNN
@@ -153,7 +61,7 @@ F 3 "" H 1650 1100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR03
+L optocouplers-rescue:GND #PWR03
 U 1 1 598263C5
 P 2000 1000
 F 0 "#PWR03" H 2000 750 50  0001 C CNN
@@ -166,7 +74,7 @@ $EndComp
 Text GLabel 2000 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L R R_A0
+L optocouplers-rescue:R R_A0
 U 1 1 598263CC
 P 1200 1000
 F 0 "R_A0" V 1280 1000 50  0000 C CNN
@@ -177,7 +85,7 @@ F 3 "" H 1200 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR04
+L optocouplers-rescue:+5V #PWR04
 U 1 1 598263D2
 P 1050 1000
 F 0 "#PWR04" H 1050 850 50  0001 C CNN
@@ -192,7 +100,7 @@ Wire Wire Line
 Wire Wire Line
 	900  1700 1350 1700
 $Comp
-L GND #PWR05
+L optocouplers-rescue:GND #PWR05
 U 1 1 598265DB
 P 2000 2500
 F 0 "#PWR05" H 2000 2250 50  0001 C CNN
@@ -205,7 +113,7 @@ $EndComp
 Text GLabel 2000 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L R R_A3
+L optocouplers-rescue:R R_A3
 U 1 1 598265E2
 P 1200 2500
 F 0 "R_A3" V 1280 2500 50  0000 C CNN
@@ -216,7 +124,7 @@ F 3 "" H 1200 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR06
+L optocouplers-rescue:+5V #PWR06
 U 1 1 598265E8
 P 1050 2500
 F 0 "#PWR06" H 1050 2350 50  0001 C CNN
@@ -227,7 +135,7 @@ F 3 "" H 1050 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR07
+L optocouplers-rescue:GND #PWR07
 U 1 1 598265F4
 P 2000 2000
 F 0 "#PWR07" H 2000 1750 50  0001 C CNN
@@ -240,7 +148,7 @@ $EndComp
 Text GLabel 2000 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L R R_A2
+L optocouplers-rescue:R R_A2
 U 1 1 598265FB
 P 1200 2000
 F 0 "R_A2" V 1280 2000 50  0000 C CNN
@@ -251,7 +159,7 @@ F 3 "" H 1200 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR08
+L optocouplers-rescue:+5V #PWR08
 U 1 1 59826601
 P 1050 2000
 F 0 "#PWR08" H 1050 1850 50  0001 C CNN
@@ -267,7 +175,7 @@ Wire Wire Line
 	900  2700 1350 2700
 Connection ~ 900  2200
 $Comp
-L GND #PWR09
+L optocouplers-rescue:GND #PWR09
 U 1 1 59826C42
 P 2000 3500
 F 0 "#PWR09" H 2000 3250 50  0001 C CNN
@@ -280,7 +188,7 @@ $EndComp
 Text GLabel 2000 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L R R_A5
+L optocouplers-rescue:R R_A5
 U 1 1 59826C49
 P 1200 3500
 F 0 "R_A5" V 1280 3500 50  0000 C CNN
@@ -291,7 +199,7 @@ F 3 "" H 1200 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR010
+L optocouplers-rescue:+5V #PWR010
 U 1 1 59826C4F
 P 1050 3500
 F 0 "#PWR010" H 1050 3350 50  0001 C CNN
@@ -302,7 +210,7 @@ F 3 "" H 1050 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR011
+L optocouplers-rescue:GND #PWR011
 U 1 1 59826C5B
 P 2000 3000
 F 0 "#PWR011" H 2000 2750 50  0001 C CNN
@@ -315,7 +223,7 @@ $EndComp
 Text GLabel 2000 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L R R_A4
+L optocouplers-rescue:R R_A4
 U 1 1 59826C62
 P 1200 3000
 F 0 "R_A4" V 1280 3000 50  0000 C CNN
@@ -326,7 +234,7 @@ F 3 "" H 1200 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR012
+L optocouplers-rescue:+5V #PWR012
 U 1 1 59826C68
 P 1050 3000
 F 0 "#PWR012" H 1050 2850 50  0001 C CNN
@@ -344,7 +252,7 @@ Connection ~ 900  3700
 Connection ~ 900  3200
 Connection ~ 900  2700
 $Comp
-L PN2222A Q1
+L optocouplers-rescue:PN2222A Q1
 U 1 1 59826E5B
 P 1100 4200
 F 0 "Q1" V 1050 4000 50  0000 L CNN
@@ -355,7 +263,7 @@ F 3 "" H 1100 4200 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR017
+L optocouplers-rescue:GND #PWR017
 U 1 1 59826F3C
 P 1300 4100
 F 0 "#PWR017" H 1300 3850 50  0001 C CNN
@@ -368,7 +276,7 @@ $EndComp
 Text GLabel 1400 4400 2    60   Input ~ 0
 arduino_D5
 $Comp
-L R R1
+L optocouplers-rescue:R R1
 U 1 1 5982D566
 P 1250 4400
 F 0 "R1" V 1330 4400 50  0000 C CNN
@@ -379,7 +287,7 @@ F 3 "" H 1250 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR018
+L optocouplers-rescue:+5V #PWR018
 U 1 1 59CC1D8F
 P 1000 5150
 F 0 "#PWR018" H 1000 5000 50  0001 C CNN
@@ -390,7 +298,7 @@ F 3 "" H 1000 5150 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 $Comp
-L PWR_FLAG #FLG019
+L optocouplers-rescue:PWR_FLAG #FLG019
 U 1 1 59CC1E1E
 P 1000 5150
 F 0 "#FLG019" H 1000 5225 50  0001 C CNN
@@ -401,7 +309,7 @@ F 3 "" H 1000 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A1
+L optocouplers-rescue:ITR9608 U_A1
 U 1 1 59CC4C3B
 P 1650 1600
 F 0 "U_A1" H 1450 1800 50  0000 L CNN
@@ -412,7 +320,7 @@ F 3 "" H 1650 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A2
+L optocouplers-rescue:ITR9608 U_A2
 U 1 1 59CC4C77
 P 1650 2100
 F 0 "U_A2" H 1450 2300 50  0000 L CNN
@@ -423,7 +331,7 @@ F 3 "" H 1650 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A3
+L optocouplers-rescue:ITR9608 U_A3
 U 1 1 59CC4CB4
 P 1650 2600
 F 0 "U_A3" H 1450 2800 50  0000 L CNN
@@ -434,7 +342,7 @@ F 3 "" H 1650 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A4
+L optocouplers-rescue:ITR9608 U_A4
 U 1 1 59CC4F32
 P 1650 3100
 F 0 "U_A4" H 1450 3300 50  0000 L CNN
@@ -445,7 +353,7 @@ F 3 "" H 1650 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A5
+L optocouplers-rescue:ITR9608 U_A5
 U 1 1 59CC4F76
 P 1650 3600
 F 0 "U_A5" H 1450 3800 50  0000 L CNN
@@ -456,7 +364,7 @@ F 3 "" H 1650 3600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR013
+L optocouplers-rescue:GND #PWR013
 U 1 1 5A3B00F7
 P 3800 1500
 F 0 "#PWR013" H 3800 1250 50  0001 C CNN
@@ -469,7 +377,7 @@ $EndComp
 Text GLabel 3800 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L R R_A7
+L optocouplers-rescue:R R_A7
 U 1 1 5A3B00FE
 P 3000 1500
 F 0 "R_A7" V 3080 1500 50  0000 C CNN
@@ -480,7 +388,7 @@ F 3 "" H 3000 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR014
+L optocouplers-rescue:+5V #PWR014
 U 1 1 5A3B0104
 P 2850 1500
 F 0 "#PWR014" H 2850 1350 50  0001 C CNN
@@ -491,7 +399,7 @@ F 3 "" H 2850 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A6
+L optocouplers-rescue:ITR9608 U_A6
 U 1 1 5A3B010A
 P 3450 1100
 F 0 "U_A6" H 3250 1300 50  0000 L CNN
@@ -502,7 +410,7 @@ F 3 "" H 3450 1100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR015
+L optocouplers-rescue:GND #PWR015
 U 1 1 5A3B0110
 P 3800 1000
 F 0 "#PWR015" H 3800 750 50  0001 C CNN
@@ -515,7 +423,7 @@ $EndComp
 Text GLabel 3800 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L R R_A6
+L optocouplers-rescue:R R_A6
 U 1 1 5A3B0117
 P 3000 1000
 F 0 "R_A6" V 3080 1000 50  0000 C CNN
@@ -526,7 +434,7 @@ F 3 "" H 3000 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR016
+L optocouplers-rescue:+5V #PWR016
 U 1 1 5A3B011D
 P 2850 1000
 F 0 "#PWR016" H 2850 850 50  0001 C CNN
@@ -541,7 +449,7 @@ Wire Wire Line
 Wire Wire Line
 	2700 1700 3150 1700
 $Comp
-L GND #PWR019
+L optocouplers-rescue:GND #PWR019
 U 1 1 5A3B0125
 P 3800 2500
 F 0 "#PWR019" H 3800 2250 50  0001 C CNN
@@ -554,7 +462,7 @@ $EndComp
 Text GLabel 3800 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L R R_A9
+L optocouplers-rescue:R R_A9
 U 1 1 5A3B012C
 P 3000 2500
 F 0 "R_A9" V 3080 2500 50  0000 C CNN
@@ -565,7 +473,7 @@ F 3 "" H 3000 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR020
+L optocouplers-rescue:+5V #PWR020
 U 1 1 5A3B0132
 P 2850 2500
 F 0 "#PWR020" H 2850 2350 50  0001 C CNN
@@ -576,7 +484,7 @@ F 3 "" H 2850 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR021
+L optocouplers-rescue:GND #PWR021
 U 1 1 5A3B0138
 P 3800 2000
 F 0 "#PWR021" H 3800 1750 50  0001 C CNN
@@ -589,7 +497,7 @@ $EndComp
 Text GLabel 3800 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L R R_A8
+L optocouplers-rescue:R R_A8
 U 1 1 5A3B013F
 P 3000 2000
 F 0 "R_A8" V 3080 2000 50  0000 C CNN
@@ -600,7 +508,7 @@ F 3 "" H 3000 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR022
+L optocouplers-rescue:+5V #PWR022
 U 1 1 5A3B0145
 P 2850 2000
 F 0 "#PWR022" H 2850 1850 50  0001 C CNN
@@ -617,7 +525,7 @@ Wire Wire Line
 Connection ~ 2700 2200
 Connection ~ 2700 1700
 $Comp
-L GND #PWR023
+L optocouplers-rescue:GND #PWR023
 U 1 1 5A3B014F
 P 3800 3500
 F 0 "#PWR023" H 3800 3250 50  0001 C CNN
@@ -630,7 +538,7 @@ $EndComp
 Text GLabel 3800 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L R R_A11
+L optocouplers-rescue:R R_A11
 U 1 1 5A3B0156
 P 3000 3500
 F 0 "R_A11" V 3080 3500 50  0000 C CNN
@@ -641,7 +549,7 @@ F 3 "" H 3000 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR024
+L optocouplers-rescue:+5V #PWR024
 U 1 1 5A3B015C
 P 2850 3500
 F 0 "#PWR024" H 2850 3350 50  0001 C CNN
@@ -652,7 +560,7 @@ F 3 "" H 2850 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR025
+L optocouplers-rescue:GND #PWR025
 U 1 1 5A3B0162
 P 3800 3000
 F 0 "#PWR025" H 3800 2750 50  0001 C CNN
@@ -665,7 +573,7 @@ $EndComp
 Text GLabel 3800 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L R R_A10
+L optocouplers-rescue:R R_A10
 U 1 1 5A3B0169
 P 3000 3000
 F 0 "R_A10" V 3080 3000 50  0000 C CNN
@@ -676,7 +584,7 @@ F 3 "" H 3000 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR026
+L optocouplers-rescue:+5V #PWR026
 U 1 1 5A3B016F
 P 2850 3000
 F 0 "#PWR026" H 2850 2850 50  0001 C CNN
@@ -694,7 +602,7 @@ Connection ~ 2700 3700
 Connection ~ 2700 3200
 Connection ~ 2700 2700
 $Comp
-L PN2222A Q2
+L optocouplers-rescue:PN2222A Q2
 U 1 1 5A3B01A3
 P 2900 4200
 F 0 "Q2" V 2850 4000 50  0000 L CNN
@@ -705,7 +613,7 @@ F 3 "" H 2900 4200 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR027
+L optocouplers-rescue:GND #PWR027
 U 1 1 5A3B01A9
 P 3100 4100
 F 0 "#PWR027" H 3100 3850 50  0001 C CNN
@@ -718,7 +626,7 @@ $EndComp
 Text GLabel 3200 4400 2    60   Input ~ 0
 arduino_D6
 $Comp
-L R R2
+L optocouplers-rescue:R R2
 U 1 1 5A3B01B2
 P 3050 4400
 F 0 "R2" V 3130 4400 50  0000 C CNN
@@ -729,7 +637,7 @@ F 3 "" H 3050 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L ITR9608 U_A7
+L optocouplers-rescue:ITR9608 U_A7
 U 1 1 5A3B01B8
 P 3450 1600
 F 0 "U_A7" H 3250 1800 50  0000 L CNN
@@ -740,7 +648,7 @@ F 3 "" H 3450 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A8
+L optocouplers-rescue:ITR9608 U_A8
 U 1 1 5A3B01BE
 P 3450 2100
 F 0 "U_A8" H 3250 2300 50  0000 L CNN
@@ -751,7 +659,7 @@ F 3 "" H 3450 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A9
+L optocouplers-rescue:ITR9608 U_A9
 U 1 1 5A3B01C4
 P 3450 2600
 F 0 "U_A9" H 3250 2800 50  0000 L CNN
@@ -762,7 +670,7 @@ F 3 "" H 3450 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A10
+L optocouplers-rescue:ITR9608 U_A10
 U 1 1 5A3B01CA
 P 3450 3100
 F 0 "U_A10" H 3250 3300 50  0000 L CNN
@@ -773,7 +681,7 @@ F 3 "" H 3450 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_A11
+L optocouplers-rescue:ITR9608 U_A11
 U 1 1 5A3B01D0
 P 3450 3600
 F 0 "U_A11" H 3250 3800 50  0000 L CNN
@@ -784,7 +692,7 @@ F 3 "" H 3450 3600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR028
+L optocouplers-rescue:GND #PWR028
 U 1 1 5A3B0686
 P 5600 1500
 F 0 "#PWR028" H 5600 1250 50  0001 C CNN
@@ -797,7 +705,7 @@ $EndComp
 Text GLabel 5600 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L R R_B2
+L optocouplers-rescue:R R_B2
 U 1 1 5A3B068D
 P 4800 1500
 F 0 "R_B2" V 4880 1500 50  0000 C CNN
@@ -808,7 +716,7 @@ F 3 "" H 4800 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR029
+L optocouplers-rescue:+5V #PWR029
 U 1 1 5A3B0693
 P 4650 1500
 F 0 "#PWR029" H 4650 1350 50  0001 C CNN
@@ -819,7 +727,7 @@ F 3 "" H 4650 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B1
+L optocouplers-rescue:ITR9608 U_B1
 U 1 1 5A3B0699
 P 5250 1100
 F 0 "U_B1" H 5050 1300 50  0000 L CNN
@@ -830,7 +738,7 @@ F 3 "" H 5250 1100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR030
+L optocouplers-rescue:GND #PWR030
 U 1 1 5A3B069F
 P 5600 1000
 F 0 "#PWR030" H 5600 750 50  0001 C CNN
@@ -843,7 +751,7 @@ $EndComp
 Text GLabel 5600 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L R R_B1
+L optocouplers-rescue:R R_B1
 U 1 1 5A3B06A6
 P 4800 1000
 F 0 "R_B1" V 4880 1000 50  0000 C CNN
@@ -854,7 +762,7 @@ F 3 "" H 4800 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR031
+L optocouplers-rescue:+5V #PWR031
 U 1 1 5A3B06AC
 P 4650 1000
 F 0 "#PWR031" H 4650 850 50  0001 C CNN
@@ -869,7 +777,7 @@ Wire Wire Line
 Wire Wire Line
 	4500 1700 4950 1700
 $Comp
-L GND #PWR032
+L optocouplers-rescue:GND #PWR032
 U 1 1 5A3B06B4
 P 5600 2500
 F 0 "#PWR032" H 5600 2250 50  0001 C CNN
@@ -882,7 +790,7 @@ $EndComp
 Text GLabel 5600 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L R R_B4
+L optocouplers-rescue:R R_B4
 U 1 1 5A3B06BB
 P 4800 2500
 F 0 "R_B4" V 4880 2500 50  0000 C CNN
@@ -893,7 +801,7 @@ F 3 "" H 4800 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR033
+L optocouplers-rescue:+5V #PWR033
 U 1 1 5A3B06C1
 P 4650 2500
 F 0 "#PWR033" H 4650 2350 50  0001 C CNN
@@ -904,7 +812,7 @@ F 3 "" H 4650 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR034
+L optocouplers-rescue:GND #PWR034
 U 1 1 5A3B06C7
 P 5600 2000
 F 0 "#PWR034" H 5600 1750 50  0001 C CNN
@@ -917,7 +825,7 @@ $EndComp
 Text GLabel 5600 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L R R_B3
+L optocouplers-rescue:R R_B3
 U 1 1 5A3B06CE
 P 4800 2000
 F 0 "R_B3" V 4880 2000 50  0000 C CNN
@@ -928,7 +836,7 @@ F 3 "" H 4800 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR035
+L optocouplers-rescue:+5V #PWR035
 U 1 1 5A3B06D4
 P 4650 2000
 F 0 "#PWR035" H 4650 1850 50  0001 C CNN
@@ -945,7 +853,7 @@ Wire Wire Line
 Connection ~ 4500 2200
 Connection ~ 4500 1700
 $Comp
-L GND #PWR036
+L optocouplers-rescue:GND #PWR036
 U 1 1 5A3B06DE
 P 5600 3500
 F 0 "#PWR036" H 5600 3250 50  0001 C CNN
@@ -958,7 +866,7 @@ $EndComp
 Text GLabel 5600 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L R R_B6
+L optocouplers-rescue:R R_B6
 U 1 1 5A3B06E5
 P 4800 3500
 F 0 "R_B6" V 4880 3500 50  0000 C CNN
@@ -969,7 +877,7 @@ F 3 "" H 4800 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR037
+L optocouplers-rescue:+5V #PWR037
 U 1 1 5A3B06EB
 P 4650 3500
 F 0 "#PWR037" H 4650 3350 50  0001 C CNN
@@ -980,7 +888,7 @@ F 3 "" H 4650 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR038
+L optocouplers-rescue:GND #PWR038
 U 1 1 5A3B06F1
 P 5600 3000
 F 0 "#PWR038" H 5600 2750 50  0001 C CNN
@@ -993,7 +901,7 @@ $EndComp
 Text GLabel 5600 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L R R_B5
+L optocouplers-rescue:R R_B5
 U 1 1 5A3B06F8
 P 4800 3000
 F 0 "R_B5" V 4880 3000 50  0000 C CNN
@@ -1004,7 +912,7 @@ F 3 "" H 4800 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR039
+L optocouplers-rescue:+5V #PWR039
 U 1 1 5A3B06FE
 P 4650 3000
 F 0 "#PWR039" H 4650 2850 50  0001 C CNN
@@ -1022,7 +930,7 @@ Connection ~ 4500 3700
 Connection ~ 4500 3200
 Connection ~ 4500 2700
 $Comp
-L PN2222A Q3
+L optocouplers-rescue:PN2222A Q3
 U 1 1 5A3B0732
 P 4700 4200
 F 0 "Q3" V 4650 4000 50  0000 L CNN
@@ -1033,7 +941,7 @@ F 3 "" H 4700 4200 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR040
+L optocouplers-rescue:GND #PWR040
 U 1 1 5A3B0738
 P 4900 4100
 F 0 "#PWR040" H 4900 3850 50  0001 C CNN
@@ -1046,7 +954,7 @@ $EndComp
 Text GLabel 5000 4400 2    60   Input ~ 0
 arduino_D7
 $Comp
-L R R3
+L optocouplers-rescue:R R3
 U 1 1 5A3B0741
 P 4850 4400
 F 0 "R3" V 4930 4400 50  0000 C CNN
@@ -1057,7 +965,7 @@ F 3 "" H 4850 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L ITR9608 U_B2
+L optocouplers-rescue:ITR9608 U_B2
 U 1 1 5A3B0747
 P 5250 1600
 F 0 "U_B2" H 5050 1800 50  0000 L CNN
@@ -1068,7 +976,7 @@ F 3 "" H 5250 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B3
+L optocouplers-rescue:ITR9608 U_B3
 U 1 1 5A3B074D
 P 5250 2100
 F 0 "U_B3" H 5050 2300 50  0000 L CNN
@@ -1079,7 +987,7 @@ F 3 "" H 5250 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B4
+L optocouplers-rescue:ITR9608 U_B4
 U 1 1 5A3B0753
 P 5250 2600
 F 0 "U_B4" H 5050 2800 50  0000 L CNN
@@ -1090,7 +998,7 @@ F 3 "" H 5250 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B5
+L optocouplers-rescue:ITR9608 U_B5
 U 1 1 5A3B0759
 P 5250 3100
 F 0 "U_B5" H 5050 3300 50  0000 L CNN
@@ -1101,7 +1009,7 @@ F 3 "" H 5250 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B6
+L optocouplers-rescue:ITR9608 U_B6
 U 1 1 5A3B075F
 P 5250 3600
 F 0 "U_B6" H 5050 3800 50  0000 L CNN
@@ -1112,7 +1020,7 @@ F 3 "" H 5250 3600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR041
+L optocouplers-rescue:GND #PWR041
 U 1 1 5A3B0771
 P 7400 1500
 F 0 "#PWR041" H 7400 1250 50  0001 C CNN
@@ -1125,7 +1033,7 @@ $EndComp
 Text GLabel 7400 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L R R_B8
+L optocouplers-rescue:R R_B8
 U 1 1 5A3B0778
 P 6600 1500
 F 0 "R_B8" V 6680 1500 50  0000 C CNN
@@ -1136,7 +1044,7 @@ F 3 "" H 6600 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR042
+L optocouplers-rescue:+5V #PWR042
 U 1 1 5A3B077E
 P 6450 1500
 F 0 "#PWR042" H 6450 1350 50  0001 C CNN
@@ -1147,7 +1055,7 @@ F 3 "" H 6450 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B7
+L optocouplers-rescue:ITR9608 U_B7
 U 1 1 5A3B0784
 P 7050 1100
 F 0 "U_B7" H 6850 1300 50  0000 L CNN
@@ -1158,7 +1066,7 @@ F 3 "" H 7050 1100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR043
+L optocouplers-rescue:GND #PWR043
 U 1 1 5A3B078A
 P 7400 1000
 F 0 "#PWR043" H 7400 750 50  0001 C CNN
@@ -1171,7 +1079,7 @@ $EndComp
 Text GLabel 7400 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L R R_B7
+L optocouplers-rescue:R R_B7
 U 1 1 5A3B0791
 P 6600 1000
 F 0 "R_B7" V 6680 1000 50  0000 C CNN
@@ -1182,7 +1090,7 @@ F 3 "" H 6600 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR044
+L optocouplers-rescue:+5V #PWR044
 U 1 1 5A3B0797
 P 6450 1000
 F 0 "#PWR044" H 6450 850 50  0001 C CNN
@@ -1197,7 +1105,7 @@ Wire Wire Line
 Wire Wire Line
 	6300 1700 6750 1700
 $Comp
-L GND #PWR045
+L optocouplers-rescue:GND #PWR045
 U 1 1 5A3B079F
 P 7400 2500
 F 0 "#PWR045" H 7400 2250 50  0001 C CNN
@@ -1210,7 +1118,7 @@ $EndComp
 Text GLabel 7400 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L R R_B10
+L optocouplers-rescue:R R_B10
 U 1 1 5A3B07A6
 P 6600 2500
 F 0 "R_B10" V 6680 2500 50  0000 C CNN
@@ -1221,7 +1129,7 @@ F 3 "" H 6600 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR046
+L optocouplers-rescue:+5V #PWR046
 U 1 1 5A3B07AC
 P 6450 2500
 F 0 "#PWR046" H 6450 2350 50  0001 C CNN
@@ -1232,7 +1140,7 @@ F 3 "" H 6450 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR047
+L optocouplers-rescue:GND #PWR047
 U 1 1 5A3B07B2
 P 7400 2000
 F 0 "#PWR047" H 7400 1750 50  0001 C CNN
@@ -1245,7 +1153,7 @@ $EndComp
 Text GLabel 7400 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L R R_B9
+L optocouplers-rescue:R R_B9
 U 1 1 5A3B07B9
 P 6600 2000
 F 0 "R_B9" V 6680 2000 50  0000 C CNN
@@ -1256,7 +1164,7 @@ F 3 "" H 6600 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR048
+L optocouplers-rescue:+5V #PWR048
 U 1 1 5A3B07BF
 P 6450 2000
 F 0 "#PWR048" H 6450 1850 50  0001 C CNN
@@ -1273,7 +1181,7 @@ Wire Wire Line
 Connection ~ 6300 2200
 Connection ~ 6300 1700
 $Comp
-L GND #PWR049
+L optocouplers-rescue:GND #PWR049
 U 1 1 5A3B07C9
 P 7400 3500
 F 0 "#PWR049" H 7400 3250 50  0001 C CNN
@@ -1286,7 +1194,7 @@ $EndComp
 Text GLabel 7400 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L R R_B12
+L optocouplers-rescue:R R_B12
 U 1 1 5A3B07D0
 P 6600 3500
 F 0 "R_B12" V 6680 3500 50  0000 C CNN
@@ -1297,7 +1205,7 @@ F 3 "" H 6600 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR050
+L optocouplers-rescue:+5V #PWR050
 U 1 1 5A3B07D6
 P 6450 3500
 F 0 "#PWR050" H 6450 3350 50  0001 C CNN
@@ -1308,7 +1216,7 @@ F 3 "" H 6450 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR051
+L optocouplers-rescue:GND #PWR051
 U 1 1 5A3B07DC
 P 7400 3000
 F 0 "#PWR051" H 7400 2750 50  0001 C CNN
@@ -1321,7 +1229,7 @@ $EndComp
 Text GLabel 7400 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L R R_B11
+L optocouplers-rescue:R R_B11
 U 1 1 5A3B07E3
 P 6600 3000
 F 0 "R_B11" V 6680 3000 50  0000 C CNN
@@ -1332,7 +1240,7 @@ F 3 "" H 6600 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR052
+L optocouplers-rescue:+5V #PWR052
 U 1 1 5A3B07E9
 P 6450 3000
 F 0 "#PWR052" H 6450 2850 50  0001 C CNN
@@ -1350,7 +1258,7 @@ Connection ~ 6300 3700
 Connection ~ 6300 3200
 Connection ~ 6300 2700
 $Comp
-L PN2222A Q4
+L optocouplers-rescue:PN2222A Q4
 U 1 1 5A3B081D
 P 6500 4200
 F 0 "Q4" V 6450 4000 50  0000 L CNN
@@ -1361,7 +1269,7 @@ F 3 "" H 6500 4200 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR053
+L optocouplers-rescue:GND #PWR053
 U 1 1 5A3B0823
 P 6700 4100
 F 0 "#PWR053" H 6700 3850 50  0001 C CNN
@@ -1374,7 +1282,7 @@ $EndComp
 Text GLabel 6800 4400 2    60   Input ~ 0
 arduino_D8
 $Comp
-L R R4
+L optocouplers-rescue:R R4
 U 1 1 5A3B082C
 P 6650 4400
 F 0 "R4" V 6730 4400 50  0000 C CNN
@@ -1385,7 +1293,7 @@ F 3 "" H 6650 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L ITR9608 U_B8
+L optocouplers-rescue:ITR9608 U_B8
 U 1 1 5A3B0832
 P 7050 1600
 F 0 "U_B8" H 6850 1800 50  0000 L CNN
@@ -1396,7 +1304,7 @@ F 3 "" H 7050 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B9
+L optocouplers-rescue:ITR9608 U_B9
 U 1 1 5A3B0838
 P 7050 2100
 F 0 "U_B9" H 6850 2300 50  0000 L CNN
@@ -1407,7 +1315,7 @@ F 3 "" H 7050 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B10
+L optocouplers-rescue:ITR9608 U_B10
 U 1 1 5A3B083E
 P 7050 2600
 F 0 "U_B10" H 6850 2800 50  0000 L CNN
@@ -1418,7 +1326,7 @@ F 3 "" H 7050 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B11
+L optocouplers-rescue:ITR9608 U_B11
 U 1 1 5A3B0844
 P 7050 3100
 F 0 "U_B11" H 6850 3300 50  0000 L CNN
@@ -1429,7 +1337,7 @@ F 3 "" H 7050 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B12
+L optocouplers-rescue:ITR9608 U_B12
 U 1 1 5A3B084A
 P 7050 3600
 F 0 "U_B12" H 6850 3800 50  0000 L CNN
@@ -1440,7 +1348,7 @@ F 3 "" H 7050 3600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR054
+L optocouplers-rescue:GND #PWR054
 U 1 1 5A3B247C
 P 9200 1500
 F 0 "#PWR054" H 9200 1250 50  0001 C CNN
@@ -1453,7 +1361,7 @@ $EndComp
 Text GLabel 9200 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L R R_C1
+L optocouplers-rescue:R R_C1
 U 1 1 5A3B2483
 P 8400 1500
 F 0 "R_C1" V 8480 1500 50  0000 C CNN
@@ -1464,7 +1372,7 @@ F 3 "" H 8400 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR055
+L optocouplers-rescue:+5V #PWR055
 U 1 1 5A3B2489
 P 8250 1500
 F 0 "#PWR055" H 8250 1350 50  0001 C CNN
@@ -1475,7 +1383,7 @@ F 3 "" H 8250 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C0
+L optocouplers-rescue:ITR9608 U_C0
 U 1 1 5A3B248F
 P 8850 1100
 F 0 "U_C0" H 8650 1300 50  0000 L CNN
@@ -1486,7 +1394,7 @@ F 3 "" H 8850 1100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR056
+L optocouplers-rescue:GND #PWR056
 U 1 1 5A3B2495
 P 9200 1000
 F 0 "#PWR056" H 9200 750 50  0001 C CNN
@@ -1499,7 +1407,7 @@ $EndComp
 Text GLabel 9200 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L R R_C0
+L optocouplers-rescue:R R_C0
 U 1 1 5A3B249C
 P 8400 1000
 F 0 "R_C0" V 8480 1000 50  0000 C CNN
@@ -1510,7 +1418,7 @@ F 3 "" H 8400 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR057
+L optocouplers-rescue:+5V #PWR057
 U 1 1 5A3B24A2
 P 8250 1000
 F 0 "#PWR057" H 8250 850 50  0001 C CNN
@@ -1525,7 +1433,7 @@ Wire Wire Line
 Wire Wire Line
 	8100 1700 8550 1700
 $Comp
-L GND #PWR058
+L optocouplers-rescue:GND #PWR058
 U 1 1 5A3B24AA
 P 9200 2500
 F 0 "#PWR058" H 9200 2250 50  0001 C CNN
@@ -1538,7 +1446,7 @@ $EndComp
 Text GLabel 9200 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L R R_C3
+L optocouplers-rescue:R R_C3
 U 1 1 5A3B24B1
 P 8400 2500
 F 0 "R_C3" V 8480 2500 50  0000 C CNN
@@ -1549,7 +1457,7 @@ F 3 "" H 8400 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR059
+L optocouplers-rescue:+5V #PWR059
 U 1 1 5A3B24B7
 P 8250 2500
 F 0 "#PWR059" H 8250 2350 50  0001 C CNN
@@ -1560,7 +1468,7 @@ F 3 "" H 8250 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR060
+L optocouplers-rescue:GND #PWR060
 U 1 1 5A3B24BD
 P 9200 2000
 F 0 "#PWR060" H 9200 1750 50  0001 C CNN
@@ -1573,7 +1481,7 @@ $EndComp
 Text GLabel 9200 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L R R_C2
+L optocouplers-rescue:R R_C2
 U 1 1 5A3B24C4
 P 8400 2000
 F 0 "R_C2" V 8480 2000 50  0000 C CNN
@@ -1584,7 +1492,7 @@ F 3 "" H 8400 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR061
+L optocouplers-rescue:+5V #PWR061
 U 1 1 5A3B24CA
 P 8250 2000
 F 0 "#PWR061" H 8250 1850 50  0001 C CNN
@@ -1601,7 +1509,7 @@ Wire Wire Line
 Connection ~ 8100 2200
 Connection ~ 8100 1700
 $Comp
-L GND #PWR062
+L optocouplers-rescue:GND #PWR062
 U 1 1 5A3B24D4
 P 9200 3500
 F 0 "#PWR062" H 9200 3250 50  0001 C CNN
@@ -1614,7 +1522,7 @@ $EndComp
 Text GLabel 9200 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L R R_C5
+L optocouplers-rescue:R R_C5
 U 1 1 5A3B24DB
 P 8400 3500
 F 0 "R_C5" V 8480 3500 50  0000 C CNN
@@ -1625,7 +1533,7 @@ F 3 "" H 8400 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR063
+L optocouplers-rescue:+5V #PWR063
 U 1 1 5A3B24E1
 P 8250 3500
 F 0 "#PWR063" H 8250 3350 50  0001 C CNN
@@ -1636,7 +1544,7 @@ F 3 "" H 8250 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR064
+L optocouplers-rescue:GND #PWR064
 U 1 1 5A3B24E7
 P 9200 3000
 F 0 "#PWR064" H 9200 2750 50  0001 C CNN
@@ -1649,7 +1557,7 @@ $EndComp
 Text GLabel 9200 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L R R_C4
+L optocouplers-rescue:R R_C4
 U 1 1 5A3B24EE
 P 8400 3000
 F 0 "R_C4" V 8480 3000 50  0000 C CNN
@@ -1660,7 +1568,7 @@ F 3 "" H 8400 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR065
+L optocouplers-rescue:+5V #PWR065
 U 1 1 5A3B24F4
 P 8250 3000
 F 0 "#PWR065" H 8250 2850 50  0001 C CNN
@@ -1678,7 +1586,7 @@ Connection ~ 8100 3700
 Connection ~ 8100 3200
 Connection ~ 8100 2700
 $Comp
-L PN2222A Q5
+L optocouplers-rescue:PN2222A Q5
 U 1 1 5A3B2528
 P 8300 4200
 F 0 "Q5" V 8250 4000 50  0000 L CNN
@@ -1689,7 +1597,7 @@ F 3 "" H 8300 4200 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR066
+L optocouplers-rescue:GND #PWR066
 U 1 1 5A3B252E
 P 8500 4100
 F 0 "#PWR066" H 8500 3850 50  0001 C CNN
@@ -1702,7 +1610,7 @@ $EndComp
 Text GLabel 8600 4400 2    60   Input ~ 0
 arduino_D9
 $Comp
-L R R5
+L optocouplers-rescue:R R5
 U 1 1 5A3B2537
 P 8450 4400
 F 0 "R5" V 8530 4400 50  0000 C CNN
@@ -1713,7 +1621,7 @@ F 3 "" H 8450 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L ITR9608 U_C1
+L optocouplers-rescue:ITR9608 U_C1
 U 1 1 5A3B253D
 P 8850 1600
 F 0 "U_C1" H 8650 1800 50  0000 L CNN
@@ -1724,7 +1632,7 @@ F 3 "" H 8850 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C2
+L optocouplers-rescue:ITR9608 U_C2
 U 1 1 5A3B2543
 P 8850 2100
 F 0 "U_C2" H 8650 2300 50  0000 L CNN
@@ -1735,7 +1643,7 @@ F 3 "" H 8850 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C3
+L optocouplers-rescue:ITR9608 U_C3
 U 1 1 5A3B2549
 P 8850 2600
 F 0 "U_C3" H 8650 2800 50  0000 L CNN
@@ -1746,7 +1654,7 @@ F 3 "" H 8850 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C4
+L optocouplers-rescue:ITR9608 U_C4
 U 1 1 5A3B254F
 P 8850 3100
 F 0 "U_C4" H 8650 3300 50  0000 L CNN
@@ -1757,7 +1665,7 @@ F 3 "" H 8850 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C5
+L optocouplers-rescue:ITR9608 U_C5
 U 1 1 5A3B2555
 P 8850 3600
 F 0 "U_C5" H 8650 3800 50  0000 L CNN
@@ -1768,7 +1676,7 @@ F 3 "" H 8850 3600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR067
+L optocouplers-rescue:GND #PWR067
 U 1 1 5A3B2567
 P 11000 1500
 F 0 "#PWR067" H 11000 1250 50  0001 C CNN
@@ -1781,7 +1689,7 @@ $EndComp
 Text GLabel 11000 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L R R_C7
+L optocouplers-rescue:R R_C7
 U 1 1 5A3B256E
 P 10200 1500
 F 0 "R_C7" V 10280 1500 50  0000 C CNN
@@ -1792,7 +1700,7 @@ F 3 "" H 10200 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR068
+L optocouplers-rescue:+5V #PWR068
 U 1 1 5A3B2574
 P 10050 1500
 F 0 "#PWR068" H 10050 1350 50  0001 C CNN
@@ -1803,7 +1711,7 @@ F 3 "" H 10050 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C6
+L optocouplers-rescue:ITR9608 U_C6
 U 1 1 5A3B257A
 P 10650 1100
 F 0 "U_C6" H 10450 1300 50  0000 L CNN
@@ -1814,7 +1722,7 @@ F 3 "" H 10650 1100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR069
+L optocouplers-rescue:GND #PWR069
 U 1 1 5A3B2580
 P 11000 1000
 F 0 "#PWR069" H 11000 750 50  0001 C CNN
@@ -1827,7 +1735,7 @@ $EndComp
 Text GLabel 11000 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L R R_C6
+L optocouplers-rescue:R R_C6
 U 1 1 5A3B2587
 P 10200 1000
 F 0 "R_C6" V 10280 1000 50  0000 C CNN
@@ -1838,7 +1746,7 @@ F 3 "" H 10200 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR070
+L optocouplers-rescue:+5V #PWR070
 U 1 1 5A3B258D
 P 10050 1000
 F 0 "#PWR070" H 10050 850 50  0001 C CNN
@@ -1853,7 +1761,7 @@ Wire Wire Line
 Wire Wire Line
 	9900 1700 10350 1700
 $Comp
-L GND #PWR071
+L optocouplers-rescue:GND #PWR071
 U 1 1 5A3B2595
 P 11000 2500
 F 0 "#PWR071" H 11000 2250 50  0001 C CNN
@@ -1866,7 +1774,7 @@ $EndComp
 Text GLabel 11000 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L R R_C9
+L optocouplers-rescue:R R_C9
 U 1 1 5A3B259C
 P 10200 2500
 F 0 "R_C9" V 10280 2500 50  0000 C CNN
@@ -1877,7 +1785,7 @@ F 3 "" H 10200 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR072
+L optocouplers-rescue:+5V #PWR072
 U 1 1 5A3B25A2
 P 10050 2500
 F 0 "#PWR072" H 10050 2350 50  0001 C CNN
@@ -1888,7 +1796,7 @@ F 3 "" H 10050 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR073
+L optocouplers-rescue:GND #PWR073
 U 1 1 5A3B25A8
 P 11000 2000
 F 0 "#PWR073" H 11000 1750 50  0001 C CNN
@@ -1901,7 +1809,7 @@ $EndComp
 Text GLabel 11000 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L R R_C8
+L optocouplers-rescue:R R_C8
 U 1 1 5A3B25AF
 P 10200 2000
 F 0 "R_C8" V 10280 2000 50  0000 C CNN
@@ -1912,7 +1820,7 @@ F 3 "" H 10200 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR074
+L optocouplers-rescue:+5V #PWR074
 U 1 1 5A3B25B5
 P 10050 2000
 F 0 "#PWR074" H 10050 1850 50  0001 C CNN
@@ -1929,7 +1837,7 @@ Wire Wire Line
 Connection ~ 9900 2200
 Connection ~ 9900 1700
 $Comp
-L GND #PWR075
+L optocouplers-rescue:GND #PWR075
 U 1 1 5A3B25BF
 P 11000 3500
 F 0 "#PWR075" H 11000 3250 50  0001 C CNN
@@ -1942,7 +1850,7 @@ $EndComp
 Text GLabel 11000 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L R R_C11
+L optocouplers-rescue:R R_C11
 U 1 1 5A3B25C6
 P 10200 3500
 F 0 "R_C11" V 10280 3500 50  0000 C CNN
@@ -1953,7 +1861,7 @@ F 3 "" H 10200 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR076
+L optocouplers-rescue:+5V #PWR076
 U 1 1 5A3B25CC
 P 10050 3500
 F 0 "#PWR076" H 10050 3350 50  0001 C CNN
@@ -1964,7 +1872,7 @@ F 3 "" H 10050 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR077
+L optocouplers-rescue:GND #PWR077
 U 1 1 5A3B25D2
 P 11000 3000
 F 0 "#PWR077" H 11000 2750 50  0001 C CNN
@@ -1977,7 +1885,7 @@ $EndComp
 Text GLabel 11000 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L R R_C10
+L optocouplers-rescue:R R_C10
 U 1 1 5A3B25D9
 P 10200 3000
 F 0 "R_C10" V 10280 3000 50  0000 C CNN
@@ -1988,7 +1896,7 @@ F 3 "" H 10200 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR078
+L optocouplers-rescue:+5V #PWR078
 U 1 1 5A3B25DF
 P 10050 3000
 F 0 "#PWR078" H 10050 2850 50  0001 C CNN
@@ -2006,7 +1914,7 @@ Connection ~ 9900 3700
 Connection ~ 9900 3200
 Connection ~ 9900 2700
 $Comp
-L PN2222A Q6
+L optocouplers-rescue:PN2222A Q6
 U 1 1 5A3B2613
 P 10100 4200
 F 0 "Q6" V 10050 4000 50  0000 L CNN
@@ -2017,7 +1925,7 @@ F 3 "" H 10100 4200 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR079
+L optocouplers-rescue:GND #PWR079
 U 1 1 5A3B2619
 P 10300 4100
 F 0 "#PWR079" H 10300 3850 50  0001 C CNN
@@ -2030,7 +1938,7 @@ $EndComp
 Text GLabel 10400 4400 2    60   Input ~ 0
 arduino_D10
 $Comp
-L R R6
+L optocouplers-rescue:R R6
 U 1 1 5A3B2622
 P 10250 4400
 F 0 "R6" V 10330 4400 50  0000 C CNN
@@ -2041,7 +1949,7 @@ F 3 "" H 10250 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L ITR9608 U_C7
+L optocouplers-rescue:ITR9608 U_C7
 U 1 1 5A3B2628
 P 10650 1600
 F 0 "U_C7" H 10450 1800 50  0000 L CNN
@@ -2052,7 +1960,7 @@ F 3 "" H 10650 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C8
+L optocouplers-rescue:ITR9608 U_C8
 U 1 1 5A3B262E
 P 10650 2100
 F 0 "U_C8" H 10450 2300 50  0000 L CNN
@@ -2063,7 +1971,7 @@ F 3 "" H 10650 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C9
+L optocouplers-rescue:ITR9608 U_C9
 U 1 1 5A3B2634
 P 10650 2600
 F 0 "U_C9" H 10450 2800 50  0000 L CNN
@@ -2074,7 +1982,7 @@ F 3 "" H 10650 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C10
+L optocouplers-rescue:ITR9608 U_C10
 U 1 1 5A3B263A
 P 10650 3100
 F 0 "U_C10" H 10450 3300 50  0000 L CNN
@@ -2085,7 +1993,7 @@ F 3 "" H 10650 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_C11
+L optocouplers-rescue:ITR9608 U_C11
 U 1 1 5A3B2640
 P 10650 3600
 F 0 "U_C11" H 10450 3800 50  0000 L CNN
@@ -2096,7 +2004,7 @@ F 3 "" H 10650 3600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR080
+L optocouplers-rescue:GND #PWR080
 U 1 1 5A3B2652
 P 12800 1500
 F 0 "#PWR080" H 12800 1250 50  0001 C CNN
@@ -2109,7 +2017,7 @@ $EndComp
 Text GLabel 12800 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L R R_D0
+L optocouplers-rescue:R R_D0
 U 1 1 5A3B2659
 P 12000 1500
 F 0 "R_D0" V 12080 1500 50  0000 C CNN
@@ -2120,7 +2028,7 @@ F 3 "" H 12000 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR081
+L optocouplers-rescue:+5V #PWR081
 U 1 1 5A3B265F
 P 11850 1500
 F 0 "#PWR081" H 11850 1350 50  0001 C CNN
@@ -2131,7 +2039,7 @@ F 3 "" H 11850 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_B0
+L optocouplers-rescue:ITR9608 U_B0
 U 1 1 5A3B2665
 P 12450 1100
 F 0 "U_B0" H 12250 1300 50  0000 L CNN
@@ -2142,7 +2050,7 @@ F 3 "" H 12450 1100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR082
+L optocouplers-rescue:GND #PWR082
 U 1 1 5A3B266B
 P 12800 1000
 F 0 "#PWR082" H 12800 750 50  0001 C CNN
@@ -2155,7 +2063,7 @@ $EndComp
 Text GLabel 12800 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L R R_B0
+L optocouplers-rescue:R R_B0
 U 1 1 5A3B2672
 P 12000 1000
 F 0 "R_B0" V 12080 1000 50  0000 C CNN
@@ -2166,7 +2074,7 @@ F 3 "" H 12000 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR083
+L optocouplers-rescue:+5V #PWR083
 U 1 1 5A3B2678
 P 11850 1000
 F 0 "#PWR083" H 11850 850 50  0001 C CNN
@@ -2181,7 +2089,7 @@ Wire Wire Line
 Wire Wire Line
 	11700 1700 12150 1700
 $Comp
-L GND #PWR084
+L optocouplers-rescue:GND #PWR084
 U 1 1 5A3B2680
 P 12800 2500
 F 0 "#PWR084" H 12800 2250 50  0001 C CNN
@@ -2194,7 +2102,7 @@ $EndComp
 Text GLabel 12800 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L R R_D2
+L optocouplers-rescue:R R_D2
 U 1 1 5A3B2687
 P 12000 2500
 F 0 "R_D2" V 12080 2500 50  0000 C CNN
@@ -2205,7 +2113,7 @@ F 3 "" H 12000 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR085
+L optocouplers-rescue:+5V #PWR085
 U 1 1 5A3B268D
 P 11850 2500
 F 0 "#PWR085" H 11850 2350 50  0001 C CNN
@@ -2216,7 +2124,7 @@ F 3 "" H 11850 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR086
+L optocouplers-rescue:GND #PWR086
 U 1 1 5A3B2693
 P 12800 2000
 F 0 "#PWR086" H 12800 1750 50  0001 C CNN
@@ -2229,7 +2137,7 @@ $EndComp
 Text GLabel 12800 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L R R_D1
+L optocouplers-rescue:R R_D1
 U 1 1 5A3B269A
 P 12000 2000
 F 0 "R_D1" V 12080 2000 50  0000 C CNN
@@ -2240,7 +2148,7 @@ F 3 "" H 12000 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR087
+L optocouplers-rescue:+5V #PWR087
 U 1 1 5A3B26A0
 P 11850 2000
 F 0 "#PWR087" H 11850 1850 50  0001 C CNN
@@ -2257,7 +2165,7 @@ Wire Wire Line
 Connection ~ 11700 2200
 Connection ~ 11700 1700
 $Comp
-L GND #PWR088
+L optocouplers-rescue:GND #PWR088
 U 1 1 5A3B26AA
 P 12800 3500
 F 0 "#PWR088" H 12800 3250 50  0001 C CNN
@@ -2270,7 +2178,7 @@ $EndComp
 Text GLabel 12800 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L R R_D4
+L optocouplers-rescue:R R_D4
 U 1 1 5A3B26B1
 P 12000 3500
 F 0 "R_D4" V 12080 3500 50  0000 C CNN
@@ -2281,7 +2189,7 @@ F 3 "" H 12000 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR089
+L optocouplers-rescue:+5V #PWR089
 U 1 1 5A3B26B7
 P 11850 3500
 F 0 "#PWR089" H 11850 3350 50  0001 C CNN
@@ -2292,7 +2200,7 @@ F 3 "" H 11850 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR090
+L optocouplers-rescue:GND #PWR090
 U 1 1 5A3B26BD
 P 12800 3000
 F 0 "#PWR090" H 12800 2750 50  0001 C CNN
@@ -2305,7 +2213,7 @@ $EndComp
 Text GLabel 12800 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L R R_D3
+L optocouplers-rescue:R R_D3
 U 1 1 5A3B26C4
 P 12000 3000
 F 0 "R_D3" V 12080 3000 50  0000 C CNN
@@ -2316,7 +2224,7 @@ F 3 "" H 12000 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR091
+L optocouplers-rescue:+5V #PWR091
 U 1 1 5A3B26CA
 P 11850 3000
 F 0 "#PWR091" H 11850 2850 50  0001 C CNN
@@ -2334,7 +2242,7 @@ Connection ~ 11700 3700
 Connection ~ 11700 3200
 Connection ~ 11700 2700
 $Comp
-L PN2222A Q7
+L optocouplers-rescue:PN2222A Q7
 U 1 1 5A3B26FE
 P 11900 4200
 F 0 "Q7" V 11850 4000 50  0000 L CNN
@@ -2345,7 +2253,7 @@ F 3 "" H 11900 4200 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR092
+L optocouplers-rescue:GND #PWR092
 U 1 1 5A3B2704
 P 12100 4100
 F 0 "#PWR092" H 12100 3850 50  0001 C CNN
@@ -2358,7 +2266,7 @@ $EndComp
 Text GLabel 12200 4400 2    60   Input ~ 0
 arduino_D11
 $Comp
-L R R7
+L optocouplers-rescue:R R7
 U 1 1 5A3B270D
 P 12050 4400
 F 0 "R7" V 12130 4400 50  0000 C CNN
@@ -2369,7 +2277,7 @@ F 3 "" H 12050 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L ITR9608 U_D0
+L optocouplers-rescue:ITR9608 U_D0
 U 1 1 5A3B2713
 P 12450 1600
 F 0 "U_D0" H 12250 1800 50  0000 L CNN
@@ -2380,7 +2288,7 @@ F 3 "" H 12450 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_D1
+L optocouplers-rescue:ITR9608 U_D1
 U 1 1 5A3B2719
 P 12450 2100
 F 0 "U_D1" H 12250 2300 50  0000 L CNN
@@ -2391,7 +2299,7 @@ F 3 "" H 12450 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_D2
+L optocouplers-rescue:ITR9608 U_D2
 U 1 1 5A3B271F
 P 12450 2600
 F 0 "U_D2" H 12250 2800 50  0000 L CNN
@@ -2402,7 +2310,7 @@ F 3 "" H 12450 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_D3
+L optocouplers-rescue:ITR9608 U_D3
 U 1 1 5A3B2725
 P 12450 3100
 F 0 "U_D3" H 12250 3300 50  0000 L CNN
@@ -2413,7 +2321,7 @@ F 3 "" H 12450 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_D4
+L optocouplers-rescue:ITR9608 U_D4
 U 1 1 5A3B272B
 P 12450 3600
 F 0 "U_D4" H 12250 3800 50  0000 L CNN
@@ -2424,7 +2332,7 @@ F 3 "" H 12450 3600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR093
+L optocouplers-rescue:GND #PWR093
 U 1 1 5A3B273D
 P 14600 1500
 F 0 "#PWR093" H 14600 1250 50  0001 C CNN
@@ -2437,7 +2345,7 @@ $EndComp
 Text GLabel 14600 1700 2    60   Input ~ 0
 arduino_A1
 $Comp
-L R R_D6
+L optocouplers-rescue:R R_D6
 U 1 1 5A3B2744
 P 13800 1500
 F 0 "R_D6" V 13880 1500 50  0000 C CNN
@@ -2448,7 +2356,7 @@ F 3 "" H 13800 1500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR094
+L optocouplers-rescue:+5V #PWR094
 U 1 1 5A3B274A
 P 13650 1500
 F 0 "#PWR094" H 13650 1350 50  0001 C CNN
@@ -2459,7 +2367,7 @@ F 3 "" H 13650 1500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_D5
+L optocouplers-rescue:ITR9608 U_D5
 U 1 1 5A3B2750
 P 14250 1100
 F 0 "U_D5" H 14050 1300 50  0000 L CNN
@@ -2470,7 +2378,7 @@ F 3 "" H 14250 1100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR095
+L optocouplers-rescue:GND #PWR095
 U 1 1 5A3B2756
 P 14600 1000
 F 0 "#PWR095" H 14600 750 50  0001 C CNN
@@ -2483,7 +2391,7 @@ $EndComp
 Text GLabel 14600 1200 2    60   Input ~ 0
 arduino_A0
 $Comp
-L R R_D5
+L optocouplers-rescue:R R_D5
 U 1 1 5A3B275D
 P 13800 1000
 F 0 "R_D5" V 13880 1000 50  0000 C CNN
@@ -2494,7 +2402,7 @@ F 3 "" H 13800 1000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR096
+L optocouplers-rescue:+5V #PWR096
 U 1 1 5A3B2763
 P 13650 1000
 F 0 "#PWR096" H 13650 850 50  0001 C CNN
@@ -2509,7 +2417,7 @@ Wire Wire Line
 Wire Wire Line
 	13500 1700 13950 1700
 $Comp
-L GND #PWR097
+L optocouplers-rescue:GND #PWR097
 U 1 1 5A3B276B
 P 14600 2500
 F 0 "#PWR097" H 14600 2250 50  0001 C CNN
@@ -2522,7 +2430,7 @@ $EndComp
 Text GLabel 14600 2700 2    60   Input ~ 0
 arduino_A3
 $Comp
-L R R_D8
+L optocouplers-rescue:R R_D8
 U 1 1 5A3B2772
 P 13800 2500
 F 0 "R_D8" V 13880 2500 50  0000 C CNN
@@ -2533,7 +2441,7 @@ F 3 "" H 13800 2500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR098
+L optocouplers-rescue:+5V #PWR098
 U 1 1 5A3B2778
 P 13650 2500
 F 0 "#PWR098" H 13650 2350 50  0001 C CNN
@@ -2544,7 +2452,7 @@ F 3 "" H 13650 2500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR099
+L optocouplers-rescue:GND #PWR099
 U 1 1 5A3B277E
 P 14600 2000
 F 0 "#PWR099" H 14600 1750 50  0001 C CNN
@@ -2557,7 +2465,7 @@ $EndComp
 Text GLabel 14600 2200 2    60   Input ~ 0
 arduino_A2
 $Comp
-L R R_D7
+L optocouplers-rescue:R R_D7
 U 1 1 5A3B2785
 P 13800 2000
 F 0 "R_D7" V 13880 2000 50  0000 C CNN
@@ -2568,7 +2476,7 @@ F 3 "" H 13800 2000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR0100
+L optocouplers-rescue:+5V #PWR0100
 U 1 1 5A3B278B
 P 13650 2000
 F 0 "#PWR0100" H 13650 1850 50  0001 C CNN
@@ -2585,7 +2493,7 @@ Wire Wire Line
 Connection ~ 13500 2200
 Connection ~ 13500 1700
 $Comp
-L GND #PWR0101
+L optocouplers-rescue:GND #PWR0101
 U 1 1 5A3B2795
 P 14600 3500
 F 0 "#PWR0101" H 14600 3250 50  0001 C CNN
@@ -2598,7 +2506,7 @@ $EndComp
 Text GLabel 14600 3700 2    60   Input ~ 0
 arduino_A5
 $Comp
-L R R_D10
+L optocouplers-rescue:R R_D10
 U 1 1 5A3B279C
 P 13800 3500
 F 0 "R_D10" V 13880 3500 50  0000 C CNN
@@ -2609,7 +2517,7 @@ F 3 "" H 13800 3500 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR0102
+L optocouplers-rescue:+5V #PWR0102
 U 1 1 5A3B27A2
 P 13650 3500
 F 0 "#PWR0102" H 13650 3350 50  0001 C CNN
@@ -2620,7 +2528,7 @@ F 3 "" H 13650 3500 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L GND #PWR0103
+L optocouplers-rescue:GND #PWR0103
 U 1 1 5A3B27A8
 P 14600 3000
 F 0 "#PWR0103" H 14600 2750 50  0001 C CNN
@@ -2633,7 +2541,7 @@ $EndComp
 Text GLabel 14600 3200 2    60   Input ~ 0
 arduino_A4
 $Comp
-L R R_D9
+L optocouplers-rescue:R R_D9
 U 1 1 5A3B27AF
 P 13800 3000
 F 0 "R_D9" V 13880 3000 50  0000 C CNN
@@ -2644,7 +2552,7 @@ F 3 "" H 13800 3000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR0104
+L optocouplers-rescue:+5V #PWR0104
 U 1 1 5A3B27B5
 P 13650 3000
 F 0 "#PWR0104" H 13650 2850 50  0001 C CNN
@@ -2662,7 +2570,7 @@ Connection ~ 13500 3700
 Connection ~ 13500 3200
 Connection ~ 13500 2700
 $Comp
-L PN2222A Q8
+L optocouplers-rescue:PN2222A Q8
 U 1 1 5A3B27E9
 P 13700 4200
 F 0 "Q8" V 13650 4000 50  0000 L CNN
@@ -2673,7 +2581,7 @@ F 3 "" H 13700 4200 50  0001 L CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR0105
+L optocouplers-rescue:GND #PWR0105
 U 1 1 5A3B27EF
 P 13900 4100
 F 0 "#PWR0105" H 13900 3850 50  0001 C CNN
@@ -2686,7 +2594,7 @@ $EndComp
 Text GLabel 14000 4400 2    60   Input ~ 0
 arduino_D12
 $Comp
-L R R8
+L optocouplers-rescue:R R8
 U 1 1 5A3B27F8
 P 13850 4400
 F 0 "R8" V 13930 4400 50  0000 C CNN
@@ -2697,7 +2605,7 @@ F 3 "" H 13850 4400 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L ITR9608 U_D6
+L optocouplers-rescue:ITR9608 U_D6
 U 1 1 5A3B27FE
 P 14250 1600
 F 0 "U_D6" H 14050 1800 50  0000 L CNN
@@ -2708,7 +2616,7 @@ F 3 "" H 14250 1600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_D7
+L optocouplers-rescue:ITR9608 U_D7
 U 1 1 5A3B2804
 P 14250 2100
 F 0 "U_D7" H 14050 2300 50  0000 L CNN
@@ -2719,7 +2627,7 @@ F 3 "" H 14250 2100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_D8
+L optocouplers-rescue:ITR9608 U_D8
 U 1 1 5A3B280A
 P 14250 2600
 F 0 "U_D8" H 14050 2800 50  0000 L CNN
@@ -2730,7 +2638,7 @@ F 3 "" H 14250 2600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_D9
+L optocouplers-rescue:ITR9608 U_D9
 U 1 1 5A3B2810
 P 14250 3100
 F 0 "U_D9" H 14050 3300 50  0000 L CNN
@@ -2741,7 +2649,7 @@ F 3 "" H 14250 3100 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L ITR9608 U_D10
+L optocouplers-rescue:ITR9608 U_D10
 U 1 1 5A3B2816
 P 14250 3600
 F 0 "U_D10" H 14050 3800 50  0000 L CNN
@@ -2752,24 +2660,24 @@ F 3 "" H 14250 3600 50  0001 L CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	900  1200 900  4100
+	900  1200 900  1700
 Connection ~ 900  1700
 Wire Wire Line
-	2700 1200 2700 4100
+	2700 1200 2700 1700
 Wire Wire Line
-	4500 1200 4500 4100
+	4500 1200 4500 1700
 Wire Wire Line
-	6300 1200 6300 4100
+	6300 1200 6300 1700
 Wire Wire Line
-	8100 1200 8100 4100
+	8100 1200 8100 1700
 Wire Wire Line
-	9900 1200 9900 4100
+	9900 1200 9900 1700
 Wire Wire Line
-	11700 1200 11700 4100
+	11700 1200 11700 1700
 Wire Wire Line
-	13500 1200 13500 4100
+	13500 1200 13500 1700
 $Comp
-L GND #PWR0106
+L optocouplers-rescue:GND #PWR0106
 U 1 1 5A3D7676
 P 1400 5150
 F 0 "#PWR0106" H 1400 4900 50  0001 C CNN
@@ -2780,7 +2688,7 @@ F 3 "" H 1400 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L PWR_FLAG #FLG01
+L optocouplers-rescue:PWR_FLAG #FLG01
 U 1 1 5A3D7969
 P 1400 5150
 F 0 "#FLG01" H 1400 5225 50  0001 C CNN
@@ -2791,18 +2699,18 @@ F 3 "" H 1400 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Conn_02x13_Top_Bottom J1
+L optocouplers-rescue:Conn_02x13_Top_Bottom J1
 U 1 1 5A4545DE
 P 2900 5600
 F 0 "J1" H 2950 6417 50  0000 C CNN
 F 1 "Conn_02x13_Top_Bottom" H 2950 6326 50  0000 C CNN
-F 2 "" H 2900 5600 50  0001 C CNN
+F 2 "Connectors_Multicomp:Multicomp_MC9A12-2634_2x13x2.54mm_Straight" H 2900 5600 50  0001 C CNN
 F 3 "~" H 2900 5600 50  0001 C CNN
 	1    2900 5600
 	1    0    0    -1  
 $EndComp
 $Comp
-L +5V #PWR0107
+L optocouplers-rescue:+5V #PWR0107
 U 1 1 5A455418
 P 3200 5000
 F 0 "#PWR0107" H 3200 4850 50  0001 C CNN
@@ -2813,7 +2721,7 @@ F 3 "" H 3200 5000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L +5V #PWR0108
+L optocouplers-rescue:+5V #PWR0108
 U 1 1 5A4565E9
 P 2700 5000
 F 0 "#PWR0108" H 2700 4850 50  0001 C CNN
@@ -2824,7 +2732,7 @@ F 3 "" H 2700 5000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR0109
+L optocouplers-rescue:GND #PWR0109
 U 1 1 5A4568BF
 P 3200 5100
 F 0 "#PWR0109" H 3200 4850 50  0001 C CNN
@@ -2835,7 +2743,7 @@ F 3 "" H 3200 5100 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GND #PWR0110
+L optocouplers-rescue:GND #PWR0110
 U 1 1 5A456B8E
 P 2700 5100
 F 0 "#PWR0110" H 2700 4850 50  0001 C CNN
@@ -2881,4 +2789,84 @@ NoConn ~ 3200 6100
 NoConn ~ 3200 6000
 NoConn ~ 3200 5300
 NoConn ~ 3200 5200
+Wire Wire Line
+	900  2200 900  2700
+Wire Wire Line
+	900  3700 900  4100
+Wire Wire Line
+	900  3200 900  3700
+Wire Wire Line
+	900  2700 900  3200
+Wire Wire Line
+	2700 2200 2700 2700
+Wire Wire Line
+	2700 1700 2700 2200
+Wire Wire Line
+	2700 3700 2700 4100
+Wire Wire Line
+	2700 3200 2700 3700
+Wire Wire Line
+	2700 2700 2700 3200
+Wire Wire Line
+	4500 2200 4500 2700
+Wire Wire Line
+	4500 1700 4500 2200
+Wire Wire Line
+	4500 3700 4500 4100
+Wire Wire Line
+	4500 3200 4500 3700
+Wire Wire Line
+	4500 2700 4500 3200
+Wire Wire Line
+	6300 2200 6300 2700
+Wire Wire Line
+	6300 1700 6300 2200
+Wire Wire Line
+	6300 3700 6300 4100
+Wire Wire Line
+	6300 3200 6300 3700
+Wire Wire Line
+	6300 2700 6300 3200
+Wire Wire Line
+	8100 2200 8100 2700
+Wire Wire Line
+	8100 1700 8100 2200
+Wire Wire Line
+	8100 3700 8100 4100
+Wire Wire Line
+	8100 3200 8100 3700
+Wire Wire Line
+	8100 2700 8100 3200
+Wire Wire Line
+	9900 2200 9900 2700
+Wire Wire Line
+	9900 1700 9900 2200
+Wire Wire Line
+	9900 3700 9900 4100
+Wire Wire Line
+	9900 3200 9900 3700
+Wire Wire Line
+	9900 2700 9900 3200
+Wire Wire Line
+	11700 2200 11700 2700
+Wire Wire Line
+	11700 1700 11700 2200
+Wire Wire Line
+	11700 3700 11700 4100
+Wire Wire Line
+	11700 3200 11700 3700
+Wire Wire Line
+	11700 2700 11700 3200
+Wire Wire Line
+	13500 2200 13500 2700
+Wire Wire Line
+	13500 1700 13500 2200
+Wire Wire Line
+	13500 3700 13500 4100
+Wire Wire Line
+	13500 3200 13500 3700
+Wire Wire Line
+	13500 2700 13500 3200
+Wire Wire Line
+	900  1700 900  2200
 $EndSCHEMATC
