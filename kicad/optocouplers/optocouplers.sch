@@ -2699,17 +2699,6 @@ F 3 "" H 1400 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L optocouplers-rescue:Conn_02x13_Top_Bottom J1
-U 1 1 5A4545DE
-P 2900 5600
-F 0 "J1" H 2950 6417 50  0000 C CNN
-F 1 "Conn_02x13_Top_Bottom" H 2950 6326 50  0000 C CNN
-F 2 "Connectors_Multicomp:Multicomp_MC9A12-2634_2x13x2.54mm_Straight" H 2900 5600 50  0001 C CNN
-F 3 "~" H 2900 5600 50  0001 C CNN
-	1    2900 5600
-	1    0    0    -1  
-$EndComp
-$Comp
 L optocouplers-rescue:+5V #PWR0107
 U 1 1 5A455418
 P 3200 5000
@@ -2734,61 +2723,55 @@ $EndComp
 $Comp
 L optocouplers-rescue:GND #PWR0109
 U 1 1 5A4568BF
-P 3200 5100
-F 0 "#PWR0109" H 3200 4850 50  0001 C CNN
-F 1 "GND" V 3205 4972 50  0000 R CNN
-F 2 "" H 3200 5100 50  0001 C CNN
-F 3 "" H 3200 5100 50  0001 C CNN
-	1    3200 5100
+P 3200 6200
+F 0 "#PWR0109" H 3200 5950 50  0001 C CNN
+F 1 "GND" V 3205 6072 50  0000 R CNN
+F 2 "" H 3200 6200 50  0001 C CNN
+F 3 "" H 3200 6200 50  0001 C CNN
+	1    3200 6200
 	0    -1   -1   0   
 $EndComp
 $Comp
 L optocouplers-rescue:GND #PWR0110
 U 1 1 5A456B8E
-P 2700 5100
-F 0 "#PWR0110" H 2700 4850 50  0001 C CNN
-F 1 "GND" V 2705 4972 50  0000 R CNN
-F 2 "" H 2700 5100 50  0001 C CNN
-F 3 "" H 2700 5100 50  0001 C CNN
-	1    2700 5100
+P 2700 6200
+F 0 "#PWR0110" H 2700 5950 50  0001 C CNN
+F 1 "GND" V 2705 6072 50  0000 R CNN
+F 2 "" H 2700 6200 50  0001 C CNN
+F 3 "" H 2700 6200 50  0001 C CNN
+	1    2700 6200
 	0    1    1    0   
 $EndComp
-Text GLabel 2700 6200 0    60   Input ~ 0
-arduino_D12
-Text GLabel 2700 6100 0    60   Input ~ 0
-arduino_D11
-Text GLabel 2700 6000 0    60   Input ~ 0
-arduino_D10
-Text GLabel 2700 5900 0    60   Input ~ 0
-arduino_D9
 Text GLabel 2700 5800 0    60   Input ~ 0
-arduino_D8
+arduino_D12
 Text GLabel 2700 5700 0    60   Input ~ 0
-arduino_D7
+arduino_D11
 Text GLabel 2700 5600 0    60   Input ~ 0
-arduino_D6
+arduino_D10
 Text GLabel 2700 5500 0    60   Input ~ 0
+arduino_D9
+Text GLabel 2700 5400 0    60   Input ~ 0
+arduino_D8
+Text GLabel 2700 5300 0    60   Input ~ 0
+arduino_D7
+Text GLabel 2700 5200 0    60   Input ~ 0
+arduino_D6
+Text GLabel 2700 5100 0    60   Input ~ 0
 arduino_D5
-NoConn ~ 2700 5400
-NoConn ~ 2700 5300
-NoConn ~ 2700 5200
-Text GLabel 3200 5400 2    60   Input ~ 0
+Text GLabel 3200 5100 2    60   Input ~ 0
 arduino_A5
-Text GLabel 3200 5500 2    60   Input ~ 0
+Text GLabel 3200 5200 2    60   Input ~ 0
 arduino_A4
-Text GLabel 3200 5600 2    60   Input ~ 0
+Text GLabel 3200 5300 2    60   Input ~ 0
 arduino_A3
-Text GLabel 3200 5700 2    60   Input ~ 0
+Text GLabel 3200 5400 2    60   Input ~ 0
 arduino_A2
-Text GLabel 3200 5800 2    60   Input ~ 0
+Text GLabel 3200 5500 2    60   Input ~ 0
 arduino_A1
-Text GLabel 3200 5900 2    60   Input ~ 0
+Text GLabel 3200 5600 2    60   Input ~ 0
 arduino_A0
-NoConn ~ 3200 6200
 NoConn ~ 3200 6100
 NoConn ~ 3200 6000
-NoConn ~ 3200 5300
-NoConn ~ 3200 5200
 Wire Wire Line
 	900  2200 900  2700
 Wire Wire Line
@@ -2869,4 +2852,21 @@ Wire Wire Line
 	13500 2700 13500 3200
 Wire Wire Line
 	900  1700 900  2200
+NoConn ~ 2700 5900
+NoConn ~ 2700 6000
+NoConn ~ 2700 6100
+NoConn ~ 3200 5700
+NoConn ~ 3200 5800
+NoConn ~ 3200 5900
+$Comp
+L Connector_Generic:Conn_02x13_Odd_Even Conn1
+U 1 1 5D7EB063
+P 2900 5600
+F 0 "Conn1" H 2950 6417 50  0000 C CNN
+F 1 "Conn_02x13_Odd_Even" H 2950 6326 50  0000 C CNN
+F 2 "Connector_Multicomp:Multicomp_MC9A12-2634_2x13_P2.54mm_Vertical" H 2900 5600 50  0001 C CNN
+F 3 "~" H 2900 5600 50  0001 C CNN
+	1    2900 5600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
