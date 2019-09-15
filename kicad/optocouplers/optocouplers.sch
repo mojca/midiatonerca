@@ -1,6 +1,6 @@
 EESchema Schematic File Version 4
 LIBS:optocouplers-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr User 17717 7087
 encoding utf-8
@@ -2742,21 +2742,21 @@ F 3 "" H 2700 6200 50  0001 C CNN
 	1    2700 6200
 	0    1    1    0   
 $EndComp
-Text GLabel 2700 5800 0    60   Input ~ 0
+Text GLabel 2700 6100 0    60   Input ~ 0
 arduino_D12
-Text GLabel 2700 5700 0    60   Input ~ 0
+Text GLabel 2700 6000 0    60   Input ~ 0
 arduino_D11
-Text GLabel 2700 5600 0    60   Input ~ 0
+Text GLabel 2700 5900 0    60   Input ~ 0
 arduino_D10
-Text GLabel 2700 5500 0    60   Input ~ 0
+Text GLabel 2700 5800 0    60   Input ~ 0
 arduino_D9
-Text GLabel 2700 5400 0    60   Input ~ 0
+Text GLabel 2700 5700 0    60   Input ~ 0
 arduino_D8
-Text GLabel 2700 5300 0    60   Input ~ 0
+Text GLabel 2700 5600 0    60   Input ~ 0
 arduino_D7
-Text GLabel 2700 5200 0    60   Input ~ 0
+Text GLabel 2700 5500 0    60   Input ~ 0
 arduino_D6
-Text GLabel 2700 5100 0    60   Input ~ 0
+Text GLabel 2700 5400 0    60   Input ~ 0
 arduino_D5
 Text GLabel 3200 5100 2    60   Input ~ 0
 arduino_A5
@@ -2852,9 +2852,6 @@ Wire Wire Line
 	13500 2700 13500 3200
 Wire Wire Line
 	900  1700 900  2200
-NoConn ~ 2700 5900
-NoConn ~ 2700 6000
-NoConn ~ 2700 6100
 NoConn ~ 3200 5700
 NoConn ~ 3200 5800
 NoConn ~ 3200 5900
@@ -2869,4 +2866,151 @@ F 3 "~" H 2900 5600 50  0001 C CNN
 	1    2900 5600
 	1    0    0    -1  
 $EndComp
+Text GLabel 15600 1700 2    60   Input ~ 0
+arduino_A1
+Text GLabel 15600 1200 2    60   Input ~ 0
+arduino_A0
+Text GLabel 15600 2700 2    60   Input ~ 0
+arduino_A3
+Text GLabel 15600 2200 2    60   Input ~ 0
+arduino_A2
+Text GLabel 15600 3700 2    60   Input ~ 0
+arduino_A5
+Text GLabel 15600 3200 2    60   Input ~ 0
+arduino_A4
+$Comp
+L power:+5V #PWR0111
+U 1 1 5DB2BCC0
+P 15300 1200
+F 0 "#PWR0111" H 15300 1050 50  0001 C CNN
+F 1 "+5V" H 15315 1373 50  0000 C CNN
+F 2 "" H 15300 1200 50  0001 C CNN
+F 3 "" H 15300 1200 50  0001 C CNN
+	1    15300 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0112
+U 1 1 5DB2C8AB
+P 15300 1700
+F 0 "#PWR0112" H 15300 1550 50  0001 C CNN
+F 1 "+5V" H 15315 1873 50  0000 C CNN
+F 2 "" H 15300 1700 50  0001 C CNN
+F 3 "" H 15300 1700 50  0001 C CNN
+	1    15300 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R_R2
+U 1 1 5DB2ED55
+P 15450 2200
+F 0 "R_R2" V 15550 2200 50  0000 C CNN
+F 1 "2k" V 15450 2200 50  0000 C CNN
+F 2 "" V 15380 2200 50  0001 C CNN
+F 3 "~" H 15450 2200 50  0001 C CNN
+	1    15450 2200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0113
+U 1 1 5DB2ED5B
+P 15300 2200
+F 0 "#PWR0113" H 15300 2050 50  0001 C CNN
+F 1 "+5V" H 15315 2373 50  0000 C CNN
+F 2 "" H 15300 2200 50  0001 C CNN
+F 3 "" H 15300 2200 50  0001 C CNN
+	1    15300 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R_R3
+U 1 1 5DB31435
+P 15450 2700
+F 0 "R_R3" V 15550 2700 50  0000 C CNN
+F 1 "2k" V 15450 2700 50  0000 C CNN
+F 2 "" V 15380 2700 50  0001 C CNN
+F 3 "~" H 15450 2700 50  0001 C CNN
+	1    15450 2700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0114
+U 1 1 5DB3143B
+P 15300 2700
+F 0 "#PWR0114" H 15300 2550 50  0001 C CNN
+F 1 "+5V" H 15315 2873 50  0000 C CNN
+F 2 "" H 15300 2700 50  0001 C CNN
+F 3 "" H 15300 2700 50  0001 C CNN
+	1    15300 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R_R4
+U 1 1 5DB3377D
+P 15450 3200
+F 0 "R_R4" V 15550 3200 50  0000 C CNN
+F 1 "2k" V 15450 3200 50  0000 C CNN
+F 2 "" V 15380 3200 50  0001 C CNN
+F 3 "~" H 15450 3200 50  0001 C CNN
+	1    15450 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0115
+U 1 1 5DB33783
+P 15300 3200
+F 0 "#PWR0115" H 15300 3050 50  0001 C CNN
+F 1 "+5V" H 15315 3373 50  0000 C CNN
+F 2 "" H 15300 3200 50  0001 C CNN
+F 3 "" H 15300 3200 50  0001 C CNN
+	1    15300 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R_R5
+U 1 1 5DB35C7D
+P 15450 3700
+F 0 "R_R5" V 15550 3700 50  0000 C CNN
+F 1 "2k" V 15450 3700 50  0000 C CNN
+F 2 "" V 15380 3700 50  0001 C CNN
+F 3 "~" H 15450 3700 50  0001 C CNN
+	1    15450 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:+5V #PWR0116
+U 1 1 5DB35C83
+P 15300 3700
+F 0 "#PWR0116" H 15300 3550 50  0001 C CNN
+F 1 "+5V" H 15315 3873 50  0000 C CNN
+F 2 "" H 15300 3700 50  0001 C CNN
+F 3 "" H 15300 3700 50  0001 C CNN
+	1    15300 3700
+	1    0    0    -1  
+$EndComp
+NoConn ~ 2700 5300
+NoConn ~ 2700 5200
+$Comp
+L Device:R R_R0
+U 1 1 5DB27A45
+P 15450 1200
+F 0 "R_R0" V 15550 1200 50  0000 C CNN
+F 1 "2k" V 15450 1200 50  0000 C CNN
+F 2 "" V 15380 1200 50  0001 C CNN
+F 3 "~" H 15450 1200 50  0001 C CNN
+	1    15450 1200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R_R1
+U 1 1 5DB2C8A5
+P 15450 1700
+F 0 "R_R1" V 15550 1700 50  0000 C CNN
+F 1 "2k" V 15450 1700 50  0000 C CNN
+F 2 "" V 15380 1700 50  0001 C CNN
+F 3 "~" H 15450 1700 50  0001 C CNN
+	1    15450 1700
+	0    1    1    0   
+$EndComp
+NoConn ~ 2700 5100
 $EndSCHEMATC
