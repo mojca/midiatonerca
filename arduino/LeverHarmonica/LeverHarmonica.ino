@@ -1,6 +1,12 @@
 /*
  * Arduino Nano v3.1, Old bootloader
- *
+ * 
+ * MIDI note number 69 is A4 concert pitch = 440 Hz
+ * 
+ * Note number 43 is G2
+ * Note number 31 is G1
+ * Note number 19 is G0 chord
+ * 
  * pin assignment:
  * Inputs: A0, A1, A2, A3, A4, A5, 11, 12,    8?, 10?
  * Outputs: 2, 3, 4, 5, 6, 7
@@ -37,6 +43,14 @@
  *
  */
 
+// if true then a simplistic test program will run
+//#define TEST_PROGRAM
+
+// true to send notes to Raspberry PI at 31250, false to send to console at 115200
+const bool MIDI = true;
+
+
+
 const int PATCH_COUNT = 15;
 int isSpecialInstrument[PATCH_COUNT] = {true,false,false,false,false,false,false,false,false,false,false,false,false,false}; // 0-based
 int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12,0}; // 0-based
@@ -57,7 +71,7 @@ int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 
 #define DIRECTION_BUTTON_PIN 10
 
-// true to send notes to Raspberry PI at 31250, false to send to console at 115200
+// true to send notes to Raspberry PI, false to send to console, both at 115200
 const bool MIDI = true;
 const int noteON = 144;  // 10010000
 const int noteOFF = 128; // 10000000
@@ -267,19 +281,19 @@ byte vincentBassPullNoteNumber[2][6][3]={
 };
 
 
-static const byte midi_C   = 24; // C2
-static const byte midi_Cis = 25; // C#2
-static const byte midi_D   = 26; // D2
-static const byte midi_Dis = 27; // D#2
-static const byte midi_Es = 27;  // Eb2
-static const byte midi_E   = 28; // E2
-static const byte midi_F   = 29; // F2
-static const byte midi_Fis = 30; // F#2
-static const byte midi_G   = 31; // G2
-static const byte midi_Gis = 32; // G#2
-static const byte midi_A   = 33; // A2
-static const byte midi_B   = 34; // Bb2
-static const byte midi_H   = 35; // B2
+static const byte midi_C   = 36; // C2
+static const byte midi_Cis = 37; // C#2
+static const byte midi_D   = 38; // D2
+static const byte midi_Dis = 39; // D#2
+static const byte midi_Es  = 39; // Eb2
+static const byte midi_E   = 40; // E2
+static const byte midi_F   = 41; // F2
+static const byte midi_Fis = 42; // F#2
+static const byte midi_G   = 43; // G2     should be G1
+static const byte midi_Gis = 44; // G#2
+static const byte midi_A   = 45; // A2
+static const byte midi_B   = 46; // Bb2
+static const byte midi_H   = 47; // B2
 
 static const byte octave = 12;
 
@@ -514,7 +528,7 @@ void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
     Serial.print(MIDIvelocity);
 
     int noteNr=MIDInote%12;
-    int noteOctave=MIDInote/12;//-2;
+    int noteOctave=MIDInote/12 -1;
     Serial.print(" ");
     Serial.print(noteNames[noteNr*2]);
     if (noteNames[noteNr*2+1] != ' ') {
@@ -840,6 +854,53 @@ void loop() {
   //manageRedGreenLeds();
 }
 
+void playTestProgram() {
+  pinMode(13,OUTPUT);
+  bool led=true;
+
+  int myPause=1000;
+  while (1) {
+    digitalWrite(13,led);
+    led=!led;
+    //MIDImessage2(instrumentSelect,1);
+    //delay(1000);
+/*
+    // C0 on
+    MIDImessage(noteON, 24, NOTE_ON_VELOCITY); // noteON = 144, NOTE_ON_VELOCITY=100      [144, 24, 100]   but it reads it as [255, 32, 48]
+    delay(myPause);
+ 
+    // C0 off  
+    MIDImessage(noteOFF, 24, NOTE_OFF_VELOCITY); // noteOFF = 128, NOTE_OFF_VELOCITY=127    [128, 24, 127]  but it reads it as [255, 0, 48]
+    delay(myPause);
+*/
+/*
+    // C2 on
+    MIDImessage(noteON, 48, NOTE_ON_VELOCITY);
+    delay(myPause);
+  
+    // C2 off  
+    MIDImessage(noteOFF, 48, NOTE_OFF_VELOCITY);
+    delay(myPause);
+*/
+    // C4 on
+    MIDImessage(noteON, 72, NOTE_ON_VELOCITY);
+    delay(myPause);
+  
+    // C4 off  
+    MIDImessage(noteOFF, 72, NOTE_OFF_VELOCITY);
+    delay(myPause);
+/*
+    // C6 on
+    MIDImessage(noteON, 96, NOTE_ON_VELOCITY);
+    delay(myPause);
+  
+    // C6 off  
+    MIDImessage(noteOFF, 96, NOTE_OFF_VELOCITY);
+    delay(myPause);
+*/    
+  }
+}
+
 
 void setup() {
   /*
@@ -858,13 +919,19 @@ void setup() {
     if (!digitalRead(9)) {
       Serial.begin(115200); // for Hairless MIDI
     } else {*/
-      Serial.begin(31250); // for midi instrument
+      //Serial.begin(31250); // for midi instrument
+      //Serial.begin(38400); // for midi instrument
+      Serial.begin(115200);
     //}
-    MIDImessage2(instrumentSelect,patch);
+    //MIDImessage2(instrumentSelect,patch);
   } else {
     Serial.begin(115200);
   }
 
+#ifdef TEST_PROGRAM
+  playTestProgram();
+#endif
+  
   // Six output pins
   for (int i=2; i<=7; i++) {
     pinMode(i,OUTPUT);
