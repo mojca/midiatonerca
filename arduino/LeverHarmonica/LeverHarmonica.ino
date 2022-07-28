@@ -1,6 +1,6 @@
 /*
  * Arduino Nano v3.1, Old bootloader
- * 
+ *
  * pin assignment:
  * Inputs: A0, A1, A2, A3, A4, A5, 11, 12,    8?, 10?
  * Outputs: 2, 3, 4, 5, 6, 7
@@ -10,9 +10,9 @@
  * 6 mojcaMode
  * 7 free: button pushed
  * 0,1 serial
- * 
+ *
  * Banks: high if active
- * Bass side: 
+ * Bass side:
  * red lines six banks
  * white lines read signals, connect to inputs
  */
@@ -34,7 +34,7 @@
  * 13. Rezo bass
  * 14. Simple bass
  * 15. Accordion
- * 
+ *
  */
 
 const int PATCH_COUNT = 15;
@@ -58,7 +58,7 @@ int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 #define DIRECTION_BUTTON_PIN 10
 
 // true to send notes to Raspberry PI at 31250, false to send to console at 115200
-const bool MIDI = true; 
+const bool MIDI = true;
 const int noteON = 144;  // 10010000
 const int noteOFF = 128; // 10000000
 //const bool USE_TILT = false;
@@ -134,7 +134,7 @@ byte vincentPushNoteNumber[4][13]={
 
 /* PULL:
   (C#E G BbC E G BbC E)
- (G#B D F A B D F A B D) 
+ (G#B D F A B D F A B D)
 */
 byte vincentPullNoteNumber[4][13]={
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -146,7 +146,7 @@ byte vincentPullNoteNumber[4][13]={
 /*
   0 1 2 3 4 5     inputNr 0
    0 1 2 3 4 -     inputNr 1
-   
+
   BASS PUSH:
   c C  f  F x x
    a A bb Bb x x
@@ -202,7 +202,7 @@ static const byte midi_chord_D1m_special = midi_Cis - 2 * octave;
 /*
   0 1 2 3 4 5     inputNr 0
    0 1 2 3 4 -     inputNr 1
-   
+
   BASS PUSH:
   c  C  f  F  b  B
    G  a  A  d  D
@@ -245,8 +245,8 @@ byte mojcaBassPullNoteNumber[2][6][3]={
    G  a  A  d  D
   C0 C2 F0 F2 A#0 A#1
    G2 A0 A2  D0  D2  x
-   
- * 
+
+ *
  */
 byte specialMojcaBassPushNoteNumber[2][6]={
   {
@@ -287,7 +287,7 @@ void sensorToCoordinate(int bank, int inputNr, int& row, int& column)
 {
   row = 3-(inputNr/2);
   column = (5-bank)*2+(1-inputNr%2);
-  
+
   if (row == 3 && column == 0) {
     row = 1;
     column = 0;
@@ -306,7 +306,7 @@ void coordinateToSensor(int row, int column, int& bank, int& inputNr) {
     ph = (column+1)%2;
   }
   inputNr = 2*(3-row)+ph;
-  
+
   if (bank == 6 && inputNr == 4) {
       bank = 5;
       inputNr = 1;
@@ -423,7 +423,7 @@ void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
     Serial.print(noteOctave);
 
     if (command == 144) {
-      Serial.println(" on");      
+      Serial.println(" on");
     } else if (command == 128) {
       Serial.println(" off");
     }
@@ -539,7 +539,7 @@ void incrementDecrementPatch(int column) {
 void setPatchAccordingToButtonState_old() {
   int bankNr;
   int inputNr;
-  
+
   // bottom row
   for (int i=0;i<10;i++) {
     coordinateToSensor(0,i,bankNr,inputNr);
@@ -564,7 +564,7 @@ void setPatchAccordingToButtonState_old() {
 void setPatchAccordingToButtonState() {
   int bankNr;
   int inputNr;
-  
+
   // bottom row
   int newPatchNr = 0;
   for (int i=0;i<8;i++) {
@@ -583,7 +583,7 @@ void manageSwitchPull() {
   // Switch detected
   // all notes off? No, doesn't work with all synths...
   //MIDImessage3(176,123,0);
-  
+
   for (int buttonNr=0; buttonNr<48; buttonNr++) {
     if (buttonState[buttonNr]) {
       // send note off on oldPullState and note on on pull
@@ -594,7 +594,7 @@ void manageSwitchPull() {
 
       int noteNumber = getNoteNumber(!pullState,row,column);
       MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
-      
+
       noteNumber = getNoteNumber(pullState,row,column);
       MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
     }
@@ -612,10 +612,10 @@ void manageSwitchPull() {
         // special instrument with single note for chords
         int noteNumber = getSpecialBassNoteNumber(!pullState,bankNr,inputNr);
         MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
-        
+
         noteNumber = getSpecialBassNoteNumber(pullState,bankNr,inputNr
         );
-        MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);      
+        MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
       } else {
         // normal instruments
         int* noteNumbers = getBassNoteNumbers(!pullState,bankNr,inputNr);
@@ -624,7 +624,7 @@ void manageSwitchPull() {
             MIDImessage(noteOFF, noteNumbers[noteSubNr], NOTE_OFF_VELOCITY);
           }
         }
-  
+
         noteNumbers = getBassNoteNumbers(pullState,bankNr,inputNr);
         for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
           if (noteNumbers[noteSubNr]>0) {
@@ -633,7 +633,7 @@ void manageSwitchPull() {
         }
       }
     }
-  }  
+  }
 }
 
 void manageTrebleButtons(int bankNr) {
@@ -659,7 +659,7 @@ void manageTrebleButtons(int bankNr) {
             incrementDecrementPatch(column);
           } else if (row == 3 && column == 7) {
             // set patch according to button state
-            setPatchAccordingToButtonState();              
+            setPatchAccordingToButtonState();
           }
         }
       }
@@ -702,11 +702,11 @@ void manageBassButtons(int bankNr) {
           }
         }
       }
-    }      
+    }
   }
 }
 
-void readButtons() {  
+void readButtons() {
   for (int bankNr=0;bankNr<=5;bankNr++) {
     digitalWrite(outputPinNr[bankNr],HIGH);
     delayMicroseconds(500); // to give electronics time to activate
@@ -751,8 +751,8 @@ void setup() {
   pinMode(ANY_BUTTON_PUSHED_LED,OUTPUT);
   pinMode(DIRECTION_LED,OUTPUT);
   */
-  
-  
+
+
   if (MIDI) {
     /*
     if (!digitalRead(9)) {
@@ -764,7 +764,7 @@ void setup() {
   } else {
     Serial.begin(115200);
   }
-  
+
   // Six output pins
   for (int i=2; i<=7; i++) {
     pinMode(i,OUTPUT);
@@ -787,7 +787,7 @@ void setup() {
     bassButtonState[i]=0;
   }
   pullState = 0;
-  
+
   if (!MIDI) {
     if (mojcaMode) {
       Serial.println("Four row, ...");
@@ -812,7 +812,7 @@ void updateButtonState() {
   if (pull != pullState) {
     // off&on all pressed buttons
     Serial.println("##");
-    pullState = pull;    
+    pullState = pull;
   }
 
   for (int bankNr=0;bankNr<=5;bankNr++) {
@@ -853,7 +853,7 @@ void updateButtonState() {
         }
 
         bool printNote = digitalValue;
-        
+
         if (noteNumber>0) {
           int noteIndex = noteNumber%12;
           int octave = noteNumber/12-3;
@@ -865,7 +865,7 @@ void updateButtonState() {
               Serial.print(ch);
             }
             Serial.print(octave);
-            
+
             if (digitalValue) {
               Serial.print(" on");
             } else {
@@ -889,4 +889,4 @@ void updateButtonState() {
   //  updateButtonState();
   //}
   //showAllButtons();
-  //showAnalog();  
+  //showAnalog();
