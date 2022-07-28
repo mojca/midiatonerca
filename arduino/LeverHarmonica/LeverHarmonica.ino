@@ -58,7 +58,7 @@ int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 #define DIRECTION_BUTTON_PIN 10
 
 // true to send notes to Raspberry PI at 31250, false to send to console at 115200
-const bool MIDI = false; 
+const bool MIDI = true; 
 const int noteON = 144;  // 10010000
 const int noteOFF = 128; // 10000000
 //const bool USE_TILT = false;
@@ -571,7 +571,6 @@ void setPatchAccordingToButtonState() {
     coordinateToSensor(0,i,bankNr,inputNr);
     if (buttonState[bankNr*8+inputNr]) {
       newPatchNr += 1<<i;
-      return;
     }
   }
   if (newPatchNr>0) {
