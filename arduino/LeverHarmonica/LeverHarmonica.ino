@@ -89,6 +89,96 @@ bool mojcaMode = true;
 //#define TREBLE_NOTE_OFFSET 12
 //#define BASS_NOTE_OFFSET 0
 
+static const byte midi_C0   = 12;
+static const byte midi_Cis0 = 13;
+static const byte midi_D0   = 14;
+static const byte midi_Es0  = 15;
+static const byte midi_E0   = 16;
+static const byte midi_F0   = 17;
+static const byte midi_Fis0 = 18;
+static const byte midi_G0   = 19;
+static const byte midi_Gis0 = 20;
+static const byte midi_A0   = 21;
+static const byte midi_B0   = 22;
+static const byte midi_H0   = 23;
+static const byte midi_C1   = 24;
+static const byte midi_Cis1 = 25;
+static const byte midi_D1   = 26;
+static const byte midi_Es1  = 27;
+static const byte midi_E1   = 28;
+static const byte midi_F1   = 29;
+static const byte midi_Fis1 = 30;
+static const byte midi_G1   = 31;
+static const byte midi_Gis1 = 32;
+static const byte midi_A1   = 33;
+static const byte midi_B1   = 34;
+static const byte midi_H1   = 35;
+static const byte midi_C2   = 36;
+static const byte midi_Cis2 = 37;
+static const byte midi_D2   = 38;
+static const byte midi_Es2  = 39;
+static const byte midi_E2   = 40;
+static const byte midi_F2   = 41;
+static const byte midi_Fis2 = 42;
+static const byte midi_G2   = 43;
+static const byte midi_Gis2 = 44;
+static const byte midi_A2   = 45;
+static const byte midi_B2   = 46;
+static const byte midi_H2   = 47;
+static const byte midi_C3   = 48;
+static const byte midi_Cis3 = 49;
+static const byte midi_D3   = 50;
+static const byte midi_Es3  = 51;
+static const byte midi_E3   = 52;
+static const byte midi_F3   = 53;
+static const byte midi_Fis3 = 54;
+static const byte midi_G3   = 55;
+static const byte midi_Gis3 = 56;
+static const byte midi_A3   = 57;
+static const byte midi_B3   = 58;
+static const byte midi_H3   = 59;
+static const byte midi_C4   = 60;
+static const byte midi_Cis4 = 61;
+static const byte midi_D4   = 62;
+static const byte midi_Es4  = 63;
+static const byte midi_E4   = 64;
+static const byte midi_F4   = 65;
+static const byte midi_Fis4 = 66;
+static const byte midi_G4   = 67;
+static const byte midi_Gis4 = 68;
+static const byte midi_A4   = 69;
+static const byte midi_B4   = 70;
+static const byte midi_H4   = 71;
+static const byte midi_C5   = 72;
+static const byte midi_Cis5 = 73;
+static const byte midi_D5   = 74;
+static const byte midi_Es5  = 75;
+static const byte midi_E5   = 76;
+static const byte midi_F5   = 77;
+static const byte midi_Fis5 = 78;
+static const byte midi_G5   = 79;
+static const byte midi_Gis5 = 80;
+static const byte midi_A5   = 81;
+static const byte midi_B5   = 82;
+static const byte midi_H5   = 83;
+static const byte midi_C6   = 84;
+static const byte midi_Cis6 = 85;
+static const byte midi_D6   = 86;
+static const byte midi_Es6  = 87;
+static const byte midi_E6   = 88;
+static const byte midi_F6   = 89;
+static const byte midi_Fis6 = 90;
+static const byte midi_G6   = 91;
+static const byte midi_Gis6 = 92;
+static const byte midi_A6   = 93;
+static const byte midi_B6   = 94;
+static const byte midi_H6   = 95;
+static const byte midi_C7   = 96;
+static const byte midi_Cis7 = 97;
+static const byte midi_D7   = 98;
+
+// notation in comments is in "octave-3"
+
 /* PUSH
     {--,ds,as,gs,es,gs,ds,ds,--,--,--,--,--},
    {f0,bs,d1,f1,bs,d2,f2,bs,d3,f3,bs,d4,--},
@@ -96,12 +186,11 @@ bool mojcaMode = true;
    {c0,e0,g0,c1,e1,g1,c2,e2,g2,c3,e3,g3,--}
 */
 byte pushNoteNumber[4][13]={
-    { 0, 0, 0,54,63, 0, 0, 0, 0, 0, 0, 0, 0},
-   {41,46,50,53,58,62,65,70,74,77,82,86, 0},
-  {36,41,45,48,53,57,60,65,69,72,77,81,84},
-   {36,40,43,48,52,55,60,64,67,72,76,79, 0}
+  {          0,        0,        0,        midi_Fis4, midi_Es5, 0, 0, 0, 0, 0, 0, 0, 0},
+  {     midi_F3,  midi_B3,  midi_D4,  midi_F4,  midi_B4,  midi_D5,  midi_F5,  midi_B5,  midi_D6,  midi_F6,  midi_B6,  midi_D7,  0},
+  {midi_C3,  midi_F3,  midi_A3,  midi_C4,  midi_F4,  midi_A4,  midi_C5,  midi_F5,  midi_A5,  midi_C6,  midi_F6,  midi_A6,  midi_C7},
+  {     midi_C3,  midi_E3,  midi_G3,  midi_C4,  midi_E4,  midi_G4,  midi_C5,  midi_E5,  midi_G5,  midi_C6,  midi_E6,  midi_G6,  0},
 };
-
 
 /* PULL
     {--,as,gs,ds,ds,gs,as,ds,--,--,--,--,--}
@@ -109,15 +198,12 @@ byte pushNoteNumber[4][13]={
   {e0,bs,c1,e1,g1,bs,c2,e2,g2,bs,d3,e3,g4}
    {f0,g0,b0,d1,f1,a1,b1,d2,f2,a2,b2,d3,--}
  */
-
-// MIDI note numbers: octave+3
 byte pullNoteNumber[4][13]={
-    { 0, 0, 0,49,61, 0, 0, 0, 0, 0, 0, 0, 0},
-   {45,51,53,57,60,63,65,69,72,75,79,81, 0},
-  {40,46,48,52,55,58,60,64,67,70,72,76,79},
-   {41,43,47,50,53,57,59,62,65,69,71,74, 0}
+  {          0,        0,        0,        midi_Cis4, midi_Cis5, 0, 0, 0, 0, 0, 0, 0, 0},
+  {     midi_A3,  midi_Es4, midi_F4,  midi_A4,  midi_C5,  midi_Es5, midi_F5,  midi_A5,  midi_C6,  midi_Es6, midi_G6,  midi_A6,  0},
+  {midi_E3,  midi_B3,  midi_C4,  midi_E4,  midi_G4,  midi_B4,  midi_C5,  midi_E5,  midi_G5,  midi_B5,  midi_C6,  midi_E6,  midi_G6},
+  {     midi_F3,  midi_G3,  midi_H3,  midi_D4,  midi_F4,  midi_A4,  midi_H4,  midi_D5,  midi_F5,  midi_A5,  midi_H5,  midi_D6,  0}
 };
-
 
 // Vincent's two-row harmonica
 /* PUSH:
@@ -126,10 +212,10 @@ byte pullNoteNumber[4][13]={
 */
 
 byte vincentPushNoteNumber[4][13]={
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-   {63,48,53,57,62,65,69,72,77,81, 0, 0, 0},
-  {54,43,48,52,55,60,64,67,72,76,79, 0, 0},
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+  {     midi_Es5,  midi_C4,  midi_F4,  midi_A4,  midi_D5,  midi_F5,  midi_A5,  midi_C6,  midi_F6,  midi_A6,  0, 0, 0},
+  {midi_Fis4, midi_G3,  midi_C4,  midi_E4,  midi_G4,  midi_C5,  midi_E5,  midi_G5,  midi_C6,  midi_E6,  midi_G6,  0, 0},
+  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
 };
 
 /* PULL:
@@ -137,10 +223,10 @@ byte vincentPushNoteNumber[4][13]={
  (G#B D F A B D F A B D)
 */
 byte vincentPullNoteNumber[4][13]={
-    { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-   {61,52,55,58,60,64,67,70,72,76, 0, 0, 0},
-  {56,47,50,53,57,59,62,65,69,71,74, 0, 0},
-   { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
+  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+  {     midi_Cis5, midi_E4,  midi_G4,  midi_B4,  midi_C5,  midi_E5,  midi_G5,  midi_B5,  midi_C6,  midi_E6,  0, 0, 0},
+  {midi_Gis4, midi_H3,  midi_D4,  midi_F4,  midi_A4,  midi_H4,  midi_D5,  midi_F5,  midi_A5,  midi_H5,  midi_D6, 0, 0},
+  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 };
 
 /*
@@ -152,8 +238,15 @@ byte vincentPullNoteNumber[4][13]={
    a A bb Bb x x
 */
 byte vincentBassPushNoteNumber[2][6][3]={
-  {{36,40,43}, {24,0,0}, {41,45,48}, {29,0,0}, {0,0,0}, {0,0,0}},
-  {{33,37,40}, {21,0,0}, {34,38,41}, {22,0,0}, {0,0,0}, {0,0,0}}
+  {
+    {midi_C3,  midi_E3,  midi_G3}, {midi_C2, 0, 0},
+    {midi_F3,  midi_A3,  midi_C4}, {midi_F2, 0, 0},
+    {0,        0,        0      }, {0,       0, 0}
+  }, {
+    {midi_A2,  midi_Cis3, midi_E3}, {midi_A1, 0, 0},
+    {midi_B2,  midi_D3,   midi_F3}, {midi_B1, 0, 0},
+    {0,        0,         0      }, {0,       0, 0}
+  }
 };
 
 /*
@@ -162,8 +255,15 @@ byte vincentBassPushNoteNumber[2][6][3]={
    dm D bb Bb x x
  */
 byte vincentBassPullNoteNumber[2][6][3]={
-  {{43,47,50}, {31,0,0}, {36,40,43}, {24,0,0}, {0,0,0}, {0,0,0}},
-  {{38,41,45}, {26,0,0}, {34,38,41}, {22,0,0}, {0,0,0}, {0,0,0}}
+  {
+    {midi_G3,  midi_H3,  midi_D4}, {midi_G2, 0, 0},
+    {midi_C3,  midi_E3,  midi_G3}, {midi_C2, 0, 0},
+    {0,        0,        0      }, {0,       0, 0}
+  }, {
+    {midi_D3,  midi_F3,  midi_A3}, {midi_D2, 0, 0},
+    {midi_B2,  midi_D3,  midi_F3}, {midi_B1, 0, 0},
+    {0,        0,        0      }, {0,       0, 0}
+  }
 };
 
 
