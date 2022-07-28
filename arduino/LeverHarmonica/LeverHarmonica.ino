@@ -1,4 +1,6 @@
 /*
+ * Arduino Nano v3.1, Old bootloader
+ * 
  * pin assignment:
  * Inputs: A0, A1, A2, A3, A4, A5, 11, 12,    8?, 10?
  * Outputs: 2, 3, 4, 5, 6, 7
@@ -17,7 +19,7 @@
 
 /*
  * Patches:
- * 1. Accordion
+ * 1. SpecialRecording
  * 2. MKII Flute
  * 3. Lately Bass
  * 4. Saw
@@ -31,13 +33,14 @@
  * 12. Organ
  * 13. Rezo bass
  * 14. Simple bass
+ * 15. Accordion
  * 
  */
 
-const int PATCH_COUNT = 14;
-int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12}; // 0-based
-int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12}; // 0-based
-//int bassNoteOffsetPerPatch[PATCH_COUNT] = {12,12,12,12,12,12,12,12,12,12,12,12}; // 0-based
+const int PATCH_COUNT = 15;
+int isSpecialInstrument[PATCH_COUNT] = {true,false,false,false,false,false,false,false,false,false,false,false,false,false}; // 0-based
+int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12,0}; // 0-based
+int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12,0}; // 0-based
 
 int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 
@@ -49,15 +52,20 @@ int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 #define DIRECTION_LED 10
 */
 
+#define NOTE_ON_VELOCITY 100
+#define NOTE_OFF_VELOCITY 127
+
 #define DIRECTION_BUTTON_PIN 10
-const bool MIDI = true;
+
+// true to send notes to Raspberry PI at 31250, false to send to console at 115200
+const bool MIDI = false; 
 const int noteON = 144;  // 10010000
 const int noteOFF = 128; // 10000000
 //const bool USE_TILT = false;
 const int instrumentSelect = 192; // 11000000
 
 
-int patch = 1; // 1-based
+int patch = 1; // 1-based, so subtract one for array indexing
 
 // Test optical gates
 // Output: D2..D7 for column 0..5
@@ -175,6 +183,15 @@ static const byte midi_H   = 35; // B2
 
 static const byte octave = 12;
 
+static const byte midi_chord_A0_special  = midi_A   - 2 * octave;
+static const byte midi_chord_B0_special  = midi_B   - 2 * octave;
+static const byte midi_chord_C1_special  = midi_C   - 2 * octave;
+static const byte midi_chord_D1_special  = midi_D   - 2 * octave;
+static const byte midi_chord_Es1_special = midi_Es  - 2 * octave;
+static const byte midi_chord_F1_special  = midi_F   - 2 * octave;
+static const byte midi_chord_G1_special  = midi_G   - 2 * octave;
+static const byte midi_chord_D1m_special = midi_Cis - 2 * octave;
+
 #define midi_chord_B0  {midi_B  + 0*octave, midi_D + octave, midi_F +   octave}
 #define midi_chord_C1  {midi_C  +   octave, midi_E + octave, midi_G +   octave}
 #define midi_chord_Es1 {midi_Es +   octave, midi_G + octave, midi_B +   octave}
@@ -219,6 +236,47 @@ byte mojcaBassPullNoteNumber[2][6][3]={
     midi_chord_Es1, {midi_Es, 0, 0}, {0,0,0}
   }
 };
+
+
+/*
+ * The special instrument (#1) has recordings for basses and chords, so play only one note for each bass button.
+  BASS PUSH:
+  c  C  f  F  b  B
+   G  a  A  d  D
+  C0 C2 F0 F2 A#0 A#1
+   G2 A0 A2  D0  D2  x
+   
+ * 
+ */
+byte specialMojcaBassPushNoteNumber[2][6]={
+  {
+    midi_chord_C1_special, midi_C,
+    midi_chord_F1_special, midi_F,
+    midi_chord_B0_special, midi_B - octave,
+  }, {
+                           midi_G,
+    midi_chord_A0_special, midi_A - octave,
+    midi_chord_D1_special, midi_D, 0,
+  }
+};
+
+byte specialMojcaBassPullNoteNumber[2][6]={
+  {
+    midi_chord_G1_special, midi_G,
+    midi_chord_C1_special, midi_C,
+    midi_chord_F1_special, midi_F
+  },
+  {
+    midi_E,
+    midi_chord_D1m_special, midi_D,
+    midi_chord_Es1_special, midi_Es, 0
+  }
+};
+
+
+
+
+
 
 
 //const char *noteNames = "C DbD EbE F GbG AbA BbB ";
@@ -282,6 +340,27 @@ int getNoteNumber(bool pull, int row, int column) {
   return noteNumber;
 }
 
+int getSpecialBassNoteNumber(bool pull, int bankNr, int inputNr) {
+  if (mojcaMode) {
+    //int noteOffset = bassNoteOffsetPerPatch[patch-1];
+    //int noteNumber;
+    if (pull) {
+      return specialMojcaBassPullNoteNumber[inputNr][bankNr];
+    } else { // push
+      return specialMojcaBassPushNoteNumber[inputNr][bankNr];
+    }
+    /*
+    if (noteNumber > 0) {
+      noteNumber += noteOffset;
+    }
+    return noteNumber;
+    */
+  } else {
+    // vincent mode
+    // not yet implemented!
+  }
+}
+
 int* getBassNoteNumbers(bool pull, int bankNr, int inputNr) {
   static int noteNumbers[3];
   for (int i=0;i<3;i++) {
@@ -335,7 +414,7 @@ void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
     Serial.print(MIDIvelocity);
 
     int noteNr=MIDInote%12;
-    int noteOctave=MIDInote/12-2;
+    int noteOctave=MIDInote/12;//-2;
     Serial.print(" ");
     Serial.print(noteNames[noteNr*2]);
     if (noteNames[noteNr*2+1] != ' ') {
@@ -457,7 +536,7 @@ void incrementDecrementPatch(int column) {
   MIDImessage2(instrumentSelect,patch);
 }
 
-void setPatchAccordingToButtonState() {
+void setPatchAccordingToButtonState_old() {
   int bankNr;
   int inputNr;
   
@@ -481,6 +560,26 @@ void setPatchAccordingToButtonState() {
   }
 }
 
+// binary!
+void setPatchAccordingToButtonState() {
+  int bankNr;
+  int inputNr;
+  
+  // bottom row
+  int newPatchNr = 0;
+  for (int i=0;i<8;i++) {
+    coordinateToSensor(0,i,bankNr,inputNr);
+    if (buttonState[bankNr*8+inputNr]) {
+      newPatchNr += 1<<i;
+      return;
+    }
+  }
+  if (newPatchNr>0) {
+    patch=newPatchNr;
+    MIDImessage2(instrumentSelect,patch);
+  }
+}
+
 void manageSwitchPull() {
   // Switch detected
   // all notes off? No, doesn't work with all synths...
@@ -495,10 +594,10 @@ void manageSwitchPull() {
       sensorToCoordinate(bankNr, inputNr, row, column);
 
       int noteNumber = getNoteNumber(!pullState,row,column);
-      MIDImessage(noteOFF, noteNumber, 100);
+      MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
       
       noteNumber = getNoteNumber(pullState,row,column);
-      MIDImessage(noteON, noteNumber, 100);
+      MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
     }
   }
 
@@ -510,17 +609,28 @@ void manageSwitchPull() {
 
       //int noteNumber = getBassNoteNumber(!pullState,bankNr,inputNr);
 
-      int* noteNumbers = getBassNoteNumbers(!pullState,bankNr,inputNr);
-      for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
-        if (noteNumbers[noteSubNr]>0) {
-          MIDImessage(noteOFF, noteNumbers[noteSubNr], 127);
+      if (isSpecialInstrument[patch-1]) {
+        // special instrument with single note for chords
+        int noteNumber = getSpecialBassNoteNumber(!pullState,bankNr,inputNr);
+        MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
+        
+        noteNumber = getSpecialBassNoteNumber(pullState,bankNr,inputNr
+        );
+        MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);      
+      } else {
+        // normal instruments
+        int* noteNumbers = getBassNoteNumbers(!pullState,bankNr,inputNr);
+        for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
+          if (noteNumbers[noteSubNr]>0) {
+            MIDImessage(noteOFF, noteNumbers[noteSubNr], NOTE_OFF_VELOCITY);
+          }
         }
-      }
-
-      noteNumbers = getBassNoteNumbers(pullState,bankNr,inputNr);
-      for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
-        if (noteNumbers[noteSubNr]>0) {
-          MIDImessage(noteON, noteNumbers[noteSubNr], 100);
+  
+        noteNumbers = getBassNoteNumbers(pullState,bankNr,inputNr);
+        for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
+          if (noteNumbers[noteSubNr]>0) {
+            MIDImessage(noteON, noteNumbers[noteSubNr], NOTE_ON_VELOCITY);
+          }
         }
       }
     }
@@ -538,9 +648,9 @@ void manageTrebleButtons(int bankNr) {
       int noteNumber = getNoteNumber(pullState,row,column);
       if (noteNumber>0) {
         if (digitalValue) {
-          MIDImessage(noteON, noteNumber, 100);
+          MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
         } else {
-          MIDImessage(noteOFF, noteNumber, 127);
+          MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
         }
       } else {
         if (digitalValue) {
@@ -573,13 +683,23 @@ void manageBassButtons(int bankNr) {
       }
       bassButtonState[bankNr*BASS_INPUT_NR_COUNT+inputNr]=noteOn;
 
-      int* noteNumbers = getBassNoteNumbers(pullState,bankNr,inputNr);
-      for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
-        if (noteNumbers[noteSubNr]>0) {
-          if (noteOn) {
-            MIDImessage(noteON, noteNumbers[noteSubNr], 100);
-          } else {
-            MIDImessage(noteOFF, noteNumbers[noteSubNr], 127);
+      if (isSpecialInstrument[patch-1]) {
+        // special instrument with single note for chords
+        int noteNumber = getSpecialBassNoteNumber(pullState,bankNr,inputNr);
+        if (noteOn) {
+          MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
+        } else {
+          MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
+        }
+      } else {
+        int* noteNumbers = getBassNoteNumbers(pullState,bankNr,inputNr);
+        for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
+          if (noteNumbers[noteSubNr]>0) {
+            if (noteOn) {
+              MIDImessage(noteON, noteNumbers[noteSubNr], NOTE_ON_VELOCITY);
+            } else {
+              MIDImessage(noteOFF, noteNumbers[noteSubNr], NOTE_OFF_VELOCITY);
+            }
           }
         }
       }
