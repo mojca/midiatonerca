@@ -28,8 +28,8 @@
 
 /*
  * Patches:
- * 0. SpecialRecording
- * 1. SpecialRecording
+ * 0. Special Accordion recorded by Mojca&Vincent on July 27, 2022
+ * 1. Accordion
  * 2. MKII Flute
  * 3. Lately Bass
  * 4. Saw
@@ -43,43 +43,33 @@
  * 12. Organ
  * 13. Rezo bass
  * 14. Simple bass
- * 15. Accordion
  *
  */
 
 // if true then a simplistic test program will run
 //#define TEST_PROGRAM
 
-// true to send notes to Raspberry PI at 31250, false to send to console at 115200
+// true to send notes to Raspberry PI, false to send to console, both at 115200
 const bool MIDI = true;
-
-
 
 const int PATCH_COUNT = 15;
 int isSpecialInstrument[PATCH_COUNT] = {true,false,false,false,false,false,false,false,false,false,false,false,false,false}; // 0-based
-int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,0,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
-int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,0,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
+int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,-12,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
+int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,-12,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
 
 int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 
 // 13 columns, four rows
 
 #define BASS_INPUT_NR_COUNT 2 // per bank
-/*
-#define ANY_BUTTON_PUSHED_LED 8
-#define DIRECTION_LED 10
-*/
 
 #define NOTE_ON_VELOCITY 100
 #define NOTE_OFF_VELOCITY 127
 
 #define DIRECTION_BUTTON_PIN 10
 
-// true to send notes to Raspberry PI, false to send to console, both at 115200
-//const bool MIDI = true;
 const int noteON = 144;  // 10010000
 const int noteOFF = 128; // 10000000
-//const bool USE_TILT = false;
 const int instrumentSelect = 192; // 11000000
 
 
@@ -101,11 +91,6 @@ bool bassButtonState[12]; // bankNr*2+inputNr
 bool pullState;
 
 bool mojcaMode = true;
-
-
-
-//#define TREBLE_NOTE_OFFSET 12
-//#define BASS_NOTE_OFFSET 0
 
 static const byte midi_C0   = 12;
 static const byte midi_Cis0 = 13;
@@ -549,20 +534,22 @@ int* getBassNoteNumbers(bool pull, int bankNr, int inputNr) {
 
 void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
   if (MIDI) {
-    if (command == noteON) {
-      notePushedCount[MIDInote]++;
-      Serial.write(command); //send note on or note off command
-      Serial.write(MIDInote); //send pitch data
-      Serial.write(MIDIvelocity); //send velocity data
-    } else if (command == noteOFF) {
-      notePushedCount[MIDInote]--;
-      if (notePushedCount[MIDInote] < 0) {
-        notePushedCount[MIDInote] = 0;
-      }
-      if (notePushedCount[MIDInote] == 0) {
+    if (MIDInote>0) {
+      if (command == noteON) {
+        notePushedCount[MIDInote]++;
         Serial.write(command); //send note on or note off command
         Serial.write(MIDInote); //send pitch data
         Serial.write(MIDIvelocity); //send velocity data
+      } else if (command == noteOFF) {
+        notePushedCount[MIDInote]--;
+        if (notePushedCount[MIDInote] < 0) {
+          notePushedCount[MIDInote] = 0;
+        }
+        if (notePushedCount[MIDInote] == 0) {
+          Serial.write(command); //send note on or note off command
+          Serial.write(MIDInote); //send pitch data
+          Serial.write(MIDIvelocity); //send velocity data
+        }
       }
     }
   } else {
@@ -634,50 +621,7 @@ void manageRedGreenLeds() {
 
 
 
-void showAnalog() {
-//  for (int bankNr=0;bankNr<=5;bankNr++) {
-//    digitalWrite(outputPinNr[bankNr],HIGH);
-//  }
-  digitalWrite(outputPinNr[2],HIGH);
-  for (int inputNr=0;inputNr<8;inputNr++) {
-    int analogValue = analogRead(inputNr);
-    int digitalValue = !digitalRead(inputPinNr[inputNr]);
-    Serial.print(analogValue);
-    Serial.print('/');
-    Serial.print(digitalValue);
-    Serial.print(' ');
-  }
-  Serial.println();
-}
-
-void showAllButtons() {
-  for (int bankNr=0;bankNr<=5;bankNr++) {
-    digitalWrite(outputPinNr[bankNr],HIGH);
-    Serial.print('#');
-    Serial.print(bankNr);
-    Serial.print(':');
-    for (int inputNr=0;inputNr<8;inputNr++) {
-      int digitalValue = !digitalRead(inputPinNr[inputNr]);
-      if (PRINT_ANALOG && inputNr<6) {
-        int analogValue = analogRead(inputNr);
-        Serial.print(analogValue);
-        Serial.print('/');
-      }
-      Serial.print(digitalValue);
-      //Serial.print(' ');
-    }
-    digitalWrite(outputPinNr[bankNr],LOW);
-    Serial.print(' ');
-  }
-  Serial.println();
-}
-
-
-
-
-
-
-
+/*
 void incrementDecrementPatch(int column) {
   // increment or decrement patch
   if (column == 10) {
@@ -694,7 +638,7 @@ void incrementDecrementPatch(int column) {
     }
   }
   MIDImessage2(instrumentSelect,patch);
-}
+}*/
 
 void setPatchAccordingToButtonState_old() {
   int bankNr;
@@ -739,65 +683,78 @@ void setPatchAccordingToButtonState() {
   //}
 }
 
+// Play or stop the note of a specific treble button number, given pull state. Keeps internally track of number of times a specific note is pressed.
+// Returns noteNumber. Is 0 if no note is assigned to the specific button, given the current mojcaMode and myPullState.
+int turnTrebleButton(bool noteOn, int buttonNr, int myPullState) {
+  // buttonNr: 0..47
+  int bankNr = buttonNr/8;
+  int inputNr = buttonNr%8;
+  int row, column;
+  sensorToCoordinate(bankNr, inputNr, row, column);
+
+  int noteNumber = getNoteNumber(myPullState,row,column);
+  MIDImessage(noteOn?noteON:noteOFF, noteNumber, noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY);
+  return noteNumber;
+}
+
+// Play or stop the note of a specific bass button number, given pull state. Keeps internally track of number of times a specific note is pressed.
+void turnBassButton(bool noteOn, int buttonNr, int myPullState) {
+  // send note off on oldPullState and note on on pull
+  int bankNr = buttonNr/2;
+  int inputNr = buttonNr%2;
+
+  if (isSpecialInstrument[patch]) {
+    // special instrument with single note for chords
+    int noteNumber = getSpecialBassNoteNumber(myPullState,bankNr,inputNr);
+    MIDImessage(noteOn?noteON:noteOFF, noteNumber, noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY);
+  } else {
+    // normal instruments
+    int* noteNumbers = getBassNoteNumbers(myPullState,bankNr,inputNr);
+    for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
+      if (noteNumbers[noteSubNr]>0) {
+        MIDImessage(noteOn?noteON:noteOFF, noteNumbers[noteSubNr], noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY);
+      }
+    }
+  }
+}
+
+
+// Turns all buttons off of the current mojcaMode and pullState
+void turnAllTrebleButtonsOff() {
+  for (int buttonNr=0;buttonNr<48;buttonNr++) {
+    turnTrebleButton(false, buttonNr, pullState);
+  }
+}
+
+// Turns all buttons off of the current mojcaMode and pullState
+void turnAllBassButtonsOff() {
+  for (int buttonNr=0;buttonNr<12;buttonNr++) {
+    turnBassButton(false, buttonNr, pullState);
+  }
+}
+
+// Switch from pull to push (or vice-versa) detected. pullState is the new pull state, !pullState the old one.
 void manageSwitchPull() {
-  // Switch detected
-  // all notes off? No, doesn't work with all synths...
-  //MIDImessage3(176,123,0);
 
   // pressed treble notes off
   for (int buttonNr=0; buttonNr<48; buttonNr++) {
     if (buttonState[buttonNr]) {
       // send note off on oldPullState and note on on pull
-      int bankNr = buttonNr/8;
-      int inputNr = buttonNr%8;
-      int row, column;
-      sensorToCoordinate(bankNr, inputNr, row, column);
-
-      int noteNumber = getNoteNumber(!pullState,row,column);
-      MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
-      //notePushedCount[noteNumber] = 0;
+      turnTrebleButton(false,buttonNr,!pullState);
     }
   }
 
   // pressed treble notes on
   for (int buttonNr=0; buttonNr<48; buttonNr++) {
     if (buttonState[buttonNr]) {
-      // send note off on oldPullState and note on on pull
-      int bankNr = buttonNr/8;
-      int inputNr = buttonNr%8;
-      int row, column;
-      sensorToCoordinate(bankNr, inputNr, row, column);
-
-      int noteNumber = getNoteNumber(pullState,row,column);
-      MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
-      //notePushedCount[noteNumber]++;
+      turnTrebleButton(true,buttonNr,pullState);
     }
   }
 
   // pressed bass notes off
   for (int buttonNr=0; buttonNr<12; buttonNr++) {
     if (bassButtonState[buttonNr]) {
-      // send note off on oldPullState and note on on pull
-      int bankNr = buttonNr/2;
-      int inputNr = buttonNr%2;
-
-      //int noteNumber = getBassNoteNumber(!pullState,bankNr,inputNr);
-
-      if (isSpecialInstrument[patch]) {
-        // special instrument with single note for chords
-        int noteNumber = getSpecialBassNoteNumber(!pullState,bankNr,inputNr);
-        MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
-        //notePushedCount[noteNumber] = 0;
-      } else {
-        // normal instruments
-        int* noteNumbers = getBassNoteNumbers(!pullState,bankNr,inputNr);
-        for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
-          if (noteNumbers[noteSubNr]>0) {
-            MIDImessage(noteOFF, noteNumbers[noteSubNr], NOTE_OFF_VELOCITY);
-            //notePushedCount[noteNumbers[noteSubNr]] = 0;
-          }
-        }
-      }
+      turnBassButton(false,buttonNr,!pullState);
     }
   }
 
@@ -805,26 +762,7 @@ void manageSwitchPull() {
   for (int buttonNr=0; buttonNr<12; buttonNr++) {
     if (bassButtonState[buttonNr]) {
       // send note off on oldPullState and note on on pull
-      int bankNr = buttonNr/2;
-      int inputNr = buttonNr%2;
-
-      //int noteNumber = getBassNoteNumber(!pullState,bankNr,inputNr);
-
-      if (isSpecialInstrument[patch]) {
-        // special instrument with single note for chords
-        int noteNumber = getSpecialBassNoteNumber(pullState,bankNr,inputNr);
-        MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
-        //notePushedCount[noteNumber]++;        
-      } else {
-        // normal instruments
-        int* noteNumbers = getBassNoteNumbers(pullState,bankNr,inputNr);
-        for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
-          if (noteNumbers[noteSubNr]>0) {
-            MIDImessage(noteON, noteNumbers[noteSubNr], NOTE_ON_VELOCITY);
-            //notePushedCount[noteNumbers[noteSubNr]]++;
-          }
-        }
-      }
+      turnBassButton(true, buttonNr, pullState);
     }
   }
 }
@@ -832,28 +770,17 @@ void manageSwitchPull() {
 void manageTrebleButtons(int bankNr) {
   for (int inputNr=0;inputNr<8;inputNr++) {
     int digitalValue = !digitalRead(inputPinNr[inputNr]);
-    if (digitalValue != buttonState[bankNr*8+inputNr]) {
-      buttonState[bankNr*8+inputNr]=digitalValue;
-
-      int row, column;
-      sensorToCoordinate(bankNr, inputNr, row, column);
-      int noteNumber = getNoteNumber(pullState,row,column);
-      if (noteNumber>0) {
-        if (digitalValue) {
-          MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
-        } else {
-          MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
-        }
-      } else {
-        if (digitalValue) {
-          // special keys
-          // change patch
-          if (row == 0 && (10 <= column && column <= 11)) {
-            incrementDecrementPatch(column);
-          } else if (row == 3 && column == 7) {
-            // set patch according to button state
-            setPatchAccordingToButtonState();
-          }
+    int buttonNr = bankNr*8+inputNr;
+    if (digitalValue != buttonState[buttonNr]) {
+      buttonState[buttonNr]=digitalValue;
+      int noteNumber = turnTrebleButton(buttonState[buttonNr],buttonNr,pullState);
+      if ((noteNumber == 0) && digitalValue) {
+        // possibly special keys to change patch
+        int row, column;
+        sensorToCoordinate(bankNr, inputNr, row, column);
+        if (!mojcaMode && row == 3 && column == 7) {
+          setPatchAccordingToButtonState();
+          resetAllButtons();
         }
       }
     }
@@ -865,36 +792,8 @@ void manageBassButtons(int bankNr) {
   for (int inputNr=0;inputNr<BASS_INPUT_NR_COUNT;inputNr++) {
     int noteOn = digitalRead(bassInputPinNr[inputNr]);
     if (noteOn != bassButtonState[bankNr*BASS_INPUT_NR_COUNT+inputNr]) {
-      if (!MIDI) {
-        Serial.print("Bass change detected: bankNr=");
-        Serial.print(bankNr);
-        Serial.print(" inputNr=");
-        Serial.print(inputNr);
-        Serial.print(" noteOn=");
-        Serial.println(noteOn);
-      }
       bassButtonState[bankNr*BASS_INPUT_NR_COUNT+inputNr]=noteOn;
-
-      if (isSpecialInstrument[patch]) {
-        // special instrument with single note for chords
-        int noteNumber = getSpecialBassNoteNumber(pullState,bankNr,inputNr);
-        if (noteOn) {
-          MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
-        } else {
-          MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
-        }
-      } else {
-        int* noteNumbers = getBassNoteNumbers(pullState,bankNr,inputNr);
-        for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
-          if (noteNumbers[noteSubNr]>0) {
-            if (noteOn) {
-              MIDImessage(noteON, noteNumbers[noteSubNr], NOTE_ON_VELOCITY);
-            } else {
-              MIDImessage(noteOFF, noteNumbers[noteSubNr], NOTE_OFF_VELOCITY);
-            }
-          }
-        }
-      }
+      turnBassButton(noteOn,bankNr*BASS_INPUT_NR_COUNT+inputNr,pullState);
     }
   }
 }
@@ -910,27 +809,25 @@ void readButtons() {
 }
 
 
-// writes to midi
-void sendMidi() {
-  bool pull;
-  //if (USE_TILT) {
-  //  pull = !digitalRead(8);
-  //} else {
-  //}
-  pull = digitalRead(DIRECTION_BUTTON_PIN);
+void resetAllButtons() {
+  turnAllTrebleButtonsOff();  
+  turnAllBassButtonsOff();  
+}
 
-  if (pull != pullState) {
-    pullState = pull;
+void loop() {
+  bool newMojcaMode = analogRead(6)<512;
+  if (newMojcaMode != mojcaMode) {
+    resetAllButtons();
+    mojcaMode = newMojcaMode;
+  }
+
+  bool newPullState = digitalRead(DIRECTION_BUTTON_PIN);
+  if (newPullState != pullState) {
+    pullState = newPullState;
     manageSwitchPull();
   }
 
   readButtons();
-}
-
-void loop() {
-  mojcaMode = analogRead(6)<512;
-  sendMidi();
-  //manageRedGreenLeds();
 }
 
 void playTestProgram() {
@@ -941,75 +838,22 @@ void playTestProgram() {
   while (1) {
     digitalWrite(13,led);
     led=!led;
-    //MIDImessage2(instrumentSelect,1);
-    //delay(1000);
-/*
-    // C0 on
-    MIDImessage(noteON, 24, NOTE_ON_VELOCITY); // noteON = 144, NOTE_ON_VELOCITY=100      [144, 24, 100]   but it reads it as [255, 32, 48]
-    delay(myPause);
- 
-    // C0 off  
-    MIDImessage(noteOFF, 24, NOTE_OFF_VELOCITY); // noteOFF = 128, NOTE_OFF_VELOCITY=127    [128, 24, 127]  but it reads it as [255, 0, 48]
-    delay(myPause);
-*/
-/*
-    // C2 on
-    MIDImessage(noteON, 48, NOTE_ON_VELOCITY);
+
+    MIDImessage(noteON, 72, NOTE_ON_VELOCITY); // C4 on
     delay(myPause);
   
-    // C2 off  
-    MIDImessage(noteOFF, 48, NOTE_OFF_VELOCITY);
+    MIDImessage(noteOFF, 72, NOTE_OFF_VELOCITY); // C4 off  
     delay(myPause);
-*/
-    // C4 on
-    MIDImessage(noteON, 72, NOTE_ON_VELOCITY);
-    delay(myPause);
-  
-    // C4 off  
-    MIDImessage(noteOFF, 72, NOTE_OFF_VELOCITY);
-    delay(myPause);
-/*
-    // C6 on
-    MIDImessage(noteON, 96, NOTE_ON_VELOCITY);
-    delay(myPause);
-  
-    // C6 off  
-    MIDImessage(noteOFF, 96, NOTE_OFF_VELOCITY);
-    delay(myPause);
-*/    
   }
 }
 
 
 void setup() {
-  /*
-  if (USE_TILT) {
-    pinMode(8,INPUT_PULLUP); // tilt sensor
-  }*/
-  pinMode(DIRECTION_BUTTON_PIN,INPUT_PULLUP); // direction pushbutton
-  /*
-  pinMode(ANY_BUTTON_PUSHED_LED,OUTPUT);
-  pinMode(DIRECTION_LED,OUTPUT);
-  */
-
   Serial.begin(115200);
-
-//  if (MIDI) {
-    /*
-    if (!digitalRead(9)) {
-      Serial.begin(115200); // for Hairless MIDI
-    } else {*/
-      //Serial.begin(31250); // for midi instrument
-      //Serial.begin(38400); // for midi instrument
-//      Serial.begin(115200);
-    //}
-    //MIDImessage2(instrumentSelect,patch);
-//  } else {
-//    Serial.begin(115200);
-//  }
+  pinMode(DIRECTION_BUTTON_PIN,INPUT_PULLUP); // direction pushbutton
 
 #ifdef TEST_PROGRAM
-  playTestProgram();
+  playTestProgram(); // this won't return
 #endif
   
   // Six output pins
@@ -1037,103 +881,45 @@ void setup() {
 
   if (!MIDI) {
     if (mojcaMode) {
-      Serial.println("Four row, ...");
+      Serial.println("Four row");
     } else {
       Serial.println("Two row, CG");
     }
   }
 }
 
-
-
-
-// writes to console
 /*
-void updateButtonState() {
-  bool pull;
-  if (USE_TILT) {
-    pull = !digitalRead(8);
-  } else {
-    pull = digitalRead(9);
+void showAnalog() {
+  digitalWrite(outputPinNr[2],HIGH);
+  for (int inputNr=0;inputNr<8;inputNr++) {
+    int analogValue = analogRead(inputNr);
+    int digitalValue = !digitalRead(inputPinNr[inputNr]);
+    Serial.print(analogValue);
+    Serial.print('/');
+    Serial.print(digitalValue);
+    Serial.print(' ');
   }
-  if (pull != pullState) {
-    // off&on all pressed buttons
-    Serial.println("##");
-    pullState = pull;
-  }
+  Serial.println();
+}
 
+void showAllButtons() {
   for (int bankNr=0;bankNr<=5;bankNr++) {
     digitalWrite(outputPinNr[bankNr],HIGH);
-    delayMicroseconds(500); // to give electronics time to activate
+    Serial.print('#');
+    Serial.print(bankNr);
+    Serial.print(':');
     for (int inputNr=0;inputNr<8;inputNr++) {
       int digitalValue = !digitalRead(inputPinNr[inputNr]);
-      if (digitalValue != buttonState[bankNr*8+inputNr]) {
-        buttonState[bankNr*8+inputNr]=digitalValue;
-
-        int row, column;
-        sensorToCoordinate(bankNr, inputNr, row, column);
-        int noteNumber = getNoteNumber(pull,row,column);
-        /*
-        if (pull >= 1) {
-          noteNumber = pullNoteNumber[3-row][column];
-        } else {
-          noteNumber = pushNoteNumber[3-row][column];
-        }* /
-
-        if (false) {
-          Serial.print("Bank ");
-          Serial.print(bankNr);
-          Serial.print(" input ");
-          Serial.print(inputNr);
-          Serial.print(" row ");
-          Serial.print(row);
-          Serial.print(" column ");
-          Serial.print(column);
-          if (pull >= 1) {
-            Serial.print(" pull");
-          } else {
-            Serial.print(" push");
-          }
-          Serial.print(" note number ");
-          Serial.print(noteNumber);
-          Serial.print(" ");
-        }
-
-        bool printNote = digitalValue;
-
-        if (noteNumber>0) {
-          int noteIndex = noteNumber%12;
-          int octave = noteNumber/12-3;
-
-          if (printNote) {
-            Serial.print(noteNames[noteIndex*2]);
-            char ch = noteNames[noteIndex*2+1];
-            if (ch != ' ') {
-              Serial.print(ch);
-            }
-            Serial.print(octave);
-
-            if (digitalValue) {
-              Serial.print(" on");
-            } else {
-              Serial.print(" off");
-            }
-            Serial.println();
-          }
-        } else {
-          Serial.println("Invalid button");
-        }
+      if (PRINT_ANALOG && inputNr<6) {
+        int analogValue = analogRead(inputNr);
+        Serial.print(analogValue);
+        Serial.print('/');
       }
+      Serial.print(digitalValue);
     }
     digitalWrite(outputPinNr[bankNr],LOW);
+    Serial.print(' ');
   }
-}*/
-
-
-
-  //if (MIDI) {
-  //} else {
-  //  updateButtonState();
-  //}
-  //showAllButtons();
-  //showAnalog();
+  Serial.println();
+}
+*/
