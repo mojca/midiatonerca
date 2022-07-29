@@ -195,6 +195,25 @@ static const byte midi_C7   = 96;
 static const byte midi_Cis7 = 97;
 static const byte midi_D7   = 98;
 
+#define midi_chord_A1  {midi_A1,  midi_Cis2, midi_E2}
+#define midi_chord_B1  {midi_B1,  midi_D2,   midi_F2}
+#define midi_chord_C2  {midi_C2,  midi_E2,   midi_G2}
+#define midi_chord_D2  {midi_D2,  midi_Fis2, midi_A2}
+#define midi_chord_D2m {midi_D2,  midi_F2,   midi_A2}
+#define midi_chord_Es2 {midi_Es2, midi_G2,   midi_B2}
+#define midi_chord_F2  {midi_F2,  midi_A2,   midi_C3}
+#define midi_chord_G2  {midi_G2,  midi_H2,   midi_D3}
+#define midi_chord_no  {0, 0, 0}
+
+static const byte midi_chord_A0_special  = midi_A0;
+static const byte midi_chord_B0_special  = midi_B0;
+static const byte midi_chord_C1_special  = midi_C0;
+static const byte midi_chord_D1_special  = midi_D0;
+static const byte midi_chord_D1m_special = midi_Cis0;
+static const byte midi_chord_Es1_special = midi_Es0;
+static const byte midi_chord_F1_special  = midi_F0;
+static const byte midi_chord_G1_special  = midi_G0;
+
 // notation in comments is in "octave-3"
 
 /* PUSH
@@ -247,6 +266,7 @@ byte vincentPullNoteNumber[4][13]={
   {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}
 };
 
+
 /*
   0 1 2 3 4 5     inputNr 0
    0 1 2 3 4 -     inputNr 1
@@ -257,13 +277,13 @@ byte vincentPullNoteNumber[4][13]={
 */
 byte vincentBassPushNoteNumber[2][6][3]={
   {
-    {midi_C3,  midi_E3,  midi_G3}, {midi_C2, 0, 0},
-    {midi_F3,  midi_A3,  midi_C4}, {midi_F2, 0, 0},
-    {0,        0,        0      }, {0,       0, 0}
+    midi_chord_C2, {midi_C1, 0, 0},
+    midi_chord_F2, {midi_F1, 0, 0},
+    midi_chord_no,  midi_chord_no
   }, {
-    {midi_A2,  midi_Cis3, midi_E3}, {midi_A1, 0, 0},
-    {midi_B2,  midi_D3,   midi_F3}, {midi_B1, 0, 0},
-    {0,        0,         0      }, {0,       0, 0}
+    midi_chord_A1, {midi_A1, 0, 0},
+    midi_chord_B1, {midi_B0, 0, 0},
+    midi_chord_no,  midi_chord_no
   }
 };
 
@@ -274,48 +294,15 @@ byte vincentBassPushNoteNumber[2][6][3]={
  */
 byte vincentBassPullNoteNumber[2][6][3]={
   {
-    {midi_G3,  midi_H3,  midi_D4}, {midi_G2, 0, 0},
-    {midi_C3,  midi_E3,  midi_G3}, {midi_C2, 0, 0},
-    {0,        0,        0      }, {0,       0, 0}
+    midi_chord_G2,  {midi_G2, 0, 0},
+    midi_chord_C2,  {midi_C2, 0, 0},
+    midi_chord_no,   midi_chord_no
   }, {
-    {midi_D3,  midi_F3,  midi_A3}, {midi_D2, 0, 0},
-    {midi_B2,  midi_D3,  midi_F3}, {midi_B1, 0, 0},
-    {0,        0,        0      }, {0,       0, 0}
+    midi_chord_D2m, {midi_D2, 0, 0},
+    midi_chord_B1,  {midi_B1, 0, 0},
+    midi_chord_no,   midi_chord_no
   }
 };
-
-// Bass notes
-static const byte midi_C   = 36; // C2
-static const byte midi_Cis = 37; // C#2
-static const byte midi_D   = 38; // D2
-static const byte midi_Dis = 39; // D#2
-static const byte midi_Es  = 39; // Eb2
-static const byte midi_E   = 40; // E2
-static const byte midi_F   = 41; // F2
-static const byte midi_Fis = 42; // F#2
-static const byte midi_G   = 43; // G2
-static const byte midi_Gis = 44; // G#2
-static const byte midi_A   = 45; // A2
-static const byte midi_B   = 46; // Bb2
-static const byte midi_H   = 47; // B2
-
-static const byte octave = 12;
-
-static const byte midi_chord_A0_special  = midi_A   - 2 * octave;
-static const byte midi_chord_B0_special  = midi_B   - 2 * octave;
-static const byte midi_chord_C1_special  = midi_C   - 2 * octave;
-static const byte midi_chord_D1_special  = midi_D   - 2 * octave;
-static const byte midi_chord_Es1_special = midi_Es  - 2 * octave;
-static const byte midi_chord_F1_special  = midi_F   - 2 * octave;
-static const byte midi_chord_G1_special  = midi_G   - 2 * octave;
-static const byte midi_chord_D1m_special = midi_Cis - 2 * octave;
-
-#define midi_chord_B0  {midi_B  + 0*octave, midi_D + octave, midi_F +   octave}
-#define midi_chord_C1  {midi_C  +   octave, midi_E + octave, midi_G +   octave}
-#define midi_chord_Es1 {midi_Es +   octave, midi_G + octave, midi_B +   octave}
-#define midi_chord_F1  {midi_F  +   octave, midi_A + octave, midi_C + 2*octave}
-#define midi_chord_G1  {midi_G  +   octave, midi_H + octave, midi_D + 2*octave}
-#define midi_chord_D1m {midi_D  +   octave, midi_F + octave, midi_A +   octave}
 
 /*
   0 1 2 3 4 5     inputNr 0
@@ -327,13 +314,13 @@ static const byte midi_chord_D1m_special = midi_Cis - 2 * octave;
 */
 byte mojcaBassPushNoteNumber[2][6][3]={
   {
-    midi_chord_C1, {midi_C, 0, 0},
-    midi_chord_F1, {midi_F, 0, 0},
-    midi_chord_B0, {midi_B - octave, 0, 0}
+    midi_chord_C2, {midi_C2, 0, 0},
+    midi_chord_F2, {midi_F2, 0, 0},
+    midi_chord_B1, {midi_B1, 0, 0}
   }, {
-                                                             {midi_G, 0, 0},
-    {midi_A + 0*octave, midi_Cis + octave, midi_E + octave}, {midi_A - octave, 0, 0},
-    {midi_D +   octave, midi_Fis + octave, midi_A + octave}, {midi_D, 0, 0}, {0, 0, 0}
+                   {midi_G2, 0, 0},
+    midi_chord_A1, {midi_A1, 0, 0},
+    midi_chord_D2, {midi_D2, 0, 0}, midi_chord_Es2
   }
 };
 
@@ -344,14 +331,14 @@ byte mojcaBassPushNoteNumber[2][6][3]={
  */
 byte mojcaBassPullNoteNumber[2][6][3]={
   {
-    midi_chord_G1, {midi_G, 0, 0},
-    midi_chord_C1, {midi_C, 0, 0},
-    midi_chord_F1, {midi_F, 0, 0}
+    midi_chord_G2, {midi_G2, 0, 0},
+    midi_chord_C2, {midi_C2, 0, 0},
+    midi_chord_F2, {midi_F2, 0, 0}
   },
   {
-    {midi_E, 0, 0},
-    midi_chord_D1m, {midi_D,  0, 0},
-    midi_chord_Es1, {midi_Es, 0, 0}, {0,0,0}
+                    {midi_E2,  0, 0},
+    midi_chord_D2m, {midi_D2,  0, 0},
+    midi_chord_Es2, {midi_Es2, 0, 0}, midi_chord_no
   }
 };
 
@@ -368,26 +355,26 @@ byte mojcaBassPullNoteNumber[2][6][3]={
  */
 byte specialMojcaBassPushNoteNumber[2][6]={
   {
-    midi_chord_C1_special, midi_C,
-    midi_chord_F1_special, midi_F,
-    midi_chord_B0_special, midi_B - octave,
+    midi_chord_C1_special, midi_C2,
+    midi_chord_F1_special, midi_F2,
+    midi_chord_B0_special, midi_B1,
   }, {
-                           midi_G,
-    midi_chord_A0_special, midi_A - octave,
-    midi_chord_D1_special, midi_D, 0,
+                           midi_G2,
+    midi_chord_A0_special, midi_A1,
+    midi_chord_D1_special, midi_D2, 0,
   }
 };
 
 byte specialMojcaBassPullNoteNumber[2][6]={
   {
-    midi_chord_G1_special, midi_G,
-    midi_chord_C1_special, midi_C,
-    midi_chord_F1_special, midi_F
+    midi_chord_G1_special, midi_G2,
+    midi_chord_C1_special, midi_C2,
+    midi_chord_F1_special, midi_F2
   },
   {
-    midi_E,
-    midi_chord_D1m_special, midi_D,
-    midi_chord_Es1_special, midi_Es, 0
+                            midi_E2,
+    midi_chord_D1m_special, midi_D2,
+    midi_chord_Es1_special, midi_Es2, 0
   }
 };
 
@@ -405,12 +392,12 @@ byte specialMojcaBassPullNoteNumber[2][6]={
 
 byte specialVincentBassPushNoteNumber[2][6]={
   {
-    midi_chord_C1_special, midi_C,
-    midi_chord_F1_special, midi_F,
+    midi_chord_C1_special, midi_C2,
+    midi_chord_F1_special, midi_F2,
     0, 0
   }, {
-    midi_chord_A0_special, midi_A - octave,
-    midi_chord_B0_special, midi_B - octave,
+    midi_chord_A0_special, midi_A1,
+    midi_chord_B0_special, midi_B1,
     0, 0
   }
 };
@@ -423,13 +410,13 @@ byte specialVincentBassPushNoteNumber[2][6]={
  */
 byte specialVincentBassPullNoteNumber[2][6]={
   {
-    midi_chord_G1_special, midi_G,
-    midi_chord_C1_special, midi_C,
+    midi_chord_G1_special, midi_G2,
+    midi_chord_C1_special, midi_C2,
     0, 0
   },
   {
-    midi_chord_D1m_special, midi_D,
-    midi_chord_B0_special, midi_B - octave,
+    midi_chord_D1m_special, midi_D2,
+    midi_chord_B0_special, midi_B1,
     0, 0
   }
 };
