@@ -21,6 +21,9 @@
  * Bass side:
  * red lines six banks
  * white lines read signals, connect to inputs
+ * 
+ * SamplerBox (Raspberry Pi): To mount the boot partition: "sudo mount /dev/mmcblk0p1 /boot"
+ * To restart the service: systemctl restart samplerbox.service
  */
 
 /*
@@ -52,11 +55,8 @@ const bool MIDI = true;
 
 
 
-const int PATCH_COUNT = 16;
-int isSpecialInstrument[PATCH_COUNT] = {true,true,false,false,false,false,false,false,false,false,false,false,false,false,false}; // 0-based
-//int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12,0}; // 0-based
-//int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12,0}; // 0-based
-
+const int PATCH_COUNT = 15;
+int isSpecialInstrument[PATCH_COUNT] = {true,false,false,false,false,false,false,false,false,false,false,false,false,false}; // 0-based
 int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,0,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
 int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,0,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
 
@@ -551,12 +551,20 @@ void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
   if (MIDI) {
     if (command == noteON) {
       notePushedCount[MIDInote]++;
+      Serial.write(command); //send note on or note off command
+      Serial.write(MIDInote); //send pitch data
+      Serial.write(MIDIvelocity); //send velocity data
     } else if (command == noteOFF) {
       notePushedCount[MIDInote]--;
+      if (notePushedCount[MIDInote] < 0) {
+        notePushedCount[MIDInote] = 0;
+      }
+      if (notePushedCount[MIDInote] == 0) {
+        Serial.write(command); //send note on or note off command
+        Serial.write(MIDInote); //send pitch data
+        Serial.write(MIDIvelocity); //send velocity data
+      }
     }
-    Serial.write(command); //send note on or note off command
-    Serial.write(MIDInote); //send pitch data
-    Serial.write(MIDIvelocity); //send velocity data
   } else {
     Serial.print("Command: ");
     Serial.print(command);
@@ -725,10 +733,10 @@ void setPatchAccordingToButtonState() {
       newPatchNr += 1<<i;
     }
   }
-  if (newPatchNr>0) {
+  //if (newPatchNr>0) {
     patch=newPatchNr;
     MIDImessage2(instrumentSelect,patch);
-  }
+  //}
 }
 
 void manageSwitchPull() {
@@ -736,6 +744,7 @@ void manageSwitchPull() {
   // all notes off? No, doesn't work with all synths...
   //MIDImessage3(176,123,0);
 
+  // pressed treble notes off
   for (int buttonNr=0; buttonNr<48; buttonNr++) {
     if (buttonState[buttonNr]) {
       // send note off on oldPullState and note on on pull
@@ -746,12 +755,26 @@ void manageSwitchPull() {
 
       int noteNumber = getNoteNumber(!pullState,row,column);
       MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
-
-      noteNumber = getNoteNumber(pullState,row,column);
-      MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
+      //notePushedCount[noteNumber] = 0;
     }
   }
 
+  // pressed treble notes on
+  for (int buttonNr=0; buttonNr<48; buttonNr++) {
+    if (buttonState[buttonNr]) {
+      // send note off on oldPullState and note on on pull
+      int bankNr = buttonNr/8;
+      int inputNr = buttonNr%8;
+      int row, column;
+      sensorToCoordinate(bankNr, inputNr, row, column);
+
+      int noteNumber = getNoteNumber(pullState,row,column);
+      MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
+      //notePushedCount[noteNumber]++;
+    }
+  }
+
+  // pressed bass notes off
   for (int buttonNr=0; buttonNr<12; buttonNr++) {
     if (bassButtonState[buttonNr]) {
       // send note off on oldPullState and note on on pull
@@ -764,23 +787,41 @@ void manageSwitchPull() {
         // special instrument with single note for chords
         int noteNumber = getSpecialBassNoteNumber(!pullState,bankNr,inputNr);
         MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
-
-        noteNumber = getSpecialBassNoteNumber(pullState,bankNr,inputNr
-        );
-        MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
+        //notePushedCount[noteNumber] = 0;
       } else {
         // normal instruments
         int* noteNumbers = getBassNoteNumbers(!pullState,bankNr,inputNr);
         for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
           if (noteNumbers[noteSubNr]>0) {
             MIDImessage(noteOFF, noteNumbers[noteSubNr], NOTE_OFF_VELOCITY);
+            //notePushedCount[noteNumbers[noteSubNr]] = 0;
           }
         }
+      }
+    }
+  }
 
-        noteNumbers = getBassNoteNumbers(pullState,bankNr,inputNr);
+  // pressed bass notes on
+  for (int buttonNr=0; buttonNr<12; buttonNr++) {
+    if (bassButtonState[buttonNr]) {
+      // send note off on oldPullState and note on on pull
+      int bankNr = buttonNr/2;
+      int inputNr = buttonNr%2;
+
+      //int noteNumber = getBassNoteNumber(!pullState,bankNr,inputNr);
+
+      if (isSpecialInstrument[patch]) {
+        // special instrument with single note for chords
+        int noteNumber = getSpecialBassNoteNumber(pullState,bankNr,inputNr);
+        MIDImessage(noteON, noteNumber, NOTE_ON_VELOCITY);
+        //notePushedCount[noteNumber]++;        
+      } else {
+        // normal instruments
+        int* noteNumbers = getBassNoteNumbers(pullState,bankNr,inputNr);
         for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
           if (noteNumbers[noteSubNr]>0) {
             MIDImessage(noteON, noteNumbers[noteSubNr], NOTE_ON_VELOCITY);
+            //notePushedCount[noteNumbers[noteSubNr]]++;
           }
         }
       }
