@@ -25,6 +25,7 @@
 
 /*
  * Patches:
+ * 0. SpecialRecording
  * 1. SpecialRecording
  * 2. MKII Flute
  * 3. Lately Bass
@@ -51,10 +52,13 @@ const bool MIDI = true;
 
 
 
-const int PATCH_COUNT = 15;
-int isSpecialInstrument[PATCH_COUNT] = {true,false,false,false,false,false,false,false,false,false,false,false,false,false}; // 0-based
-int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12,0}; // 0-based
-int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12,0}; // 0-based
+const int PATCH_COUNT = 16;
+int isSpecialInstrument[PATCH_COUNT] = {true,true,false,false,false,false,false,false,false,false,false,false,false,false,false}; // 0-based
+//int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12,0}; // 0-based
+//int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,12,24,24,24,24,12,12,24,12,12,12,12,12,0}; // 0-based
+
+int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,0,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
+int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,0,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
 
 int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 
@@ -72,14 +76,14 @@ int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 #define DIRECTION_BUTTON_PIN 10
 
 // true to send notes to Raspberry PI, false to send to console, both at 115200
-const bool MIDI = true;
+//const bool MIDI = true;
 const int noteON = 144;  // 10010000
 const int noteOFF = 128; // 10000000
 //const bool USE_TILT = false;
 const int instrumentSelect = 192; // 11000000
 
 
-int patch = 1; // 1-based, so subtract one for array indexing
+int patch = 0; // 0-based!
 
 // Test optical gates
 // Output: D2..D7 for column 0..5
@@ -280,7 +284,7 @@ byte vincentBassPullNoteNumber[2][6][3]={
   }
 };
 
-
+// Bass notes
 static const byte midi_C   = 36; // C2
 static const byte midi_Cis = 37; // C#2
 static const byte midi_D   = 38; // D2
@@ -289,7 +293,7 @@ static const byte midi_Es  = 39; // Eb2
 static const byte midi_E   = 40; // E2
 static const byte midi_F   = 41; // F2
 static const byte midi_Fis = 42; // F#2
-static const byte midi_G   = 43; // G2     should be G1
+static const byte midi_G   = 43; // G2
 static const byte midi_Gis = 44; // G#2
 static const byte midi_A   = 45; // A2
 static const byte midi_B   = 46; // Bb2
@@ -390,6 +394,49 @@ byte specialMojcaBassPullNoteNumber[2][6]={
 
 
 
+/*
+  0 1 2 3 4 5     inputNr 0
+   0 1 2 3 4 -     inputNr 1
+
+  VINCENT BASS PUSH:
+  c C  f  F x x
+   a A bb Bb x x
+*/
+
+byte specialVincentBassPushNoteNumber[2][6]={
+  {
+    midi_chord_C1_special, midi_C,
+    midi_chord_F1_special, midi_F,
+    0, 0
+  }, {
+    midi_chord_A0_special, midi_A - octave,
+    midi_chord_B0_special, midi_B - octave,
+    0, 0
+  }
+};
+
+
+/*
+  VINCENT BASS PULL:
+  g  G  c  C x x
+   dm D bb Bb x x
+ */
+byte specialVincentBassPullNoteNumber[2][6]={
+  {
+    midi_chord_G1_special, midi_G,
+    midi_chord_C1_special, midi_C,
+    0, 0
+  },
+  {
+    midi_chord_D1m_special, midi_D,
+    midi_chord_B0_special, midi_B - octave,
+    0, 0
+  }
+};
+
+
+
+
 
 
 
@@ -430,7 +477,7 @@ void coordinateToSensor(int row, int column, int& bank, int& inputNr) {
 int getNoteNumber(bool pull, int row, int column) {
   int noteNumber;
   if (mojcaMode) {
-    int noteOffset = trebleNoteOffsetPerPatch[patch-1];
+    int noteOffset = trebleNoteOffsetPerPatch[patch];
     if (pull) {
       noteNumber = pullNoteNumber[3-row][column];
     } else {
@@ -441,7 +488,7 @@ int getNoteNumber(bool pull, int row, int column) {
     }
   } else {
     // vincent mode
-    int noteOffset = trebleNoteOffsetPerPatch[patch-1];
+    int noteOffset = trebleNoteOffsetPerPatch[patch];
     if (pull) {
       noteNumber = vincentPullNoteNumber[3-row][column];
     } else {
@@ -456,7 +503,7 @@ int getNoteNumber(bool pull, int row, int column) {
 
 int getSpecialBassNoteNumber(bool pull, int bankNr, int inputNr) {
   if (mojcaMode) {
-    //int noteOffset = bassNoteOffsetPerPatch[patch-1];
+    //int noteOffset = bassNoteOffsetPerPatch[patch];
     //int noteNumber;
     if (pull) {
       return specialMojcaBassPullNoteNumber[inputNr][bankNr];
@@ -471,7 +518,11 @@ int getSpecialBassNoteNumber(bool pull, int bankNr, int inputNr) {
     */
   } else {
     // vincent mode
-    // not yet implemented!
+    if (pull) {
+      return specialVincentBassPullNoteNumber[inputNr][bankNr];
+    } else { // push
+      return specialVincentBassPushNoteNumber[inputNr][bankNr];
+    }
   }
 }
 
@@ -479,7 +530,7 @@ int* getBassNoteNumbers(bool pull, int bankNr, int inputNr) {
   static int noteNumbers[3];
   for (int i=0;i<3;i++) {
     if (mojcaMode) {
-      int noteOffset = bassNoteOffsetPerPatch[patch-1];//-12;
+      int noteOffset = bassNoteOffsetPerPatch[patch];
       int noteNumber;
       if (pull) {
         noteNumber = mojcaBassPullNoteNumber[inputNr][bankNr][i];
@@ -492,7 +543,7 @@ int* getBassNoteNumbers(bool pull, int bankNr, int inputNr) {
       noteNumbers[i] = noteNumber;
     } else {
       // vincent mode
-      int noteOffset = bassNoteOffsetPerPatch[patch-1];
+      int noteOffset = bassNoteOffsetPerPatch[patch];
       int noteNumber;
       if (pull) {
         noteNumber = vincentBassPullNoteNumber[inputNr][bankNr][i];
@@ -722,7 +773,7 @@ void manageSwitchPull() {
 
       //int noteNumber = getBassNoteNumber(!pullState,bankNr,inputNr);
 
-      if (isSpecialInstrument[patch-1]) {
+      if (isSpecialInstrument[patch]) {
         // special instrument with single note for chords
         int noteNumber = getSpecialBassNoteNumber(!pullState,bankNr,inputNr);
         MIDImessage(noteOFF, noteNumber, NOTE_OFF_VELOCITY);
@@ -796,7 +847,7 @@ void manageBassButtons(int bankNr) {
       }
       bassButtonState[bankNr*BASS_INPUT_NR_COUNT+inputNr]=noteOn;
 
-      if (isSpecialInstrument[patch-1]) {
+      if (isSpecialInstrument[patch]) {
         // special instrument with single note for chords
         int noteNumber = getSpecialBassNoteNumber(pullState,bankNr,inputNr);
         if (noteOn) {
@@ -913,20 +964,21 @@ void setup() {
   pinMode(DIRECTION_LED,OUTPUT);
   */
 
+  Serial.begin(115200);
 
-  if (MIDI) {
+//  if (MIDI) {
     /*
     if (!digitalRead(9)) {
       Serial.begin(115200); // for Hairless MIDI
     } else {*/
       //Serial.begin(31250); // for midi instrument
       //Serial.begin(38400); // for midi instrument
-      Serial.begin(115200);
+//      Serial.begin(115200);
     //}
     //MIDImessage2(instrumentSelect,patch);
-  } else {
-    Serial.begin(115200);
-  }
+//  } else {
+//    Serial.begin(115200);
+//  }
 
 #ifdef TEST_PROGRAM
   playTestProgram();
