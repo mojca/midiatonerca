@@ -277,12 +277,12 @@ byte vincentPullNoteNumber[4][13]={
 */
 byte vincentBassPushNoteNumber[2][6][3]={
   {
-    midi_chord_C2, {midi_C1, 0, 0},
-    midi_chord_F2, {midi_F1, 0, 0},
+    midi_chord_C2, {midi_C2, 0, 0},
+    midi_chord_F2, {midi_F2, 0, 0},
     midi_chord_no,  midi_chord_no
   }, {
-    midi_chord_A1, {midi_A1, 0, 0},
-    midi_chord_B1, {midi_B0, 0, 0},
+    midi_chord_A1, {midi_A2, 0, 0},
+    midi_chord_B1, {midi_B1, 0, 0},
     midi_chord_no,  midi_chord_no
   }
 };
@@ -319,7 +319,7 @@ byte mojcaBassPushNoteNumber[2][6][3]={
     midi_chord_B1, {midi_B1, 0, 0}
   }, {
                    {midi_G2, 0, 0},
-    midi_chord_A1, {midi_A1, 0, 0},
+    midi_chord_A1, {midi_A2, 0, 0},
     midi_chord_D2, {midi_D2, 0, 0}, midi_chord_Es2
   }
 };
@@ -360,7 +360,7 @@ byte specialMojcaBassPushNoteNumber[2][6]={
     midi_chord_B0_special, midi_B1,
   }, {
                            midi_G2,
-    midi_chord_A0_special, midi_A1,
+    midi_chord_A0_special, midi_A2,
     midi_chord_D1_special, midi_D2, 0,
   }
 };
@@ -396,7 +396,7 @@ byte specialVincentBassPushNoteNumber[2][6]={
     midi_chord_F1_special, midi_F2,
     0, 0
   }, {
-    midi_chord_A0_special, midi_A1,
+    midi_chord_A0_special, midi_A2,
     midi_chord_B0_special, midi_B1,
     0, 0
   }
@@ -416,7 +416,7 @@ byte specialVincentBassPullNoteNumber[2][6]={
   },
   {
     midi_chord_D1m_special, midi_D2,
-    midi_chord_B0_special, midi_B1,
+    midi_chord_B0_special,  midi_B1,
     0, 0
   }
 };
