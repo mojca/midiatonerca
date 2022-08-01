@@ -1889,6 +1889,7 @@
   (gr_line (start 47 40) (end 222 40) (layer "F.SilkS") (width 0.15) (tstamp 4ee469be-3498-47f1-bb81-48086eeb556a))
   (gr_line (start 222 40) (end 222 93) (layer "F.SilkS") (width 0.15) (tstamp c3aa033f-7266-4d7c-86ea-96dc77b74c72))
   (gr_line (start 222 93) (end 47 93) (layer "F.SilkS") (width 0.15) (tstamp f2e97cdb-e710-45bc-83d7-1cba14b6d0f9))
+  (gr_rect (start 46.8 39.8) (end 222.2 93.2) (layer "Edge.Cuts") (width 0.15) (fill none) (tstamp 5b1e8143-48a7-4aeb-a079-4ae003a76955))
   (gr_text "Midiatonerca 1.0 (Sep. 2019): Proudly presented by Mojca & Vincent" (at 164 89) (layer "B.SilkS") (tstamp 00000000-0000-0000-0000-00005d7f0dff)
     (effects (font (size 2 1.8) (thickness 0.2)) (justify mirror))
   )
