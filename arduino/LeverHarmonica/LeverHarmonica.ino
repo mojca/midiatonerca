@@ -8,14 +8,35 @@
  * Note number 19 is G0 chord
  * 
  * pin assignment:
- * Inputs: A0, A1, A2, A3, A4, A5, 11, 12,    8?, 10?
- * Outputs: 2, 3, 4, 5, 6, 7
- * 8 tilt
- * 9 direction
- * 10 free: direction led
- * 6 mojcaMode
- * 7 free: button pushed
- * 0,1 serial
+ * Treble inputs: A0, A1, A2, A3, A4, A5, 11, 12
+ * Bass inputs: 8, 9
+ * Bank outputs: 2, 3, 4, 5, 6, 7
+ * 
+ * Analog pins A0..A7:
+ * A0..A5: treble inputs
+ * A6 mojcaMode, needs pull-up resistor. Can only be used as analog input, not digital I/O
+ * A7 practically free. Only analog input.
+ * 
+ * Digital pins D0..D13:
+ * 0, 1 serial
+ * 8, 9 bass inputs
+ * 10 direction buttons
+ * 11, 12: treble inputs
+ * 13: onboard LED, practically free. Due to LED it has a strong pull-down resistor.
+ * 
+ * 
+ * Aug 2022: proposal for new pin assignments:
+ * Analog A0..A7:
+ * A0..A5: treble input (digital I/O)
+ * A6: MojcaMode (analog input, cannot change to digital)
+ * A7: free, can only be used as analog input  
+ * 
+ * Digital D0..D13:
+ * D0, D1: reserved for serial communications
+ * D2: Direction switch
+ * D3, D4: bass input (digital I/O)
+ * D5, D6, D7, D8, D9, D10, D11, D12: select bank (digital I/O)
+ * D13: onboard LED
  *
  * Banks: high if active
  * Bass side:
@@ -28,8 +49,8 @@
 
 /*
  * Patches:
- * 0. Special Accordion recorded by Mojca&Vincent on July 27, 2022
- * 1. Accordion
+ * 0. Accordion recorded in studio by Mojca&Vincent on August 1, 2022
+ * 1. Accordion from Samplerbox website
  * 2. MKII Flute
  * 3. Lately Bass
  * 4. Saw
@@ -43,6 +64,7 @@
  * 12. Organ
  * 13. Rezo bass
  * 14. Simple bass
+ * 15. Accordion recorded home by Mojca&Vincent on July 27, 2022
  *
  */
 
@@ -52,10 +74,10 @@
 // true to send notes to Raspberry PI, false to send to console, both at 115200
 const bool MIDI = true;
 
-const int PATCH_COUNT = 15;
-int isSpecialInstrument[PATCH_COUNT] = {true,false,false,false,false,false,false,false,false,false,false,false,false,false}; // 0-based
-int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,-12,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
-int bassNoteOffsetPerPatch[PATCH_COUNT] = {0,-12,0,12,12,12,0,0,12,0,0,0,0,0,0}; // 0-based
+const int PATCH_COUNT = 16;
+int isSpecialInstrument[PATCH_COUNT] = {true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true}; // 0-based
+int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,-12,0,12,12,12,0,0,12,0,0,0,0,0,0,0}; // 0-based
+int bassNoteOffsetPerPatch[PATCH_COUNT] =   {0,-12,0,12,12,12,0,0,12,0,0,0,0,0,0,0}; // 0-based
 
 int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 
@@ -533,8 +555,8 @@ int* getBassNoteNumbers(bool pull, int bankNr, int inputNr) {
 }
 
 void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
-  if (MIDI) {
-    if (MIDInote>0) {
+  if (MIDInote>0) {
+    if (MIDI) {
       if (command == noteON) {
         notePushedCount[MIDInote]++;
         Serial.write(command); //send note on or note off command
@@ -551,28 +573,28 @@ void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
           Serial.write(MIDIvelocity); //send velocity data
         }
       }
-    }
-  } else {
-    Serial.print("Command: ");
-    Serial.print(command);
-    Serial.print(" MIDInote: ");
-    Serial.print(MIDInote);
-    Serial.print(" MIDIvelocity: ");
-    Serial.print(MIDIvelocity);
-
-    int noteNr=MIDInote%12;
-    int noteOctave=MIDInote/12 -1;
-    Serial.print(" ");
-    Serial.print(noteNames[noteNr*2]);
-    if (noteNames[noteNr*2+1] != ' ') {
-      Serial.print(noteNames[noteNr*2+1]);
-    }
-    Serial.print(noteOctave);
-
-    if (command == 144) {
-      Serial.println(" on");
-    } else if (command == 128) {
-      Serial.println(" off");
+    } else {
+      Serial.print("Command: ");
+      Serial.print(command);
+      Serial.print(" MIDInote: ");
+      Serial.print(MIDInote);
+      Serial.print(" MIDIvelocity: ");
+      Serial.print(MIDIvelocity);
+  
+      int noteNr=MIDInote%12;
+      int noteOctave=MIDInote/12 -1;
+      Serial.print(" ");
+      Serial.print(noteNames[noteNr*2]);
+      if (noteNames[noteNr*2+1] != ' ') {
+        Serial.print(noteNames[noteNr*2+1]);
+      }
+      Serial.print(noteOctave);
+  
+      if (command == 144) {
+        Serial.println(" on");
+      } else if (command == 128) {
+        Serial.println(" off");
+      }
     }
   }
 }
