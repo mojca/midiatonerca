@@ -1953,7 +1953,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 5A466A19) (tstamp 00000000-0000-0000-0000-00005d88185d)
-    (at 34.5 41.5)
+    (at 34.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b248f")
