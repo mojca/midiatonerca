@@ -264,13 +264,13 @@
       (property "ki_fp_filters" "R_*" (id 6) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "R_0_1"
+      (symbol "R.0_1"
         (rectangle (start -1.016 -2.54) (end 1.016 2.54)
           (stroke (width 0.254) (type default) (color 0 0 0 0))
           (fill (type none))
         )
       )
-      (symbol "R_1_1"
+      (symbol "R.1_1"
         (pin passive line (at 0 3.81 270) (length 1.27)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
@@ -5654,7 +5654,7 @@
   (symbol (lib_id "Device:R") (at 392.43 30.48 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005db27a45)
-    (property "Reference" "R_R0" (id 0) (at 392.43 33.02 90))
+    (property "Reference" "R.R0" (id 0) (at 392.43 33.02 90))
     (property "Value" "2k" (id 1) (at 392.43 30.48 90))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 392.43 28.702 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -5685,7 +5685,7 @@
   (symbol (lib_id "Device:R") (at 392.43 43.18 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005db2c8a5)
-    (property "Reference" "R_R1" (id 0) (at 392.43 45.72 90))
+    (property "Reference" "R.R1" (id 0) (at 392.43 45.72 90))
     (property "Value" "2k" (id 1) (at 392.43 43.18 90))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 392.43 41.402 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -5716,7 +5716,7 @@
   (symbol (lib_id "Device:R") (at 392.43 55.88 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005db2ed55)
-    (property "Reference" "R_R2" (id 0) (at 392.43 58.42 90))
+    (property "Reference" "R.R2" (id 0) (at 392.43 58.42 90))
     (property "Value" "2k" (id 1) (at 392.43 55.88 90))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 392.43 54.102 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -5747,7 +5747,7 @@
   (symbol (lib_id "Device:R") (at 392.43 68.58 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005db31435)
-    (property "Reference" "R_R3" (id 0) (at 392.43 71.12 90))
+    (property "Reference" "R.R3" (id 0) (at 392.43 71.12 90))
     (property "Value" "2k" (id 1) (at 392.43 68.58 90))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 392.43 66.802 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -5778,7 +5778,7 @@
   (symbol (lib_id "Device:R") (at 392.43 81.28 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005db3377d)
-    (property "Reference" "R_R4" (id 0) (at 392.43 83.82 90))
+    (property "Reference" "R.R4" (id 0) (at 392.43 83.82 90))
     (property "Value" "2k" (id 1) (at 392.43 81.28 90))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 392.43 79.502 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -5809,7 +5809,7 @@
   (symbol (lib_id "Device:R") (at 392.43 93.98 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005db35c7d)
-    (property "Reference" "R_R5" (id 0) (at 392.43 96.52 90))
+    (property "Reference" "R.R5" (id 0) (at 392.43 96.52 90))
     (property "Value" "2k" (id 1) (at 392.43 93.98 90))
     (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 392.43 92.202 90)
       (effects (font (size 1.27 1.27)) hide)
@@ -6392,22 +6392,22 @@
       (reference "R8") (unit 1) (value "1k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005db27a45"
-      (reference "R_R0") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R.R0") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005db2c8a5"
-      (reference "R_R1") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R.R1") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005db2ed55"
-      (reference "R_R2") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R.R2") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005db31435"
-      (reference "R_R3") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R.R3") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005db3377d"
-      (reference "R_R4") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R.R4") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005db35c7d"
-      (reference "R_R5") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+      (reference "R.R5") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-0000598263bf"
       (reference "U.A0") (unit 1) (value "ITR9608") (footprint "ITR9608:ITR9608")
