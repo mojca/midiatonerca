@@ -158,7 +158,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 5A466A36) (tstamp 00000000-0000-0000-0000-000059cc1659)
-    (at 38.5 20.5)
+    (at 30.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-0000598263bf")
@@ -216,7 +216,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 5A466A4B) (tstamp 00000000-0000-0000-0000-000059cc1679)
-    (at 58.5 20.5)
+    (at 50.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b010a")
@@ -303,7 +303,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 5A466A61) (tstamp 00000000-0000-0000-0000-000059cc1691)
-    (at 54.5 41.5)
+    (at 54.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b257a")
@@ -361,7 +361,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501b96)
-    (at 78.5 20.5)
+    (at 70.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-000059cc4c3b")
@@ -390,7 +390,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501ba2)
-    (at 98.5 20.5)
+    (at 90.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b01b8")
@@ -419,7 +419,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501bae)
-    (at 118.5 20.5)
+    (at 110.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-000059cc4c77")
@@ -448,7 +448,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501bba)
-    (at 138.5 20.5)
+    (at 130.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b01be")
@@ -477,7 +477,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501bc6)
-    (at 158.5 20.5)
+    (at 150.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-000059cc4cb4")
@@ -506,7 +506,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501bd2)
-    (at 178.5 20.5)
+    (at 170.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b01c4")
@@ -535,7 +535,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501bde)
-    (at 198.5 20.5)
+    (at 190.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-000059cc4f32")
@@ -564,7 +564,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501bea)
-    (at 218.5 20.5)
+    (at 210.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b01ca")
@@ -593,7 +593,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501bf6)
-    (at 238.5 20.5)
+    (at 230.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-000059cc4f76")
@@ -622,7 +622,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501c02)
-    (at 258.5 20.5)
+    (at 250.5 34.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b01d0")
@@ -941,7 +941,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501c86)
-    (at 74.5 41.5)
+    (at 74.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b253d")
@@ -970,7 +970,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501c92)
-    (at 94.5 41.5)
+    (at 94.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b2628")
@@ -999,7 +999,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501c9e)
-    (at 114.5 41.5)
+    (at 114.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b2543")
@@ -1028,7 +1028,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501caa)
-    (at 134.5 41.5)
+    (at 134.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b262e")
@@ -1057,7 +1057,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501cb6)
-    (at 154.5 41.5)
+    (at 154.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b2549")
@@ -1086,7 +1086,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501cc2)
-    (at 174.5 41.5)
+    (at 174.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b2634")
@@ -1115,7 +1115,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501cce)
-    (at 194.5 41.5)
+    (at 194.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b254f")
@@ -1144,7 +1144,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501cda)
-    (at 214.5 41.5)
+    (at 214.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b263a")
@@ -1173,7 +1173,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005a501ce6)
-    (at 234.5 41.5)
+    (at 234.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b2555")
@@ -1895,7 +1895,7 @@
 
   (footprint "ITR9608:ITR9608" (layer "F.Cu")
     (tedit 59CC13C7) (tstamp 00000000-0000-0000-0000-00005d8815c6)
-    (at 254.5 41.5)
+    (at 254.5 48.5)
     (property "Sheetfile" "optocouplers.kicad_sch")
     (property "Sheetname" "")
     (path "/00000000-0000-0000-0000-00005a3b2640")
