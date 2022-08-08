@@ -1553,7 +1553,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 035213e6-28cb-4cf2-9343-fb95c43dc553)
-    (property "Reference" "SW.C8" (id 0) (at 97.79 113.411 0))
+    (property "Reference" "SW.C4" (id 0) (at 97.79 113.411 0))
     (property "Value" "SPST" (id 1) (at 97.79 115.7224 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 97.79 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1568,7 +1568,7 @@
   (symbol (lib_id "pspice:DIODE") (at 92.71 127 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 0808180c-bc27-4aba-bccc-0c8288a7991e)
-    (property "Reference" "D.C8" (id 0) (at 95.9612 125.8316 90)
+    (property "Reference" "D.C4" (id 0) (at 95.9612 125.8316 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 95.9612 128.143 90)
@@ -1587,7 +1587,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 76.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 0ae82417-bbce-4aa5-a466-0cc3bbe8bc16)
-    (property "Reference" "SW.C4" (id 0) (at 97.79 70.231 0))
+    (property "Reference" "SW.C2" (id 0) (at 97.79 70.231 0))
     (property "Value" "SPST" (id 1) (at 97.79 72.5424 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 97.79 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1602,7 +1602,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 76.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 0b4eb0cf-02ea-4792-b638-42cd770feccb)
-    (property "Reference" "SW.C5" (id 0) (at 113.03 70.231 0))
+    (property "Reference" "SW.C8" (id 0) (at 113.03 70.231 0))
     (property "Value" "SPST" (id 1) (at 113.03 72.5424 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 113.03 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1617,7 +1617,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 0d7620e4-04e1-42f3-bc15-0676504db7ec)
-    (property "Reference" "SW.B8" (id 0) (at 67.31 113.411 0))
+    (property "Reference" "SW.B4" (id 0) (at 67.31 113.411 0))
     (property "Value" "SPST" (id 1) (at 67.31 115.7224 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 67.31 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1648,7 +1648,7 @@
   (symbol (lib_id "pspice:DIODE") (at 62.23 127 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 0e4f6f42-370c-4d0a-bc11-f89abc10d771)
-    (property "Reference" "D.B8" (id 0) (at 65.4812 125.8316 90)
+    (property "Reference" "D.B4" (id 0) (at 65.4812 125.8316 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 65.4812 128.143 90)
@@ -1667,7 +1667,7 @@
   (symbol (lib_id "pspice:DIODE") (at 92.71 83.82 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 128380a0-d995-47b6-8b24-8a70af18584e)
-    (property "Reference" "D.C4" (id 0) (at 95.9612 82.6516 90)
+    (property "Reference" "D.C2" (id 0) (at 95.9612 82.6516 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 95.9612 84.963 90)
@@ -1686,7 +1686,7 @@
   (symbol (lib_id "pspice:DIODE") (at 138.43 62.23 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 15142369-debd-4caa-b45c-d2fde888fdba)
-    (property "Reference" "D.D3" (id 0) (at 141.6812 61.0616 90)
+    (property "Reference" "D.D7" (id 0) (at 141.6812 61.0616 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 141.6812 63.373 90)
@@ -1705,7 +1705,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 16a43617-0e56-401f-b37f-2e519128c5d6)
-    (property "Reference" "SW.B9" (id 0) (at 82.55 113.411 0))
+    (property "Reference" "SW.B10" (id 0) (at 82.55 113.411 0))
     (property "Value" "SPST" (id 1) (at 82.55 115.7224 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 82.55 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1720,7 +1720,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 33.02 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 175ca23b-b665-470b-aed5-28372f7e3664)
-    (property "Reference" "SW.D1" (id 0) (at 143.51 27.051 0))
+    (property "Reference" "SW.D6" (id 0) (at 143.51 27.051 0))
     (property "Value" "SPST" (id 1) (at 143.51 29.3624 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 143.51 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1751,7 +1751,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 33.02 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 1d0be58c-6cc7-48df-80b8-101ceacf6396)
-    (property "Reference" "SW.A1" (id 0) (at 52.07 27.051 0))
+    (property "Reference" "SW.A6" (id 0) (at 52.07 27.051 0))
     (property "Value" "SPST" (id 1) (at 52.07 29.3624 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 52.07 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1781,7 +1781,7 @@
   (symbol (lib_id "pspice:DIODE") (at 62.23 148.59 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2b832bcf-0d6c-43da-93ae-f262e800d746)
-    (property "Reference" "D.B10" (id 0) (at 65.4812 147.4216 90)
+    (property "Reference" "D.B5" (id 0) (at 65.4812 147.4216 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 65.4812 149.733 90)
@@ -1800,7 +1800,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 54.61 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2c3e2c5c-1033-4c6b-90f6-4cd088e75cfc)
-    (property "Reference" "SW.D2" (id 0) (at 128.27 48.641 0))
+    (property "Reference" "SW.D1" (id 0) (at 128.27 48.641 0))
     (property "Value" "SPST" (id 1) (at 128.27 50.9524 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 128.27 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1815,7 +1815,7 @@
   (symbol (lib_id "pspice:DIODE") (at 123.19 148.59 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 2ddd359a-8e30-44cc-913f-c38aee8c9aa3)
-    (property "Reference" "D.D10" (id 0) (at 126.4412 147.4216 90)
+    (property "Reference" "D.D5" (id 0) (at 126.4412 147.4216 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 126.4412 149.733 90)
@@ -1834,7 +1834,7 @@
   (symbol (lib_id "pspice:DIODE") (at 62.23 105.41 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 31d1c4fb-d677-4f74-b2bb-36a55dd7a072)
-    (property "Reference" "D.B6" (id 0) (at 65.4812 104.2416 90)
+    (property "Reference" "D.B3" (id 0) (at 65.4812 104.2416 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 65.4812 106.553 90)
@@ -1853,7 +1853,7 @@
   (symbol (lib_id "pspice:DIODE") (at 31.75 148.59 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 34b11bd5-370a-4caf-89a0-933be503eeea)
-    (property "Reference" "D.A10" (id 0) (at 35.0012 147.4216 90)
+    (property "Reference" "D.A5" (id 0) (at 35.0012 147.4216 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 35.0012 149.733 90)
@@ -1902,7 +1902,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 3d141604-462c-4785-b684-a2f9a604a507)
-    (property "Reference" "SW.A8" (id 0) (at 36.83 113.411 0))
+    (property "Reference" "SW.A4" (id 0) (at 36.83 113.411 0))
     (property "Value" "SPST" (id 1) (at 36.83 115.7224 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 36.83 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1936,7 +1936,7 @@
   (symbol (lib_id "pspice:DIODE") (at 138.43 83.82 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 42d8fbe7-a4b1-465b-a927-a77e8a7454a5)
-    (property "Reference" "D.D5" (id 0) (at 141.6812 82.6516 90)
+    (property "Reference" "D.D8" (id 0) (at 141.6812 82.6516 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 141.6812 84.963 90)
@@ -1955,7 +1955,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 54.61 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 442f2148-9bba-4b59-b324-ca102ef55365)
-    (property "Reference" "SW.A2" (id 0) (at 36.83 48.641 0))
+    (property "Reference" "SW.A1" (id 0) (at 36.83 48.641 0))
     (property "Value" "SPST" (id 1) (at 36.83 50.9524 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 36.83 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1970,7 +1970,7 @@
   (symbol (lib_id "pspice:DIODE") (at 138.43 40.64 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 44a695b5-0292-4435-9b95-a8f152d2ea3f)
-    (property "Reference" "D.D1" (id 0) (at 141.6812 39.4716 90)
+    (property "Reference" "D.D6" (id 0) (at 141.6812 39.4716 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 141.6812 41.783 90)
@@ -2008,7 +2008,7 @@
   (symbol (lib_id "pspice:DIODE") (at 77.47 127 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 45764a7e-205e-473f-9926-7e8e509c8a78)
-    (property "Reference" "D.B9" (id 0) (at 80.7212 125.8316 90)
+    (property "Reference" "D.B10" (id 0) (at 80.7212 125.8316 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 80.7212 128.143 90)
@@ -2027,7 +2027,7 @@
   (symbol (lib_id "pspice:DIODE") (at 107.95 105.41 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4631aca7-f65a-4cba-8035-bc423aaa971c)
-    (property "Reference" "D.C7" (id 0) (at 111.2012 104.2416 90)
+    (property "Reference" "D.C9" (id 0) (at 111.2012 104.2416 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 111.2012 106.553 90)
@@ -2046,7 +2046,7 @@
   (symbol (lib_id "pspice:DIODE") (at 123.19 105.41 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4a55c8b1-0698-435e-ad31-57a6af8bacef)
-    (property "Reference" "D.D6" (id 0) (at 126.4412 104.2416 90)
+    (property "Reference" "D.D3" (id 0) (at 126.4412 104.2416 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 126.4412 106.553 90)
@@ -2065,7 +2065,7 @@
   (symbol (lib_id "pspice:DIODE") (at 62.23 83.82 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 4ab29b74-0ac5-4ee8-8377-8c079b6d6b00)
-    (property "Reference" "D.B4" (id 0) (at 65.4812 82.6516 90)
+    (property "Reference" "D.B2" (id 0) (at 65.4812 82.6516 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 65.4812 84.963 90)
@@ -2100,7 +2100,7 @@
   (symbol (lib_id "pspice:DIODE") (at 46.99 105.41 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 533087a9-ebf6-4bf6-b066-1a3dfa769dd4)
-    (property "Reference" "D.A7" (id 0) (at 50.2412 104.2416 90)
+    (property "Reference" "D.A9" (id 0) (at 50.2412 104.2416 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 50.2412 106.553 90)
@@ -2119,7 +2119,7 @@
   (symbol (lib_id "pspice:DIODE") (at 123.19 62.23 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 53cf5651-29c2-47a9-b35c-4e899409e0cd)
-    (property "Reference" "D.D2" (id 0) (at 126.4412 61.0616 90)
+    (property "Reference" "D.D1" (id 0) (at 126.4412 61.0616 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 126.4412 63.373 90)
@@ -2138,7 +2138,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 54.61 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 543d63bb-195a-47b3-aab6-627e35c249ea)
-    (property "Reference" "SW.C2" (id 0) (at 97.79 48.641 0))
+    (property "Reference" "SW.C1" (id 0) (at 97.79 48.641 0))
     (property "Value" "SPST" (id 1) (at 97.79 50.9524 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 97.79 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2153,7 +2153,7 @@
   (symbol (lib_id "pspice:DIODE") (at 77.47 105.41 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5631db41-0986-4725-98e3-ce89afc3d799)
-    (property "Reference" "D.B7" (id 0) (at 80.7212 104.2416 90)
+    (property "Reference" "D.B9" (id 0) (at 80.7212 104.2416 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 80.7212 106.553 90)
@@ -2191,7 +2191,7 @@
   (symbol (lib_id "pspice:DIODE") (at 77.47 40.64 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 587fecd2-dc70-44f4-85ac-3bff29837252)
-    (property "Reference" "D.B1" (id 0) (at 80.7212 39.4716 90)
+    (property "Reference" "D.B6" (id 0) (at 80.7212 39.4716 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 80.7212 41.783 90)
@@ -2210,7 +2210,7 @@
   (symbol (lib_id "pspice:DIODE") (at 107.95 83.82 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 590dd196-e471-44cf-a225-3d32faf07614)
-    (property "Reference" "D.C5" (id 0) (at 111.2012 82.6516 90)
+    (property "Reference" "D.C8" (id 0) (at 111.2012 82.6516 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 111.2012 84.963 90)
@@ -2229,7 +2229,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 54.61 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5bdb4cc9-f1fb-4f2e-ae74-bc39b565b7f8)
-    (property "Reference" "SW.B2" (id 0) (at 67.31 48.641 0))
+    (property "Reference" "SW.B1" (id 0) (at 67.31 48.641 0))
     (property "Value" "SPST" (id 1) (at 67.31 50.9524 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 67.31 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2244,7 +2244,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 54.61 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 5e34d8fb-d35b-47c1-b8ab-6014b161526d)
-    (property "Reference" "SW.B3" (id 0) (at 82.55 48.641 0))
+    (property "Reference" "SW.B7" (id 0) (at 82.55 48.641 0))
     (property "Value" "SPST" (id 1) (at 82.55 50.9524 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 82.55 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2278,7 +2278,7 @@
   (symbol (lib_id "pspice:DIODE") (at 31.75 83.82 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 60a1ed02-e527-4a21-8727-9d8fe6e49ca5)
-    (property "Reference" "D.A4" (id 0) (at 35.0012 82.6516 90)
+    (property "Reference" "D.A2" (id 0) (at 35.0012 82.6516 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 35.0012 84.963 90)
@@ -2297,7 +2297,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 61c71a86-48b2-4736-90ba-71c94d01db4d)
-    (property "Reference" "SW.D9" (id 0) (at 143.51 113.411 0))
+    (property "Reference" "SW.D10" (id 0) (at 143.51 113.411 0))
     (property "Value" "SPST" (id 1) (at 143.51 115.7224 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 143.51 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2331,7 +2331,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 71a5c950-9f06-4090-a1fa-6f37b9a1aeee)
-    (property "Reference" "SW.A9" (id 0) (at 52.07 113.411 0))
+    (property "Reference" "SW.A10" (id 0) (at 52.07 113.411 0))
     (property "Value" "SPST" (id 1) (at 52.07 115.7224 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 52.07 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2346,7 +2346,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 72a71179-85c3-4cba-86f0-591a498b1556)
-    (property "Reference" "SW.B7" (id 0) (at 82.55 91.821 0))
+    (property "Reference" "SW.B9" (id 0) (at 82.55 91.821 0))
     (property "Value" "SPST" (id 1) (at 82.55 94.1324 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 82.55 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2361,7 +2361,7 @@
   (symbol (lib_id "pspice:DIODE") (at 31.75 127 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 73519b66-1ad8-4f06-9fa8-67e638a7ee72)
-    (property "Reference" "D.A8" (id 0) (at 35.0012 125.8316 90)
+    (property "Reference" "D.A4" (id 0) (at 35.0012 125.8316 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 35.0012 128.143 90)
@@ -2380,7 +2380,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 76.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 77a95227-e447-41e1-80a5-a7ff625c72da)
-    (property "Reference" "SW.D5" (id 0) (at 143.51 70.231 0))
+    (property "Reference" "SW.D8" (id 0) (at 143.51 70.231 0))
     (property "Value" "SPST" (id 1) (at 143.51 72.5424 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 143.51 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2414,7 +2414,7 @@
   (symbol (lib_id "pspice:DIODE") (at 138.43 127 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 7af73efc-9b47-430d-b1a0-7a95c6873b39)
-    (property "Reference" "D.D9" (id 0) (at 141.6812 125.8316 90)
+    (property "Reference" "D.D10" (id 0) (at 141.6812 125.8316 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 141.6812 128.143 90)
@@ -2433,7 +2433,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 7d297e3a-cdc2-494f-9909-1d1639b51f18)
-    (property "Reference" "SW.B6" (id 0) (at 67.31 91.821 0))
+    (property "Reference" "SW.B3" (id 0) (at 67.31 91.821 0))
     (property "Value" "SPST" (id 1) (at 67.31 94.1324 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 67.31 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2448,7 +2448,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 7d5b511e-a120-441a-9669-93c545c1a0b4)
-    (property "Reference" "SW.C7" (id 0) (at 113.03 91.821 0))
+    (property "Reference" "SW.C9" (id 0) (at 113.03 91.821 0))
     (property "Value" "SPST" (id 1) (at 113.03 94.1324 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 113.03 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2463,7 +2463,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 7f8805bd-3ac6-492e-a8ee-0834fb224297)
-    (property "Reference" "SW.D6" (id 0) (at 128.27 91.821 0))
+    (property "Reference" "SW.D3" (id 0) (at 128.27 91.821 0))
     (property "Value" "SPST" (id 1) (at 128.27 94.1324 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 128.27 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2478,7 +2478,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 83f6573e-3294-49ef-8781-f0ac58e7945b)
-    (property "Reference" "SW.A6" (id 0) (at 36.83 91.821 0))
+    (property "Reference" "SW.A3" (id 0) (at 36.83 91.821 0))
     (property "Value" "SPST" (id 1) (at 36.83 94.1324 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 36.83 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2511,7 +2511,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 54.61 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 90d6951e-75ac-440c-9a23-18c571abad63)
-    (property "Reference" "SW.D3" (id 0) (at 143.51 48.641 0))
+    (property "Reference" "SW.D7" (id 0) (at 143.51 48.641 0))
     (property "Value" "SPST" (id 1) (at 143.51 50.9524 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 143.51 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2526,7 +2526,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 76.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 961842f8-bd2d-47a2-8e3f-9699e8081407)
-    (property "Reference" "SW.D4" (id 0) (at 128.27 70.231 0))
+    (property "Reference" "SW.D2" (id 0) (at 128.27 70.231 0))
     (property "Value" "SPST" (id 1) (at 128.27 72.5424 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 128.27 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2579,7 +2579,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 54.61 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 9a90ca1b-2828-40a0-ac5c-bc16b1d4c372)
-    (property "Reference" "SW.C3" (id 0) (at 113.03 48.641 0))
+    (property "Reference" "SW.C7" (id 0) (at 113.03 48.641 0))
     (property "Value" "SPST" (id 1) (at 113.03 50.9524 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 113.03 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2633,7 +2633,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 9f4b4985-1b50-4a8f-9206-b2ddc66e6dba)
-    (property "Reference" "SW.C6" (id 0) (at 97.79 91.821 0))
+    (property "Reference" "SW.C3" (id 0) (at 97.79 91.821 0))
     (property "Value" "SPST" (id 1) (at 97.79 94.1324 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 97.79 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2648,7 +2648,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 76.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a050b193-b1bb-4262-8d66-edf0c3039030)
-    (property "Reference" "SW.A5" (id 0) (at 52.07 70.231 0))
+    (property "Reference" "SW.A8" (id 0) (at 52.07 70.231 0))
     (property "Value" "SPST" (id 1) (at 52.07 72.5424 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 52.07 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2663,7 +2663,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 140.97 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a1b2fb11-0817-4173-912e-c56da806ca6b)
-    (property "Reference" "SW.C10" (id 0) (at 97.79 135.001 0))
+    (property "Reference" "SW.C5" (id 0) (at 97.79 135.001 0))
     (property "Value" "SPST" (id 1) (at 97.79 137.3124 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 97.79 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2678,7 +2678,7 @@
   (symbol (lib_id "pspice:DIODE") (at 46.99 62.23 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a25562f9-cd8d-4098-8258-5ace542fd386)
-    (property "Reference" "D.A3" (id 0) (at 50.2412 61.0616 90)
+    (property "Reference" "D.A7" (id 0) (at 50.2412 61.0616 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 50.2412 63.373 90)
@@ -2715,7 +2715,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 54.61 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a5f6a990-724c-4db7-a610-606f87b67532)
-    (property "Reference" "SW.A3" (id 0) (at 52.07 48.641 0))
+    (property "Reference" "SW.A7" (id 0) (at 52.07 48.641 0))
     (property "Value" "SPST" (id 1) (at 52.07 50.9524 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 52.07 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2745,7 +2745,7 @@
   (symbol (lib_id "pspice:DIODE") (at 92.71 105.41 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ab2174e1-1887-4607-ab3e-27b3dcc14eef)
-    (property "Reference" "D.C6" (id 0) (at 95.9612 104.2416 90)
+    (property "Reference" "D.C3" (id 0) (at 95.9612 104.2416 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 95.9612 106.553 90)
@@ -2783,7 +2783,7 @@
   (symbol (lib_id "pspice:DIODE") (at 31.75 105.41 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid aef927df-636a-4b7b-97ab-04eed658cf06)
-    (property "Reference" "D.A6" (id 0) (at 35.0012 104.2416 90)
+    (property "Reference" "D.A3" (id 0) (at 35.0012 104.2416 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 35.0012 106.553 90)
@@ -2802,7 +2802,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid b0687eb5-7ea3-4da6-aa99-2a6ae356954b)
-    (property "Reference" "SW.C9" (id 0) (at 113.03 113.411 0))
+    (property "Reference" "SW.C10" (id 0) (at 113.03 113.411 0))
     (property "Value" "SPST" (id 1) (at 113.03 115.7224 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 113.03 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2833,7 +2833,7 @@
   (symbol (lib_id "pspice:DIODE") (at 31.75 62.23 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid b1b5ab7b-55f8-42e8-89e7-1d42db6a9fc3)
-    (property "Reference" "D.A2" (id 0) (at 35.0012 61.0616 90)
+    (property "Reference" "D.A1" (id 0) (at 35.0012 61.0616 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 35.0012 63.373 90)
@@ -2886,7 +2886,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 140.97 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid b75cf96a-45d9-4715-a978-67e0544e7f23)
-    (property "Reference" "SW.D10" (id 0) (at 128.27 135.001 0))
+    (property "Reference" "SW.D5" (id 0) (at 128.27 135.001 0))
     (property "Value" "SPST" (id 1) (at 128.27 137.3124 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 128.27 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -2939,7 +2939,7 @@
   (symbol (lib_id "pspice:DIODE") (at 92.71 148.59 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c210d3db-1fea-401b-936f-7d31c209e45c)
-    (property "Reference" "D.C10" (id 0) (at 95.9612 147.4216 90)
+    (property "Reference" "D.C5" (id 0) (at 95.9612 147.4216 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 95.9612 149.733 90)
@@ -2958,7 +2958,7 @@
   (symbol (lib_id "pspice:DIODE") (at 77.47 62.23 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c76480ad-b6b1-4300-9f28-3ac5f64c2e0b)
-    (property "Reference" "D.B3" (id 0) (at 80.7212 61.0616 90)
+    (property "Reference" "D.B7" (id 0) (at 80.7212 61.0616 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 80.7212 63.373 90)
@@ -2993,7 +2993,7 @@
   (symbol (lib_id "pspice:DIODE") (at 77.47 83.82 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c84f415f-0ae7-4912-89e2-e5ec532102bb)
-    (property "Reference" "D.B5" (id 0) (at 80.7212 82.6516 90)
+    (property "Reference" "D.B8" (id 0) (at 80.7212 82.6516 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 80.7212 84.963 90)
@@ -3012,7 +3012,7 @@
   (symbol (lib_id "pspice:DIODE") (at 92.71 62.23 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid c9ba8cb4-6940-43d9-ae83-b00843beb423)
-    (property "Reference" "D.C2" (id 0) (at 95.9612 61.0616 90)
+    (property "Reference" "D.C1" (id 0) (at 95.9612 61.0616 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 95.9612 63.373 90)
@@ -3046,7 +3046,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 140.97 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid cf2ef802-e9ef-4111-8b1c-38515c278e91)
-    (property "Reference" "SW.A10" (id 0) (at 36.83 135.001 0))
+    (property "Reference" "SW.A5" (id 0) (at 36.83 135.001 0))
     (property "Value" "SPST" (id 1) (at 36.83 137.3124 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 36.83 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3080,7 +3080,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 119.38 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d07b1a15-a537-4329-980f-7ca32b62fa98)
-    (property "Reference" "SW.D8" (id 0) (at 128.27 113.411 0))
+    (property "Reference" "SW.D4" (id 0) (at 128.27 113.411 0))
     (property "Value" "SPST" (id 1) (at 128.27 115.7224 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 128.27 119.38 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3095,7 +3095,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 33.02 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d0ea1a89-0a26-4fdd-80ab-bcd283e1349f)
-    (property "Reference" "SW.B1" (id 0) (at 82.55 27.051 0))
+    (property "Reference" "SW.B6" (id 0) (at 82.55 27.051 0))
     (property "Value" "SPST" (id 1) (at 82.55 29.3624 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 82.55 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3110,7 +3110,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 76.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d15dc63f-641b-4ef9-920a-32c9b5473c95)
-    (property "Reference" "SW.A4" (id 0) (at 36.83 70.231 0))
+    (property "Reference" "SW.A2" (id 0) (at 36.83 70.231 0))
     (property "Value" "SPST" (id 1) (at 36.83 72.5424 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 36.83 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3125,7 +3125,7 @@
   (symbol (lib_id "pspice:DIODE") (at 46.99 83.82 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d3e98de4-8997-4be0-8381-ba2a703f105b)
-    (property "Reference" "D.A5" (id 0) (at 50.2412 82.6516 90)
+    (property "Reference" "D.A8" (id 0) (at 50.2412 82.6516 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 50.2412 84.963 90)
@@ -3144,7 +3144,7 @@
   (symbol (lib_id "pspice:DIODE") (at 107.95 127 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid d6831ef0-4214-4e27-98d6-4a7ebd139d5b)
-    (property "Reference" "D.C9" (id 0) (at 111.2012 125.8316 90)
+    (property "Reference" "D.C10" (id 0) (at 111.2012 125.8316 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 111.2012 128.143 90)
@@ -3163,7 +3163,7 @@
   (symbol (lib_id "pspice:DIODE") (at 62.23 62.23 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid da70380b-6362-4feb-b0e3-98f487027053)
-    (property "Reference" "D.B2" (id 0) (at 65.4812 61.0616 90)
+    (property "Reference" "D.B1" (id 0) (at 65.4812 61.0616 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 65.4812 63.373 90)
@@ -3182,7 +3182,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 140.97 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid dada7670-9237-4210-898a-8cce1f226f25)
-    (property "Reference" "SW.B10" (id 0) (at 67.31 135.001 0))
+    (property "Reference" "SW.B5" (id 0) (at 67.31 135.001 0))
     (property "Value" "SPST" (id 1) (at 67.31 137.3124 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 67.31 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3197,7 +3197,7 @@
   (symbol (lib_id "pspice:DIODE") (at 46.99 127 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid dc64dff8-c8ac-45c6-beb4-dbf71e48a8f7)
-    (property "Reference" "D.A9" (id 0) (at 50.2412 125.8316 90)
+    (property "Reference" "D.A10" (id 0) (at 50.2412 125.8316 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 50.2412 128.143 90)
@@ -3216,7 +3216,7 @@
   (symbol (lib_id "pspice:DIODE") (at 123.19 83.82 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid dd7f5f20-7860-43a7-921a-574dce1d2c2d)
-    (property "Reference" "D.D4" (id 0) (at 126.4412 82.6516 90)
+    (property "Reference" "D.D2" (id 0) (at 126.4412 82.6516 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 126.4412 84.963 90)
@@ -3250,7 +3250,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 33.02 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid dfb2fdd3-b57b-4547-a793-1022c2b523f5)
-    (property "Reference" "SW.C1" (id 0) (at 113.03 27.051 0))
+    (property "Reference" "SW.C6" (id 0) (at 113.03 27.051 0))
     (property "Value" "SPST" (id 1) (at 113.03 29.3624 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 113.03 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3265,7 +3265,7 @@
   (symbol (lib_id "pspice:DIODE") (at 123.19 127 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e0711f05-ec4d-431e-8c2b-94642564d7b7)
-    (property "Reference" "D.D8" (id 0) (at 126.4412 125.8316 90)
+    (property "Reference" "D.D4" (id 0) (at 126.4412 125.8316 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 126.4412 128.143 90)
@@ -3284,7 +3284,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 76.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e19930a7-40ff-4473-b3a3-f4d8f3dc81a3)
-    (property "Reference" "SW.B5" (id 0) (at 82.55 70.231 0))
+    (property "Reference" "SW.B8" (id 0) (at 82.55 70.231 0))
     (property "Value" "SPST" (id 1) (at 82.55 72.5424 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 82.55 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3299,7 +3299,7 @@
   (symbol (lib_id "pspice:DIODE") (at 46.99 40.64 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e89b4ad4-cc37-46ae-b1f7-95d0cbbab3bb)
-    (property "Reference" "D.A1" (id 0) (at 50.2412 39.4716 90)
+    (property "Reference" "D.A6" (id 0) (at 50.2412 39.4716 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 50.2412 41.783 90)
@@ -3318,7 +3318,7 @@
   (symbol (lib_id "pspice:DIODE") (at 138.43 105.41 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid e8db287f-bf26-4dbb-a90b-fa3834a878e2)
-    (property "Reference" "D.D7" (id 0) (at 141.6812 104.2416 90)
+    (property "Reference" "D.D9" (id 0) (at 141.6812 104.2416 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 141.6812 106.553 90)
@@ -3337,7 +3337,7 @@
   (symbol (lib_id "pspice:DIODE") (at 107.95 62.23 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid f0ccade9-9627-4f90-bb4c-b02d086f93d3)
-    (property "Reference" "D.C3" (id 0) (at 111.2012 61.0616 90)
+    (property "Reference" "D.C7" (id 0) (at 111.2012 61.0616 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 111.2012 63.373 90)
@@ -3372,7 +3372,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid f426eafd-5a06-49f3-9f99-a31473810604)
-    (property "Reference" "SW.D7" (id 0) (at 143.51 91.821 0))
+    (property "Reference" "SW.D9" (id 0) (at 143.51 91.821 0))
     (property "Value" "SPST" (id 1) (at 143.51 94.1324 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 143.51 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3387,7 +3387,7 @@
   (symbol (lib_id "pspice:DIODE") (at 107.95 40.64 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid f55ef429-53b3-4c37-8533-df2b23ad621e)
-    (property "Reference" "D.C1" (id 0) (at 111.2012 39.4716 90)
+    (property "Reference" "D.C6" (id 0) (at 111.2012 39.4716 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "DIODE" (id 1) (at 111.2012 41.783 90)
@@ -3440,7 +3440,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 76.2 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid f7b646bb-f227-4cc7-9e5b-2f8b64b6b81f)
-    (property "Reference" "SW.B4" (id 0) (at 67.31 70.231 0))
+    (property "Reference" "SW.B2" (id 0) (at 67.31 70.231 0))
     (property "Value" "SPST" (id 1) (at 67.31 72.5424 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 67.31 76.2 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3471,7 +3471,7 @@
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 97.79 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid fd08d8f8-925c-4e1e-8884-d2512f61948b)
-    (property "Reference" "SW.A7" (id 0) (at 52.07 91.821 0))
+    (property "Reference" "SW.A9" (id 0) (at 52.07 91.821 0))
     (property "Value" "SPST" (id 1) (at 52.07 94.1324 0))
     (property "Footprint" "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB" (id 2) (at 52.07 97.79 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -3524,34 +3524,34 @@
     (path "/97178bdc-fdcc-45db-99b3-0df4ecddfa55"
       (reference "D.A0") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/e89b4ad4-cc37-46ae-b1f7-95d0cbbab3bb"
+    (path "/b1b5ab7b-55f8-42e8-89e7-1d42db6a9fc3"
       (reference "D.A1") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/b1b5ab7b-55f8-42e8-89e7-1d42db6a9fc3"
+    (path "/60a1ed02-e527-4a21-8727-9d8fe6e49ca5"
       (reference "D.A2") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/a25562f9-cd8d-4098-8258-5ace542fd386"
+    (path "/aef927df-636a-4b7b-97ab-04eed658cf06"
       (reference "D.A3") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/60a1ed02-e527-4a21-8727-9d8fe6e49ca5"
+    (path "/73519b66-1ad8-4f06-9fa8-67e638a7ee72"
       (reference "D.A4") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/d3e98de4-8997-4be0-8381-ba2a703f105b"
+    (path "/34b11bd5-370a-4caf-89a0-933be503eeea"
       (reference "D.A5") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/aef927df-636a-4b7b-97ab-04eed658cf06"
+    (path "/e89b4ad4-cc37-46ae-b1f7-95d0cbbab3bb"
       (reference "D.A6") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/533087a9-ebf6-4bf6-b066-1a3dfa769dd4"
+    (path "/a25562f9-cd8d-4098-8258-5ace542fd386"
       (reference "D.A7") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/73519b66-1ad8-4f06-9fa8-67e638a7ee72"
+    (path "/d3e98de4-8997-4be0-8381-ba2a703f105b"
       (reference "D.A8") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/dc64dff8-c8ac-45c6-beb4-dbf71e48a8f7"
+    (path "/533087a9-ebf6-4bf6-b066-1a3dfa769dd4"
       (reference "D.A9") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/34b11bd5-370a-4caf-89a0-933be503eeea"
+    (path "/dc64dff8-c8ac-45c6-beb4-dbf71e48a8f7"
       (reference "D.A10") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
     (path "/6766cf43-6fd8-4599-bde7-ff1df385194a"
@@ -3560,34 +3560,34 @@
     (path "/7895ccbd-21c2-4b2a-91dc-963c2709f882"
       (reference "D.B0") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/587fecd2-dc70-44f4-85ac-3bff29837252"
+    (path "/da70380b-6362-4feb-b0e3-98f487027053"
       (reference "D.B1") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/da70380b-6362-4feb-b0e3-98f487027053"
+    (path "/4ab29b74-0ac5-4ee8-8377-8c079b6d6b00"
       (reference "D.B2") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/c76480ad-b6b1-4300-9f28-3ac5f64c2e0b"
+    (path "/31d1c4fb-d677-4f74-b2bb-36a55dd7a072"
       (reference "D.B3") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/4ab29b74-0ac5-4ee8-8377-8c079b6d6b00"
+    (path "/0e4f6f42-370c-4d0a-bc11-f89abc10d771"
       (reference "D.B4") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/c84f415f-0ae7-4912-89e2-e5ec532102bb"
+    (path "/2b832bcf-0d6c-43da-93ae-f262e800d746"
       (reference "D.B5") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/31d1c4fb-d677-4f74-b2bb-36a55dd7a072"
+    (path "/587fecd2-dc70-44f4-85ac-3bff29837252"
       (reference "D.B6") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/5631db41-0986-4725-98e3-ce89afc3d799"
+    (path "/c76480ad-b6b1-4300-9f28-3ac5f64c2e0b"
       (reference "D.B7") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/0e4f6f42-370c-4d0a-bc11-f89abc10d771"
+    (path "/c84f415f-0ae7-4912-89e2-e5ec532102bb"
       (reference "D.B8") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/45764a7e-205e-473f-9926-7e8e509c8a78"
+    (path "/5631db41-0986-4725-98e3-ce89afc3d799"
       (reference "D.B9") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/2b832bcf-0d6c-43da-93ae-f262e800d746"
+    (path "/45764a7e-205e-473f-9926-7e8e509c8a78"
       (reference "D.B10") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
     (path "/564943e0-14bd-4074-8499-04a9b9114c76"
@@ -3599,34 +3599,34 @@
     (path "/f56ab68d-9b87-4cf5-994f-1ba92b91f9ae"
       (reference "D.C0") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/f55ef429-53b3-4c37-8533-df2b23ad621e"
+    (path "/c9ba8cb4-6940-43d9-ae83-b00843beb423"
       (reference "D.C1") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/c9ba8cb4-6940-43d9-ae83-b00843beb423"
+    (path "/128380a0-d995-47b6-8b24-8a70af18584e"
       (reference "D.C2") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/f0ccade9-9627-4f90-bb4c-b02d086f93d3"
+    (path "/ab2174e1-1887-4607-ab3e-27b3dcc14eef"
       (reference "D.C3") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/128380a0-d995-47b6-8b24-8a70af18584e"
+    (path "/0808180c-bc27-4aba-bccc-0c8288a7991e"
       (reference "D.C4") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/590dd196-e471-44cf-a225-3d32faf07614"
+    (path "/c210d3db-1fea-401b-936f-7d31c209e45c"
       (reference "D.C5") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/ab2174e1-1887-4607-ab3e-27b3dcc14eef"
+    (path "/f55ef429-53b3-4c37-8533-df2b23ad621e"
       (reference "D.C6") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/4631aca7-f65a-4cba-8035-bc423aaa971c"
+    (path "/f0ccade9-9627-4f90-bb4c-b02d086f93d3"
       (reference "D.C7") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/0808180c-bc27-4aba-bccc-0c8288a7991e"
+    (path "/590dd196-e471-44cf-a225-3d32faf07614"
       (reference "D.C8") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/d6831ef0-4214-4e27-98d6-4a7ebd139d5b"
+    (path "/4631aca7-f65a-4cba-8035-bc423aaa971c"
       (reference "D.C9") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/c210d3db-1fea-401b-936f-7d31c209e45c"
+    (path "/d6831ef0-4214-4e27-98d6-4a7ebd139d5b"
       (reference "D.C10") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
     (path "/45370db3-1e22-4167-8008-bfdcad242e9b"
@@ -3635,34 +3635,34 @@
     (path "/ac5f2b09-4e1e-4e52-8cce-aa8de69705e3"
       (reference "D.D0") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/44a695b5-0292-4435-9b95-a8f152d2ea3f"
+    (path "/53cf5651-29c2-47a9-b35c-4e899409e0cd"
       (reference "D.D1") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/53cf5651-29c2-47a9-b35c-4e899409e0cd"
+    (path "/dd7f5f20-7860-43a7-921a-574dce1d2c2d"
       (reference "D.D2") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/15142369-debd-4caa-b45c-d2fde888fdba"
+    (path "/4a55c8b1-0698-435e-ad31-57a6af8bacef"
       (reference "D.D3") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/dd7f5f20-7860-43a7-921a-574dce1d2c2d"
+    (path "/e0711f05-ec4d-431e-8c2b-94642564d7b7"
       (reference "D.D4") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/42d8fbe7-a4b1-465b-a927-a77e8a7454a5"
+    (path "/2ddd359a-8e30-44cc-913f-c38aee8c9aa3"
       (reference "D.D5") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/4a55c8b1-0698-435e-ad31-57a6af8bacef"
+    (path "/44a695b5-0292-4435-9b95-a8f152d2ea3f"
       (reference "D.D6") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/e8db287f-bf26-4dbb-a90b-fa3834a878e2"
+    (path "/15142369-debd-4caa-b45c-d2fde888fdba"
       (reference "D.D7") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/e0711f05-ec4d-431e-8c2b-94642564d7b7"
+    (path "/42d8fbe7-a4b1-465b-a927-a77e8a7454a5"
       (reference "D.D8") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/7af73efc-9b47-430d-b1a0-7a95c6873b39"
+    (path "/e8db287f-bf26-4dbb-a90b-fa3834a878e2"
       (reference "D.D9") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
-    (path "/2ddd359a-8e30-44cc-913f-c38aee8c9aa3"
+    (path "/7af73efc-9b47-430d-b1a0-7a95c6873b39"
       (reference "D.D10") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
     (path "/cfce948b-9f72-4e81-a12b-89c726c6fcef"
@@ -3686,34 +3686,34 @@
     (path "/284fe915-29d9-4b8c-b528-5698bc79fdd4"
       (reference "SW.A0") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/1d0be58c-6cc7-48df-80b8-101ceacf6396"
+    (path "/442f2148-9bba-4b59-b324-ca102ef55365"
       (reference "SW.A1") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/442f2148-9bba-4b59-b324-ca102ef55365"
+    (path "/d15dc63f-641b-4ef9-920a-32c9b5473c95"
       (reference "SW.A2") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/a5f6a990-724c-4db7-a610-606f87b67532"
+    (path "/83f6573e-3294-49ef-8781-f0ac58e7945b"
       (reference "SW.A3") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/d15dc63f-641b-4ef9-920a-32c9b5473c95"
+    (path "/3d141604-462c-4785-b684-a2f9a604a507"
       (reference "SW.A4") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/a050b193-b1bb-4262-8d66-edf0c3039030"
+    (path "/cf2ef802-e9ef-4111-8b1c-38515c278e91"
       (reference "SW.A5") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/83f6573e-3294-49ef-8781-f0ac58e7945b"
+    (path "/1d0be58c-6cc7-48df-80b8-101ceacf6396"
       (reference "SW.A6") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/fd08d8f8-925c-4e1e-8884-d2512f61948b"
+    (path "/a5f6a990-724c-4db7-a610-606f87b67532"
       (reference "SW.A7") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/3d141604-462c-4785-b684-a2f9a604a507"
+    (path "/a050b193-b1bb-4262-8d66-edf0c3039030"
       (reference "SW.A8") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/71a5c950-9f06-4090-a1fa-6f37b9a1aeee"
+    (path "/fd08d8f8-925c-4e1e-8884-d2512f61948b"
       (reference "SW.A9") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/cf2ef802-e9ef-4111-8b1c-38515c278e91"
+    (path "/71a5c950-9f06-4090-a1fa-6f37b9a1aeee"
       (reference "SW.A10") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
     (path "/3605b452-5700-4f1e-8c43-987531e444b5"
@@ -3722,34 +3722,34 @@
     (path "/f569d0ba-4dee-49d3-8326-7570ac97df3c"
       (reference "SW.B0") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/d0ea1a89-0a26-4fdd-80ab-bcd283e1349f"
+    (path "/5bdb4cc9-f1fb-4f2e-ae74-bc39b565b7f8"
       (reference "SW.B1") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/5bdb4cc9-f1fb-4f2e-ae74-bc39b565b7f8"
+    (path "/f7b646bb-f227-4cc7-9e5b-2f8b64b6b81f"
       (reference "SW.B2") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/5e34d8fb-d35b-47c1-b8ab-6014b161526d"
+    (path "/7d297e3a-cdc2-494f-9909-1d1639b51f18"
       (reference "SW.B3") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/f7b646bb-f227-4cc7-9e5b-2f8b64b6b81f"
+    (path "/0d7620e4-04e1-42f3-bc15-0676504db7ec"
       (reference "SW.B4") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/e19930a7-40ff-4473-b3a3-f4d8f3dc81a3"
+    (path "/dada7670-9237-4210-898a-8cce1f226f25"
       (reference "SW.B5") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/7d297e3a-cdc2-494f-9909-1d1639b51f18"
+    (path "/d0ea1a89-0a26-4fdd-80ab-bcd283e1349f"
       (reference "SW.B6") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/72a71179-85c3-4cba-86f0-591a498b1556"
+    (path "/5e34d8fb-d35b-47c1-b8ab-6014b161526d"
       (reference "SW.B7") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/0d7620e4-04e1-42f3-bc15-0676504db7ec"
+    (path "/e19930a7-40ff-4473-b3a3-f4d8f3dc81a3"
       (reference "SW.B8") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/16a43617-0e56-401f-b37f-2e519128c5d6"
+    (path "/72a71179-85c3-4cba-86f0-591a498b1556"
       (reference "SW.B9") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/dada7670-9237-4210-898a-8cce1f226f25"
+    (path "/16a43617-0e56-401f-b37f-2e519128c5d6"
       (reference "SW.B10") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
     (path "/ce9416a2-c796-477a-a62c-20ddd9d8f133"
@@ -3761,34 +3761,34 @@
     (path "/363bbbd4-a600-41c4-8eab-57a023ba6ecc"
       (reference "SW.C0") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/dfb2fdd3-b57b-4547-a793-1022c2b523f5"
+    (path "/543d63bb-195a-47b3-aab6-627e35c249ea"
       (reference "SW.C1") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/543d63bb-195a-47b3-aab6-627e35c249ea"
+    (path "/0ae82417-bbce-4aa5-a466-0cc3bbe8bc16"
       (reference "SW.C2") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/9a90ca1b-2828-40a0-ac5c-bc16b1d4c372"
+    (path "/9f4b4985-1b50-4a8f-9206-b2ddc66e6dba"
       (reference "SW.C3") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/0ae82417-bbce-4aa5-a466-0cc3bbe8bc16"
+    (path "/035213e6-28cb-4cf2-9343-fb95c43dc553"
       (reference "SW.C4") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/0b4eb0cf-02ea-4792-b638-42cd770feccb"
+    (path "/a1b2fb11-0817-4173-912e-c56da806ca6b"
       (reference "SW.C5") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/9f4b4985-1b50-4a8f-9206-b2ddc66e6dba"
+    (path "/dfb2fdd3-b57b-4547-a793-1022c2b523f5"
       (reference "SW.C6") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/7d5b511e-a120-441a-9669-93c545c1a0b4"
+    (path "/9a90ca1b-2828-40a0-ac5c-bc16b1d4c372"
       (reference "SW.C7") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/035213e6-28cb-4cf2-9343-fb95c43dc553"
+    (path "/0b4eb0cf-02ea-4792-b638-42cd770feccb"
       (reference "SW.C8") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/b0687eb5-7ea3-4da6-aa99-2a6ae356954b"
+    (path "/7d5b511e-a120-441a-9669-93c545c1a0b4"
       (reference "SW.C9") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/a1b2fb11-0817-4173-912e-c56da806ca6b"
+    (path "/b0687eb5-7ea3-4da6-aa99-2a6ae356954b"
       (reference "SW.C10") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
     (path "/b2af8654-e340-48f4-9105-bc8633c5f8f2"
@@ -3797,34 +3797,34 @@
     (path "/df185426-8113-4223-8563-67ca43c5991c"
       (reference "SW.D0") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/175ca23b-b665-470b-aed5-28372f7e3664"
+    (path "/2c3e2c5c-1033-4c6b-90f6-4cd088e75cfc"
       (reference "SW.D1") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/2c3e2c5c-1033-4c6b-90f6-4cd088e75cfc"
+    (path "/961842f8-bd2d-47a2-8e3f-9699e8081407"
       (reference "SW.D2") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/90d6951e-75ac-440c-9a23-18c571abad63"
+    (path "/7f8805bd-3ac6-492e-a8ee-0834fb224297"
       (reference "SW.D3") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/961842f8-bd2d-47a2-8e3f-9699e8081407"
+    (path "/d07b1a15-a537-4329-980f-7ca32b62fa98"
       (reference "SW.D4") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/77a95227-e447-41e1-80a5-a7ff625c72da"
+    (path "/b75cf96a-45d9-4715-a978-67e0544e7f23"
       (reference "SW.D5") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/7f8805bd-3ac6-492e-a8ee-0834fb224297"
+    (path "/175ca23b-b665-470b-aed5-28372f7e3664"
       (reference "SW.D6") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/f426eafd-5a06-49f3-9f99-a31473810604"
+    (path "/90d6951e-75ac-440c-9a23-18c571abad63"
       (reference "SW.D7") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/d07b1a15-a537-4329-980f-7ca32b62fa98"
+    (path "/77a95227-e447-41e1-80a5-a7ff625c72da"
       (reference "SW.D8") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/61c71a86-48b2-4736-90ba-71c94d01db4d"
+    (path "/f426eafd-5a06-49f3-9f99-a31473810604"
       (reference "SW.D9") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
-    (path "/b75cf96a-45d9-4715-a978-67e0544e7f23"
+    (path "/61c71a86-48b2-4736-90ba-71c94d01db4d"
       (reference "SW.D10") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
     )
   )
