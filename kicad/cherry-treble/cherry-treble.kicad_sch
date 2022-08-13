@@ -1551,7 +1551,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 035213e6-28cb-4cf2-9343-fb95c43dc553)
     (property "Reference" "SW.C4" (id 0) (at 97.79 113.411 0))
     (property "Value" "SPST" (id 1) (at 97.79 115.7224 0))
@@ -1585,7 +1585,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 76.2 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 0ae82417-bbce-4aa5-a466-0cc3bbe8bc16)
     (property "Reference" "SW.C2" (id 0) (at 97.79 70.231 0))
     (property "Value" "SPST" (id 1) (at 97.79 72.5424 0))
@@ -1600,7 +1600,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 76.2 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 0b4eb0cf-02ea-4792-b638-42cd770feccb)
     (property "Reference" "SW.C8" (id 0) (at 113.03 70.231 0))
     (property "Value" "SPST" (id 1) (at 113.03 72.5424 0))
@@ -1615,7 +1615,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 0d7620e4-04e1-42f3-bc15-0676504db7ec)
     (property "Reference" "SW.B4" (id 0) (at 67.31 113.411 0))
     (property "Value" "SPST" (id 1) (at 67.31 115.7224 0))
@@ -1703,7 +1703,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 16a43617-0e56-401f-b37f-2e519128c5d6)
     (property "Reference" "SW.B10" (id 0) (at 82.55 113.411 0))
     (property "Value" "SPST" (id 1) (at 82.55 115.7224 0))
@@ -1718,7 +1718,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 33.02 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 175ca23b-b665-470b-aed5-28372f7e3664)
     (property "Reference" "SW.D6" (id 0) (at 143.51 27.051 0))
     (property "Value" "SPST" (id 1) (at 143.51 29.3624 0))
@@ -1749,7 +1749,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 33.02 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 1d0be58c-6cc7-48df-80b8-101ceacf6396)
     (property "Reference" "SW.A6" (id 0) (at 52.07 27.051 0))
     (property "Value" "SPST" (id 1) (at 52.07 29.3624 0))
@@ -1764,7 +1764,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 33.02 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 284fe915-29d9-4b8c-b528-5698bc79fdd4)
     (property "Reference" "SW.A0" (id 0) (at 36.83 27.051 0))
     (property "Value" "SPST" (id 1) (at 36.83 29.3624 0))
@@ -1798,7 +1798,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 54.61 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 2c3e2c5c-1033-4c6b-90f6-4cd088e75cfc)
     (property "Reference" "SW.D1" (id 0) (at 128.27 48.641 0))
     (property "Value" "SPST" (id 1) (at 128.27 50.9524 0))
@@ -1870,7 +1870,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 3605b452-5700-4f1e-8c43-987531e444b5)
     (property "Reference" "SW.A11" (id 0) (at 52.07 135.001 0))
     (property "Value" "SPST" (id 1) (at 52.07 137.3124 0))
@@ -1885,7 +1885,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 33.02 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 363bbbd4-a600-41c4-8eab-57a023ba6ecc)
     (property "Reference" "SW.C0" (id 0) (at 97.79 27.051 0))
     (property "Value" "SPST" (id 1) (at 97.79 29.3624 0))
@@ -1900,7 +1900,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 3d141604-462c-4785-b684-a2f9a604a507)
     (property "Reference" "SW.A4" (id 0) (at 36.83 113.411 0))
     (property "Value" "SPST" (id 1) (at 36.83 115.7224 0))
@@ -1953,7 +1953,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 54.61 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 442f2148-9bba-4b59-b324-ca102ef55365)
     (property "Reference" "SW.A1" (id 0) (at 36.83 48.641 0))
     (property "Value" "SPST" (id 1) (at 36.83 50.9524 0))
@@ -2136,7 +2136,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 54.61 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 543d63bb-195a-47b3-aab6-627e35c249ea)
     (property "Reference" "SW.C1" (id 0) (at 97.79 48.641 0))
     (property "Value" "SPST" (id 1) (at 97.79 50.9524 0))
@@ -2227,7 +2227,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 54.61 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 5bdb4cc9-f1fb-4f2e-ae74-bc39b565b7f8)
     (property "Reference" "SW.B1" (id 0) (at 67.31 48.641 0))
     (property "Value" "SPST" (id 1) (at 67.31 50.9524 0))
@@ -2242,7 +2242,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 54.61 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 5e34d8fb-d35b-47c1-b8ab-6014b161526d)
     (property "Reference" "SW.B7" (id 0) (at 82.55 48.641 0))
     (property "Value" "SPST" (id 1) (at 82.55 50.9524 0))
@@ -2295,7 +2295,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 61c71a86-48b2-4736-90ba-71c94d01db4d)
     (property "Reference" "SW.D10" (id 0) (at 143.51 113.411 0))
     (property "Value" "SPST" (id 1) (at 143.51 115.7224 0))
@@ -2329,7 +2329,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 71a5c950-9f06-4090-a1fa-6f37b9a1aeee)
     (property "Reference" "SW.A10" (id 0) (at 52.07 113.411 0))
     (property "Value" "SPST" (id 1) (at 52.07 115.7224 0))
@@ -2344,7 +2344,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 97.79 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 72a71179-85c3-4cba-86f0-591a498b1556)
     (property "Reference" "SW.B9" (id 0) (at 82.55 91.821 0))
     (property "Value" "SPST" (id 1) (at 82.55 94.1324 0))
@@ -2378,7 +2378,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 76.2 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 77a95227-e447-41e1-80a5-a7ff625c72da)
     (property "Reference" "SW.D8" (id 0) (at 143.51 70.231 0))
     (property "Value" "SPST" (id 1) (at 143.51 72.5424 0))
@@ -2431,7 +2431,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 97.79 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 7d297e3a-cdc2-494f-9909-1d1639b51f18)
     (property "Reference" "SW.B3" (id 0) (at 67.31 91.821 0))
     (property "Value" "SPST" (id 1) (at 67.31 94.1324 0))
@@ -2446,7 +2446,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 97.79 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 7d5b511e-a120-441a-9669-93c545c1a0b4)
     (property "Reference" "SW.C9" (id 0) (at 113.03 91.821 0))
     (property "Value" "SPST" (id 1) (at 113.03 94.1324 0))
@@ -2461,7 +2461,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 97.79 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 7f8805bd-3ac6-492e-a8ee-0834fb224297)
     (property "Reference" "SW.D3" (id 0) (at 128.27 91.821 0))
     (property "Value" "SPST" (id 1) (at 128.27 94.1324 0))
@@ -2476,7 +2476,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 97.79 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 83f6573e-3294-49ef-8781-f0ac58e7945b)
     (property "Reference" "SW.A3" (id 0) (at 36.83 91.821 0))
     (property "Value" "SPST" (id 1) (at 36.83 94.1324 0))
@@ -2509,7 +2509,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 54.61 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 90d6951e-75ac-440c-9a23-18c571abad63)
     (property "Reference" "SW.D7" (id 0) (at 143.51 48.641 0))
     (property "Value" "SPST" (id 1) (at 143.51 50.9524 0))
@@ -2524,7 +2524,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 76.2 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 961842f8-bd2d-47a2-8e3f-9699e8081407)
     (property "Reference" "SW.D2" (id 0) (at 128.27 70.231 0))
     (property "Value" "SPST" (id 1) (at 128.27 72.5424 0))
@@ -2577,7 +2577,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 54.61 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 9a90ca1b-2828-40a0-ac5c-bc16b1d4c372)
     (property "Reference" "SW.C7" (id 0) (at 113.03 48.641 0))
     (property "Value" "SPST" (id 1) (at 113.03 50.9524 0))
@@ -2592,7 +2592,7 @@
   )
 
   (symbol (lib_id "Connector_Generic:Conn_02x13_Odd_Even") (at 189.23 38.1 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 9e3b6ef3-52a8-4dd9-a8f4-b7171c5fee3c)
     (property "Reference" "Conn1" (id 0) (at 190.5 17.3482 0))
     (property "Value" "Conn_02x13_Odd_Even" (id 1) (at 190.5 19.6596 0))
@@ -2631,7 +2631,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 97.79 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid 9f4b4985-1b50-4a8f-9206-b2ddc66e6dba)
     (property "Reference" "SW.C3" (id 0) (at 97.79 91.821 0))
     (property "Value" "SPST" (id 1) (at 97.79 94.1324 0))
@@ -2646,7 +2646,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 76.2 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid a050b193-b1bb-4262-8d66-edf0c3039030)
     (property "Reference" "SW.A8" (id 0) (at 52.07 70.231 0))
     (property "Value" "SPST" (id 1) (at 52.07 72.5424 0))
@@ -2661,7 +2661,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 97.79 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid a1b2fb11-0817-4173-912e-c56da806ca6b)
     (property "Reference" "SW.C5" (id 0) (at 97.79 135.001 0))
     (property "Value" "SPST" (id 1) (at 97.79 137.3124 0))
@@ -2713,7 +2713,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 54.61 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid a5f6a990-724c-4db7-a610-606f87b67532)
     (property "Reference" "SW.A7" (id 0) (at 52.07 48.641 0))
     (property "Value" "SPST" (id 1) (at 52.07 50.9524 0))
@@ -2728,7 +2728,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid a6b8a37e-f381-464f-8495-80da3bad6455)
     (property "Reference" "SW.B12" (id 0) (at 143.51 135.001 0))
     (property "Value" "SPST" (id 1) (at 143.51 137.3124 0))
@@ -2800,7 +2800,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid b0687eb5-7ea3-4da6-aa99-2a6ae356954b)
     (property "Reference" "SW.C10" (id 0) (at 113.03 113.411 0))
     (property "Value" "SPST" (id 1) (at 113.03 115.7224 0))
@@ -2850,7 +2850,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid b2af8654-e340-48f4-9105-bc8633c5f8f2)
     (property "Reference" "SW.C11" (id 0) (at 113.03 135.001 0))
     (property "Value" "SPST" (id 1) (at 113.03 137.3124 0))
@@ -2884,7 +2884,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid b75cf96a-45d9-4715-a978-67e0544e7f23)
     (property "Reference" "SW.D5" (id 0) (at 128.27 135.001 0))
     (property "Value" "SPST" (id 1) (at 128.27 137.3124 0))
@@ -3029,7 +3029,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid ce9416a2-c796-477a-a62c-20ddd9d8f133)
     (property "Reference" "SW.B11" (id 0) (at 82.55 135.001 0))
     (property "Value" "SPST" (id 1) (at 82.55 137.3124 0))
@@ -3044,7 +3044,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid cf2ef802-e9ef-4111-8b1c-38515c278e91)
     (property "Reference" "SW.A5" (id 0) (at 36.83 135.001 0))
     (property "Value" "SPST" (id 1) (at 36.83 137.3124 0))
@@ -3078,7 +3078,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 119.38 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid d07b1a15-a537-4329-980f-7ca32b62fa98)
     (property "Reference" "SW.D4" (id 0) (at 128.27 113.411 0))
     (property "Value" "SPST" (id 1) (at 128.27 115.7224 0))
@@ -3093,7 +3093,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 33.02 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid d0ea1a89-0a26-4fdd-80ab-bcd283e1349f)
     (property "Reference" "SW.B6" (id 0) (at 82.55 27.051 0))
     (property "Value" "SPST" (id 1) (at 82.55 29.3624 0))
@@ -3108,7 +3108,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 36.83 76.2 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid d15dc63f-641b-4ef9-920a-32c9b5473c95)
     (property "Reference" "SW.A2" (id 0) (at 36.83 70.231 0))
     (property "Value" "SPST" (id 1) (at 36.83 72.5424 0))
@@ -3180,7 +3180,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 140.97 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid dada7670-9237-4210-898a-8cce1f226f25)
     (property "Reference" "SW.B5" (id 0) (at 67.31 135.001 0))
     (property "Value" "SPST" (id 1) (at 67.31 137.3124 0))
@@ -3233,7 +3233,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 128.27 33.02 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid df185426-8113-4223-8563-67ca43c5991c)
     (property "Reference" "SW.D0" (id 0) (at 128.27 27.051 0))
     (property "Value" "SPST" (id 1) (at 128.27 29.3624 0))
@@ -3248,7 +3248,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 113.03 33.02 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid dfb2fdd3-b57b-4547-a793-1022c2b523f5)
     (property "Reference" "SW.C6" (id 0) (at 113.03 27.051 0))
     (property "Value" "SPST" (id 1) (at 113.03 29.3624 0))
@@ -3282,7 +3282,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 82.55 76.2 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid e19930a7-40ff-4473-b3a3-f4d8f3dc81a3)
     (property "Reference" "SW.B8" (id 0) (at 82.55 70.231 0))
     (property "Value" "SPST" (id 1) (at 82.55 72.5424 0))
@@ -3370,7 +3370,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 143.51 97.79 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid f426eafd-5a06-49f3-9f99-a31473810604)
     (property "Reference" "SW.D9" (id 0) (at 143.51 91.821 0))
     (property "Value" "SPST" (id 1) (at 143.51 94.1324 0))
@@ -3404,7 +3404,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 33.02 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid f569d0ba-4dee-49d3-8326-7570ac97df3c)
     (property "Reference" "SW.B0" (id 0) (at 67.31 27.051 0))
     (property "Value" "SPST" (id 1) (at 67.31 29.3624 0))
@@ -3438,7 +3438,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 67.31 76.2 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid f7b646bb-f227-4cc7-9e5b-2f8b64b6b81f)
     (property "Reference" "SW.B2" (id 0) (at 67.31 70.231 0))
     (property "Value" "SPST" (id 1) (at 67.31 72.5424 0))
@@ -3469,7 +3469,7 @@
   )
 
   (symbol (lib_id "Switch:SW_SPST") (at 52.07 97.79 0) (unit 1)
-    (in_bom yes) (on_board yes)
+    (in_bom no) (on_board yes)
     (uuid fd08d8f8-925c-4e1e-8884-d2512f61948b)
     (property "Reference" "SW.A9" (id 0) (at 52.07 91.821 0))
     (property "Value" "SPST" (id 1) (at 52.07 94.1324 0))
