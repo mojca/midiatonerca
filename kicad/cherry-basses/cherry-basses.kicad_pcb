@@ -29,8 +29,7 @@
   )
 
   (setup
-    (pad_to_mask_clearance 0.051)
-    (solder_mask_min_width 0.25)
+    (pad_to_mask_clearance 0)
     (pcbplotparams
       (layerselection 0x00010fc_ffffffff)
       (disableapertmacros false)
@@ -967,16 +966,16 @@
     (attr through_hole)
     (fp_text reference "REF**" (at 0 -3.048) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp 93282a52-78bf-47d4-b01f-63895cba508d)
+      (tstamp ff66d441-2f53-4bc8-a00a-866b7c3d96af)
     )
     (fp_text value "1pin" (at 0 3) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp dc370a65-20af-4c9e-bd70-b7e613cc1af2)
+      (tstamp bf486c66-fce5-4b6e-b863-0ba41c9801ed)
     )
-    (fp_circle (center 0 0) (end 0 -2.286) (layer "F.SilkS") (width 0.12) (fill none) (tstamp 7432ebe2-9c8a-43bc-ba07-1d2c344e6c3c))
-    (fp_circle (center 0 0) (end 2.6 0) (layer "F.CrtYd") (width 0.05) (fill none) (tstamp 31fecfda-af0c-42e6-b39f-503aa65c9ae1))
-    (fp_circle (center 0 0) (end 2 0.8) (layer "F.Fab") (width 0.1) (fill none) (tstamp d95b3938-4685-4047-b9ae-c3dcec664b70))
-    (pad "1" thru_hole circle locked (at 0 0) (size 4 4) (drill 2.5) (layers *.Cu *.Mask) (tstamp efe0d663-61bb-44ff-b9a8-03a8dde3605e))
+    (fp_circle (center 0 0) (end 0 -2.286) (layer "F.SilkS") (width 0.12) (fill none) (tstamp c60f6352-6060-459e-836d-cc2417c7fb82))
+    (fp_circle (center 0 0) (end 2.6 0) (layer "F.CrtYd") (width 0.05) (fill none) (tstamp 77c8ec64-fc25-4610-880b-dab32878bc8f))
+    (fp_circle (center 0 0) (end 2 0.8) (layer "F.Fab") (width 0.1) (fill none) (tstamp b87b0cd8-2690-4d3f-be8a-ff86c3b7bb48))
+    (pad "1" thru_hole circle locked (at 0 0) (size 4 4) (drill 2.5) (layers *.Cu *.Mask) (tstamp e79c34f2-66d3-4ff0-80a2-7ebbb9ba1700))
   )
 
   (footprint "Connectors:1pin" (layer "F.Cu")
@@ -987,16 +986,16 @@
     (attr through_hole)
     (fp_text reference "REF**" (at 0 -3.048) (layer "F.SilkS") hide
       (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp 93282a52-78bf-47d4-b01f-63895cba508d)
+      (tstamp daadb3ff-05f8-4044-94de-32b4b6dc49d1)
     )
     (fp_text value "1pin" (at 0 3) (layer "F.Fab") hide
       (effects (font (size 1 1) (thickness 0.15)))
-      (tstamp dc370a65-20af-4c9e-bd70-b7e613cc1af2)
+      (tstamp 6c1ba907-d571-4843-bfd4-abc541a5c7fe)
     )
-    (fp_circle (center 0 0) (end 0 -2.286) (layer "F.SilkS") (width 0.12) (fill none) (tstamp 7432ebe2-9c8a-43bc-ba07-1d2c344e6c3c))
-    (fp_circle (center 0 0) (end 2.6 0) (layer "F.CrtYd") (width 0.05) (fill none) (tstamp 31fecfda-af0c-42e6-b39f-503aa65c9ae1))
-    (fp_circle (center 0 0) (end 2 0.8) (layer "F.Fab") (width 0.1) (fill none) (tstamp d95b3938-4685-4047-b9ae-c3dcec664b70))
-    (pad "1" thru_hole circle locked (at 0 0) (size 4 4) (drill 2.5) (layers *.Cu *.Mask) (tstamp efe0d663-61bb-44ff-b9a8-03a8dde3605e))
+    (fp_circle (center 0 0) (end 0 -2.286) (layer "F.SilkS") (width 0.12) (fill none) (tstamp 46a72e9f-f3c4-4614-a48d-d3996fadb952))
+    (fp_circle (center 0 0) (end 2.6 0) (layer "F.CrtYd") (width 0.05) (fill none) (tstamp 5c57136b-ca46-49d4-b138-fa32abf8f241))
+    (fp_circle (center 0 0) (end 2 0.8) (layer "F.Fab") (width 0.1) (fill none) (tstamp bc7c70f4-44f8-4a45-8f23-b3b067b5f363))
+    (pad "1" thru_hole circle locked (at 0 0) (size 4 4) (drill 2.5) (layers *.Cu *.Mask) (tstamp 9ef1c892-9a00-49d2-a545-5e81b7cd6384))
   )
 
   (footprint "Diode_SMD:D_SOD-323_HandSoldering" (layer "B.Cu")
@@ -1780,9 +1779,9 @@
     (fp_line (start 1.6 0.8) (end 1.6 -0.8) (layer "B.Fab") (width 0.1) (tstamp bd3420e8-5bac-495c-aefd-7ce5c8a4fbbd))
     (fp_line (start -1.6 0.8) (end 1.6 0.8) (layer "B.Fab") (width 0.1) (tstamp bddfb754-d4dd-418a-ba7b-e56cb154c269))
     (fp_line (start -1.6 -0.8) (end -1.6 0.8) (layer "B.Fab") (width 0.1) (tstamp d53fab98-0235-4939-940a-3d4ce4cd4186))
-    (pad "1" smd roundrect locked (at -1.4875 0 180) (size 1.425 1.75) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.175439)
+    (pad "1" smd roundrect locked (at -1.4875 0 180) (size 1.425 1.75) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.1754392982)
       (net 13 "arduino_D3") (tstamp c63b5dba-5679-4529-8b05-c49182171d03))
-    (pad "2" smd roundrect locked (at 1.4875 0 180) (size 1.425 1.75) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.175439)
+    (pad "2" smd roundrect locked (at 1.4875 0 180) (size 1.425 1.75) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.1754392982)
       (net 27 "GND") (tstamp 416b9b12-872b-4c9a-ac0b-b6b4f5250b22))
     (model "${KISYS3DMOD}/Resistor_SMD.3dshapes/R_1206_3216Metric.wrl"
       (offset (xyz 0 0 0))
@@ -1914,9 +1913,9 @@
     (fp_line (start -1.6 -0.8) (end -1.6 0.8) (layer "B.Fab") (width 0.1) (tstamp 213db5e1-adc5-466b-95e1-5690cfc1fbf3))
     (fp_line (start -1.6 0.8) (end 1.6 0.8) (layer "B.Fab") (width 0.1) (tstamp ee4b0861-6d89-49ba-a349-dd315ee51207))
     (fp_line (start 1.6 0.8) (end 1.6 -0.8) (layer "B.Fab") (width 0.1) (tstamp f3d3ad46-4bdd-4fdd-a272-d459fb0ba3b5))
-    (pad "1" smd roundrect locked (at -1.4875 0) (size 1.425 1.75) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.175439)
+    (pad "1" smd roundrect locked (at -1.4875 0) (size 1.425 1.75) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.1754392982)
       (net 15 "arduino_D4") (tstamp 79f0a338-a328-4f86-8e07-a92d82a63367))
-    (pad "2" smd roundrect locked (at 1.4875 0) (size 1.425 1.75) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.175439)
+    (pad "2" smd roundrect locked (at 1.4875 0) (size 1.425 1.75) (layers "B.Cu" "B.Paste" "B.Mask") (roundrect_rratio 0.1754392982)
       (net 27 "GND") (tstamp f3a054f3-963a-4a39-8734-3ba1a2b25ea9))
     (model "${KISYS3DMOD}/Resistor_SMD.3dshapes/R_1206_3216Metric.wrl"
       (offset (xyz 0 0 0))
