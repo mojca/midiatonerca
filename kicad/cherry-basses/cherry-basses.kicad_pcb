@@ -1013,7 +1013,7 @@
     (property "Sheetname" "")
     (path "/bac3a122-34cf-4c7a-82bb-1b2dfbc8b2e7")
     (attr through_hole)
-    (fp_text reference "SW0" (at 2.54 -5.08 90) (layer "F.SilkS")
+    (fp_text reference "SW.PushPull.1" (at 0 -5.2 -90 unlocked) (layer "F.SilkS")
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 886c37a7-6005-4d03-9e6b-9d3e3ac15f36)
     )
