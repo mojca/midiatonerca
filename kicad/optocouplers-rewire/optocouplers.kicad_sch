@@ -264,13 +264,13 @@
       (property "ki_fp_filters" "R_*" (id 6) (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "R.0_1"
+      (symbol "R_0_1"
         (rectangle (start -1.016 -2.54) (end 1.016 2.54)
           (stroke (width 0.254) (type default) (color 0 0 0 0))
           (fill (type none))
         )
       )
-      (symbol "R.1_1"
+      (symbol "R_1_1"
         (pin passive line (at 0 3.81 270) (length 1.27)
           (name "~" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
@@ -2116,7 +2116,7 @@
     (property "Value" "PN2222A" (id 1) (at 31.75 101.6 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder" (id 2) (at 29.845 101.6 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide" (id 2) (at 29.845 101.6 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "" (id 3) (at 27.94 106.68 0)
@@ -2607,7 +2607,7 @@
     (property "Value" "PN2222A" (id 1) (at 77.47 101.6 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder" (id 2) (at 75.565 101.6 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide" (id 2) (at 75.565 101.6 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "" (id 3) (at 73.66 106.68 0)
@@ -3066,7 +3066,7 @@
     (property "Value" "PN2222A" (id 1) (at 123.19 101.6 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder" (id 2) (at 121.285 101.6 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide" (id 2) (at 121.285 101.6 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "" (id 3) (at 119.38 106.68 0)
@@ -3525,7 +3525,7 @@
     (property "Value" "PN2222A" (id 1) (at 168.91 101.6 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder" (id 2) (at 167.005 101.6 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide" (id 2) (at 167.005 101.6 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "" (id 3) (at 165.1 106.68 0)
@@ -3984,7 +3984,7 @@
     (property "Value" "PN2222A" (id 1) (at 214.63 101.6 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder" (id 2) (at 212.725 101.6 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide" (id 2) (at 212.725 101.6 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "" (id 3) (at 210.82 106.68 0)
@@ -4443,7 +4443,7 @@
     (property "Value" "PN2222A" (id 1) (at 260.35 101.6 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder" (id 2) (at 258.445 101.6 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide" (id 2) (at 258.445 101.6 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "" (id 3) (at 256.54 106.68 0)
@@ -4902,7 +4902,7 @@
     (property "Value" "PN2222A" (id 1) (at 306.07 101.6 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder" (id 2) (at 304.165 101.6 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide" (id 2) (at 304.165 101.6 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "" (id 3) (at 302.26 106.68 0)
@@ -5361,7 +5361,7 @@
     (property "Value" "PN2222A" (id 1) (at 351.79 101.6 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Package_TO_SOT_THT:TO-92L_HandSolder" (id 2) (at 349.885 101.6 0)
+    (property "Footprint" "Package_TO_SOT_THT:TO-92_Inline_Wide" (id 2) (at 349.885 101.6 0)
       (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
     (property "Datasheet" "" (id 3) (at 347.98 106.68 0)
@@ -6200,28 +6200,28 @@
       (reference "Conn1") (unit 1) (value "Conn_02x13_Odd_Even") (footprint "Connector_IDC:IDC-Header_2x13_P2.54mm_Vertical")
     )
     (path "/00000000-0000-0000-0000-000059826e5b"
-      (reference "Q1") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92L_HandSolder")
+      (reference "Q1") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92_Inline_Wide")
     )
     (path "/00000000-0000-0000-0000-00005a3b01a3"
-      (reference "Q2") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92L_HandSolder")
+      (reference "Q2") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92_Inline_Wide")
     )
     (path "/00000000-0000-0000-0000-00005a3b0732"
-      (reference "Q3") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92L_HandSolder")
+      (reference "Q3") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92_Inline_Wide")
     )
     (path "/00000000-0000-0000-0000-00005a3b081d"
-      (reference "Q4") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92L_HandSolder")
+      (reference "Q4") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92_Inline_Wide")
     )
     (path "/00000000-0000-0000-0000-00005a3b2528"
-      (reference "Q5") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92L_HandSolder")
+      (reference "Q5") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92_Inline_Wide")
     )
     (path "/00000000-0000-0000-0000-00005a3b2613"
-      (reference "Q6") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92L_HandSolder")
+      (reference "Q6") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92_Inline_Wide")
     )
     (path "/00000000-0000-0000-0000-00005a3b26fe"
-      (reference "Q7") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92L_HandSolder")
+      (reference "Q7") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92_Inline_Wide")
     )
     (path "/00000000-0000-0000-0000-00005a3b27e9"
-      (reference "Q8") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92L_HandSolder")
+      (reference "Q8") (unit 1) (value "PN2222A") (footprint "Package_TO_SOT_THT:TO-92_Inline_Wide")
     )
     (path "/00000000-0000-0000-0000-0000598263cc"
       (reference "R.A0") (unit 1) (value "270R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
@@ -6367,6 +6367,24 @@
     (path "/00000000-0000-0000-0000-00005a3b27af"
       (reference "R.D10") (unit 1) (value "270R") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
+    (path "/00000000-0000-0000-0000-00005db27a45"
+      (reference "R.R0") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00005db2c8a5"
+      (reference "R.R1") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00005db2ed55"
+      (reference "R.R2") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00005db31435"
+      (reference "R.R3") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00005db3377d"
+      (reference "R.R4") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
+    (path "/00000000-0000-0000-0000-00005db35c7d"
+      (reference "R.R5") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
+    )
     (path "/00000000-0000-0000-0000-00005982d566"
       (reference "R1") (unit 1) (value "1k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
@@ -6390,24 +6408,6 @@
     )
     (path "/00000000-0000-0000-0000-00005a3b27f8"
       (reference "R8") (unit 1) (value "1k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-00005db27a45"
-      (reference "R.R0") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-00005db2c8a5"
-      (reference "R.R1") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-00005db2ed55"
-      (reference "R.R2") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-00005db31435"
-      (reference "R.R3") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-00005db3377d"
-      (reference "R.R4") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
-    )
-    (path "/00000000-0000-0000-0000-00005db35c7d"
-      (reference "R.R5") (unit 1) (value "2k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-0000598263bf"
       (reference "U.A0") (unit 1) (value "ITR9608") (footprint "ITR9608:ITR9608")
