@@ -1276,7 +1276,7 @@
     (uuid 00000000-0000-0000-0000-00005da5dbd2)
     (property "Reference" "Conn1" (id 0) (at 191.77 18.6182 0))
     (property "Value" "Conn_02x13_Odd_Even" (id 1) (at 191.77 20.9296 0))
-    (property "Footprint" "Connector_Multicomp:Multicomp_MC9A12-2634_2x13_P2.54mm_Vertical" (id 2) (at 190.5 39.37 0)
+    (property "Footprint" "Connector_IDC:IDC-Header_2x13_P2.54mm_Vertical" (id 2) (at 190.5 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 190.5 39.37 0)
@@ -1557,7 +1557,7 @@
     (property "Value" "10k" (id 1) (at 34.798 51.943 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" (id 2) (at 31.242 50.8 90)
+    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 31.242 50.8 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 33.02 50.8 0)
@@ -1576,7 +1576,7 @@
     (property "Value" "10k" (id 1) (at 34.798 81.153 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder" (id 2) (at 31.242 80.01 90)
+    (property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder" (id 2) (at 31.242 80.01 90)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 33.02 80.01 0)
@@ -1623,7 +1623,7 @@
     (uuid bac3a122-34cf-4c7a-82bb-1b2dfbc8b2e7)
     (property "Reference" "SW.PushPull.1" (id 0) (at 160.02 28.321 0))
     (property "Value" "SPST" (id 1) (at 160.02 30.6324 0))
-    (property "Footprint" "Library:Neltron-5523S-XX-10-X-Terminal-P5.0mm-7.5x10" (id 2) (at 160.02 34.29 0)
+    (property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" (id 2) (at 160.02 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "" (id 3) (at 160.02 34.29 0)
@@ -1676,7 +1676,7 @@
       (reference "#PWR0106") (unit 1) (value "GND") (footprint "")
     )
     (path "/00000000-0000-0000-0000-00005da5dbd2"
-      (reference "Conn1") (unit 1) (value "Conn_02x13_Odd_Even") (footprint "Connector_Multicomp:Multicomp_MC9A12-2634_2x13_P2.54mm_Vertical")
+      (reference "Conn1") (unit 1) (value "Conn_02x13_Odd_Even") (footprint "Connector_IDC:IDC-Header_2x13_P2.54mm_Vertical")
     )
     (path "/00000000-0000-0000-0000-00005afca3f5"
       (reference "D1.1") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
@@ -1727,13 +1727,13 @@
       (reference "D2.7") (unit 1) (value "DIODE") (footprint "Diode_SMD:D_SOD-323_HandSoldering")
     )
     (path "/00000000-0000-0000-0000-00005dae40ba"
-      (reference "R1") (unit 1) (value "10k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder")
+      (reference "R1") (unit 1) (value "10k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/00000000-0000-0000-0000-00005dae47d3"
-      (reference "R2") (unit 1) (value "10k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.42x1.75mm_HandSolder")
+      (reference "R2") (unit 1) (value "10k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
     )
     (path "/bac3a122-34cf-4c7a-82bb-1b2dfbc8b2e7"
-      (reference "SW.PushPull.1") (unit 1) (value "SPST") (footprint "Library:Neltron-5523S-XX-10-X-Terminal-P5.0mm-7.5x10")
+      (reference "SW.PushPull.1") (unit 1) (value "SPST") (footprint "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical")
     )
     (path "/00000000-0000-0000-0000-00005afc9c1d"
       (reference "SW1.1") (unit 1) (value "SPST") (footprint "Button_Switch_Keyboard:SW_Cherry_MX_1.00u_PCB")
