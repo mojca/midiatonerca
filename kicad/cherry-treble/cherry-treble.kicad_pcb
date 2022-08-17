@@ -1391,7 +1391,7 @@
     (property "Sheetfile" "cherry-treble.kicad_sch")
     (property "Sheetname" "")
     (path "/9e3b6ef3-52a8-4dd9-a8f4-b7171c5fee3c")
-    (attr through_hole)
+    (attr through_hole exclude_from_bom)
     (fp_text reference "Conn1" (at 1.27 -6.1 90) (layer "F.SilkS")
       (effects (font (size 1 1) (thickness 0.15)))
       (tstamp fd67059e-75cd-4fb1-9fd6-e9b12a4a9c35)
