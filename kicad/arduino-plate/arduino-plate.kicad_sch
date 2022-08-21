@@ -702,12 +702,12 @@
 
   (no_connect (at 107.95 54.61) (uuid 63e7a5b2-c09e-4c26-9e77-135704cd79df))
   (no_connect (at 45.72 69.85) (uuid 77121638-1771-44dd-9445-0b45cd13e8de))
+  (no_connect (at 30.48 62.23) (uuid 9b687582-65a8-4532-a91f-4f83b5c6ed47))
   (no_connect (at 107.95 52.07) (uuid a263a386-30cc-48f7-b596-417258352afc))
   (no_connect (at 107.95 49.53) (uuid a7e17a90-e38e-41e8-bb00-0ea7e779367e))
   (no_connect (at 40.64 19.05) (uuid a8a6c2db-0beb-442b-aabf-5db7ccac48a2))
   (no_connect (at 45.72 19.05) (uuid a8a6c2db-0beb-442b-aabf-5db7ccac48a3))
   (no_connect (at 55.88 29.21) (uuid a8a6c2db-0beb-442b-aabf-5db7ccac48a4))
-  (no_connect (at 30.48 62.23) (uuid a8a6c2db-0beb-442b-aabf-5db7ccac48a5))
   (no_connect (at 30.48 31.75) (uuid a8a6c2db-0beb-442b-aabf-5db7ccac48a7))
   (no_connect (at 30.48 29.21) (uuid a8a6c2db-0beb-442b-aabf-5db7ccac48a8))
   (no_connect (at 55.88 39.37) (uuid a8a6c2db-0beb-442b-aabf-5db7ccac48a9))
@@ -1035,7 +1035,7 @@
   (symbol (lib_id "Connector:Conn_01x03_Male") (at 74.93 83.82 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid 28de4405-1021-43ed-988e-12cdf1abb148)
-    (property "Reference" "J.3" (id 0) (at 74.93 78.74 90))
+    (property "Reference" "J.Pres.1" (id 0) (at 74.93 78.74 90))
     (property "Value" "Conn_01x03_Male" (id 1) (at 74.93 81.28 90))
     (property "Footprint" "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" (id 2) (at 74.93 83.82 0)
       (effects (font (size 1.27 1.27)) hide)
@@ -1312,7 +1312,7 @@
   (symbol (lib_id "Connector:Conn_01x02_Male") (at 36.83 83.82 270) (unit 1)
     (in_bom yes) (on_board yes) (fields_autoplaced)
     (uuid b8d379d6-3088-4109-ae1f-421f48a1b55f)
-    (property "Reference" "J.2" (id 0) (at 38.1 83.1849 90)
+    (property "Reference" "J.VM.1" (id 0) (at 38.1 83.1849 90)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x02_Male" (id 1) (at 38.1 85.7249 90)
@@ -1433,11 +1433,11 @@
     (path "/630e96f8-15d9-452c-8985-7c5f4a63a5eb"
       (reference "J.1") (unit 1) (value "Conn_02x13_Odd_Even") (footprint "Connector_IDC:IDC-Header_2x13_P2.54mm_Vertical")
     )
-    (path "/b8d379d6-3088-4109-ae1f-421f48a1b55f"
-      (reference "J.2") (unit 1) (value "Conn_01x02_Male") (footprint "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical")
-    )
     (path "/28de4405-1021-43ed-988e-12cdf1abb148"
-      (reference "J.3") (unit 1) (value "Conn_01x03_Male") (footprint "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical")
+      (reference "J.Pres.1") (unit 1) (value "Conn_01x03_Male") (footprint "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical")
+    )
+    (path "/b8d379d6-3088-4109-ae1f-421f48a1b55f"
+      (reference "J.VM.1") (unit 1) (value "Conn_01x02_Male") (footprint "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical")
     )
     (path "/e466fdd1-256e-40af-a34f-fa99f58d4c57"
       (reference "R1") (unit 1) (value "10k") (footprint "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder")
