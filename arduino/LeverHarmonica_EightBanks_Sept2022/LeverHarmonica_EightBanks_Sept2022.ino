@@ -31,7 +31,7 @@
  #include "InstrumentPatches.h"
 
 // if true then a simplistic test program will run
-//#define MIDI_MESSAGE_TEST_PROGRAM
+//#define MIDI_MESSAGE_TEST_PROGRAM // repeatedly plays and stops C4 note
 //#define SHOW_BUTTONS_TEST_PROGRAM
 //#define SINGLE_BANK_TEST_PROGRAM
 //#define OUTPUT_TEST_PROGRAM // in MIDI mode
@@ -428,25 +428,25 @@ void manageSwitchPull() {
 
 /*
  * Assumes that bankNr is currently activated. Reads the six sensor lines and processes these.
- * sendMidiMessages: if false then no midi messages are generated, e.g. to auto-detect trebleInverted.
+ * sendMidiMessages: if false then no midi messages are generated and button state is not saved, e.g. to auto-detect trebleInverted.
  */
 void manageTrebleButtons(int bankNr, bool sendMidiMessages) {
   for (int inputNr=0;inputNr<TREBLE_INPUT_NR_COUNT;inputNr++) {
     int digitalValue = digitalRead(inputPinNr[inputNr]) ^ trebleInverted;
     int buttonNr = bankNr*TREBLE_INPUT_NR_COUNT+inputNr;
     if (digitalValue != buttonState[buttonNr]) {
-      if (!MIDI) {
-        Serial.print("Treble note change detected! Bank=");
-        Serial.print(bankNr);
-        Serial.print(" inputNr=");
-        Serial.print(inputNr);
-        Serial.print(" buttonNr=");
-        Serial.print(buttonNr);
-        Serial.print(" noteOn=");
-        Serial.println(digitalValue);
-      }
       buttonState[buttonNr] = digitalValue;
       if (sendMidiMessages) {
+        if (!MIDI) {
+          Serial.print("Treble note change detected! Bank=");
+          Serial.print(bankNr);
+          Serial.print(" inputNr=");
+          Serial.print(inputNr);
+          Serial.print(" buttonNr=");
+          Serial.print(buttonNr);
+          Serial.print(" noteOn=");
+          Serial.println(digitalValue);
+        }
         int noteNumber = turnTrebleButton(digitalValue,buttonNr,pullState);
         if ((noteNumber == 0) && digitalValue) {
           // possibly special keys to change patch
@@ -471,18 +471,18 @@ void manageBassButtons(int bankNr, bool sendMidiMessages) {
     int noteOn = digitalRead(bassInputPinNr[inputNr]) ^ bassInverted;
     int buttonNr = bankNr*BASS_INPUT_NR_COUNT+inputNr;
     if (noteOn != bassButtonState[buttonNr]) {
-      if (!MIDI) {
-        Serial.print("Bass note change detected! Bank=");
-        Serial.print(bankNr);
-        Serial.print(" inputNr=");
-        Serial.print(inputNr);
-        Serial.print(" buttonNr=");
-        Serial.print(buttonNr);
-        Serial.print(" noteOn=");
-        Serial.println(noteOn);
-      }
       bassButtonState[buttonNr]=noteOn;
       if (sendMidiMessages) {
+        if (!MIDI) {
+          Serial.print("Bass note change detected! Bank=");
+          Serial.print(bankNr);
+          Serial.print(" inputNr=");
+          Serial.print(inputNr);
+          Serial.print(" buttonNr=");
+          Serial.print(buttonNr);
+          Serial.print(" noteOn=");
+          Serial.println(noteOn);
+        }
         turnBassButton(noteOn,buttonNr,pullState);
       }
     }
@@ -635,6 +635,9 @@ void autoDetectTrebleBassInverted() {
   }
   if (buttonPressedCount > BANK_COUNT*TREBLE_INPUT_NR_COUNT/2) {
     trebleInverted = true;
+    for (int i=0;i<BANK_COUNT*TREBLE_INPUT_NR_COUNT; i++) {
+      buttonState[i] = false;
+    }
   }
 
   buttonPressedCount = 0;
@@ -645,6 +648,9 @@ void autoDetectTrebleBassInverted() {
   }
   if (buttonPressedCount > BANK_COUNT*TREBLE_INPUT_NR_COUNT/2) {
     bassInverted = true;
+    for (int i=0;i<BANK_COUNT*BASS_INPUT_NR_COUNT; i++) {
+      bassButtonState[i] = false;
+    }
   }
 }
 
