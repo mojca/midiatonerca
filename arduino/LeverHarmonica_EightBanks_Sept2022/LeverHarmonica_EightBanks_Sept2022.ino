@@ -1,7 +1,9 @@
  /*
  * Arduino Nano
  * First, wooden accordion: v3.1, old bootloader
- * Newer accordions: Nano, default boot loader
+ * Newer accordions: Nano (e.g. 33 IoT), default boot loader
+ *
+ * From Dec 2023: we use Native MIDI-over-USB instead of Midi-over-Serial-over-USB
  * 
  *
  * Pin assignments since Aug 2022
@@ -30,6 +32,8 @@
  #include "MidiNotes.h"
  #include "InstrumentPatches.h"
 
+ #include "MIDIUSB.h"
+
 // if true then a simplistic test program will run
 //#define MIDI_MESSAGE_TEST_PROGRAM // repeatedly plays and stops C4 note
 //#define SHOW_BUTTONS_TEST_PROGRAM
@@ -37,7 +41,9 @@
 //#define OUTPUT_TEST_PROGRAM // in MIDI mode
 
 // true to send notes to Raspberry PI, false to send to console, both at 115200
-const bool MIDI = true;
+
+const bool MIDI = true; // set to false for debugging
+const bool NATIVE_MIDI = true; // if true then native MIDI is used
 
 bool bassInverted = false;
 bool trebleInverted = false; // If true then a "1" means note off, "0" is note on. Cherry treble: false. Optocouplers: true. Auto-detect.
@@ -227,6 +233,23 @@ int* getBassNoteNumbers(bool pull, int bankNr, int inputNr) {
   return noteNumbers;
 }
 
+// for native midi
+void noteOn(byte channel, byte pitch, byte velocity) {
+  midiEventPacket_t noteOn = {0x09, 0x90 | channel, pitch, velocity};
+  MidiUSB.sendMIDI(noteOn);
+}
+
+void noteOff(byte channel, byte pitch, byte velocity) {
+  midiEventPacket_t noteOff = {0x08, 0x80 | channel, pitch, velocity};
+  MidiUSB.sendMIDI(noteOff);
+}
+
+void controlChange(byte channel, byte control, byte value) {
+  midiEventPacket_t event = {0x0B, 0xB0 | channel, control, value};
+  MidiUSB.sendMIDI(event);
+}
+
+
 /*
  * Sends MIDI message fo three values: command, note and velocity.
  * command can be noteON or noteOFF.
@@ -239,9 +262,13 @@ void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
 #ifdef OUTPUT_TEST_PROGRAM
   Serial.println("MIDI message!");
 #else
-  Serial.write(command); //send note on or note off command
-  Serial.write(MIDInote); //send pitch data
-  Serial.write(MIDIvelocity); //send velocity data
+        if (NATIVE_MIDI) {
+          noteOn(0, MIDInote, MIDIvelocity);
+        } else {
+          Serial.write(command); //send note on or note off command
+          Serial.write(MIDInote); //send pitch data
+          Serial.write(MIDIvelocity); //send velocity data
+        }
 #endif
       } else if (command == noteOFF) {
         notePushedCount[MIDInote]--;
@@ -249,9 +276,13 @@ void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
           notePushedCount[MIDInote] = 0;
         }
         if (notePushedCount[MIDInote] == 0) {
-          Serial.write(command); //send note on or note off command
-          Serial.write(MIDInote); //send pitch data
-          Serial.write(MIDIvelocity); //send velocity data
+          if (NATIVE_MIDI) {
+            noteOff(0, MIDInote, MIDIvelocity);
+          } else {
+            Serial.write(command); //send note on or note off command
+            Serial.write(MIDInote); //send pitch data
+            Serial.write(MIDIvelocity); //send velocity data
+          }
         }
       }
     } else {
@@ -283,14 +314,18 @@ void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
 /* Send generic MIDI command consisting of two values: command and data. Could be anything as long as it follows the MIDI protocol.
  */
 void MIDImessage2(int command, int data) {
-  if (MIDI) {
-    Serial.write(command);
-    Serial.write(data);
+  if (NATIVE_MIDI) {
+    Serial.println("MIDImessage2 not implemented for native midi!");
   } else {
-    Serial.print("Command: ");
-    Serial.print(command);
-    Serial.print(" Data: ");
-    Serial.println(data);
+    if (MIDI) {
+      Serial.write(command);
+      Serial.write(data);
+    } else {
+      Serial.print("Command: ");
+      Serial.print(command);
+      Serial.print(" Data: ");
+      Serial.println(data);
+    }
   }
 }
 
@@ -299,17 +334,21 @@ void MIDImessage2(int command, int data) {
  * number of buttons playing the same note.
  */
 void MIDImessage3(int command, int data, int data2) {
-  if (MIDI) {
-    Serial.write(command);
-    Serial.write(data);
-    Serial.write(data2);
+  if (NATIVE_MIDI) {
+    Serial.println("MIDImessage3 not implemented for native midi!");
   } else {
-    Serial.print("Command: ");
-    Serial.print(command);
-    Serial.print(" Data: ");
-    Serial.print(data);
-    Serial.print(" Data2: ");
-    Serial.println(data2);
+    if (MIDI) {
+      Serial.write(command);
+      Serial.write(data);
+      Serial.write(data2);
+    } else {
+      Serial.print("Command: ");
+      Serial.print(command);
+      Serial.print(" Data: ");
+      Serial.print(data);
+      Serial.print(" Data2: ");
+      Serial.println(data2);
+    }
   }
 }
 
@@ -331,7 +370,11 @@ void setPatchAccordingToButtonState() {
     }
   }
   patch=newPatchNr;
-  MIDImessage2(instrumentSelect,patch);
+  if (NATIVE_MIDI) {
+    controlChange(instrumentSelect,patch,0);
+  } else {
+    MIDImessage2(instrumentSelect,patch);
+  }
 }
 
 // Play or stop the note of a specific treble button number, given pull state. Keeps internally track of number of times a specific note is pressed.
@@ -344,7 +387,7 @@ int turnTrebleButton(bool noteOn, int buttonNr, int myPullState) {
   sensorToCoordinate(bankNr, inputNr, row, column);
 
   int noteNumber = getNoteNumber(myPullState,row,column);
-  MIDImessage(noteOn?noteON:noteOFF, noteNumber, noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY);
+  MIDImessage(noteOn?noteON:noteOFF, noteNumber, noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY); // is native MIDI compatible
   return noteNumber;
 }
 
@@ -366,13 +409,13 @@ void turnBassButton(bool noteOn, int buttonNr, int myPullState) {
   if (isSpecialInstrument[patch]) {
     // special instrument with single note for chords
     int noteNumber = getSpecialBassNoteNumber(myPullState,bankNr,inputNr);
-    MIDImessage(noteOn?noteON:noteOFF, noteNumber, noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY);
+    MIDImessage(noteOn?noteON:noteOFF, noteNumber, noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY); // is native MIDI compatible
   } else {
     // normal instruments
     int* noteNumbers = getBassNoteNumbers(myPullState,bankNr,inputNr);
     for (int noteSubNr=0;noteSubNr<3;noteSubNr++) {
       if (noteNumbers[noteSubNr]>0) {
-        MIDImessage(noteOn?noteON:noteOFF, noteNumbers[noteSubNr], noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY);
+        MIDImessage(noteOn?noteON:noteOFF, noteNumbers[noteSubNr], noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY); // is native MIDI compatible
       }
     }
   }
