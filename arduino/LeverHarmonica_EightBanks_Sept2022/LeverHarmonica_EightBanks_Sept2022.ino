@@ -31,8 +31,11 @@
 
  #include "MidiNotes.h"
  #include "InstrumentPatches.h"
+ #include "AccordionLeds.h"
 
  #include "MIDIUSB.h"
+
+ 
 
 // if true then a simplistic test program will run
 //#define MIDI_MESSAGE_TEST_PROGRAM // repeatedly plays and stops C4 note
@@ -41,6 +44,7 @@
 //#define OUTPUT_TEST_PROGRAM // in MIDI mode
 
 // true to send notes to Raspberry PI, false to send to console, both at 115200
+
 
 const bool MIDI = true; // set to false for debugging
 const bool NATIVE_MIDI = true; // if true then native MIDI is used
@@ -60,11 +64,15 @@ int notePushedCount[256] = {0}; // to handle multiple buttons for one note
 #define DIRECTION_BUTTON_PIN 2 // was 10
 #define MOJCA_MODE_PIN_A 6 // analog pin A6
 
+#define MAX_LED_DECAY_MS 1000
+
 const int noteON = 144;  // 10010000
 const int noteOFF = 128; // 10000000
 const int instrumentSelect = 192; // 11000000
 
 int patch = 0; // 0-based!
+
+int loopTime;
 
 // Test optical gates
 // Input
@@ -84,18 +92,25 @@ bool pullState;
 
 bool mojcaMode = true;
 
+//int decayTimeMs[4][13]; // duration since last key release
+int decayTimeMs[BANK_COUNT*TREBLE_INPUT_NR_COUNT];
+
 
 //const char *noteNames = "C DbD EbE F GbG AbA BbB ";
 const char *noteNames = "C C#D D#E F F#G G#A BbB ";
 
 // bank: 0-7. inputNr: 0-5
 // row: 0 = bottom, 3 = top row
+// column: 0..11 (most likely every column is L-shaped)
+// ledNr = row*12+column
+
+// Converts (bank, inputNr) to (row, column)
 void sensorToCoordinate(int bank, int inputNr, int& row, int& column)
 {
   // Special button: D11 -> B12.  Row B rightmost key (#13) is encoded as row D last key
   if (bank == BANK_COUNT-1 && inputNr == TREBLE_INPUT_NR_COUNT-1) {
     row = 1; // row B
-    column = TREBLE_INPUT_NR_COUNT;
+    column = TREBLE_INPUT_NR_COUNT+TREBLE_INPUT_NR_COUNT;
   } else {
     // row 0: bank 0 and 1. row 1: bank 2 and 3. Etc
     row = bank/2;
@@ -115,11 +130,12 @@ void sensorToCoordinate(int bank, int inputNr, int& row, int& column)
   */
 }
 
+// Converts (row, column) to (bank, inputNr)
 void coordinateToSensor(int row, int column, int& bank, int& inputNr) {
   if (row == 1 && column == TREBLE_INPUT_NR_COUNT) {
     // Special key, cannot be encoded within bank 3 so it is moved to bank 7
     bank = 7;
-    inputNr = TREBLE_INPUT_NR_COUNT;
+    inputNr = TREBLE_INPUT_NR_COUNT-1;
   } else {
     if (column<TREBLE_INPUT_NR_COUNT) {
       bank = row*2;
@@ -129,23 +145,6 @@ void coordinateToSensor(int row, int column, int& bank, int& inputNr) {
       inputNr = column-TREBLE_INPUT_NR_COUNT;
     }
   }
-
-  /*
-  int ph;
-  if (row == 1) {
-    bank = 6 - ((column+1)/2);
-    ph = column%2;
-  } else {
-    bank = 5 - (column/2);
-    ph = (column+1)%2;
-  }
-  inputNr = 2*(3-row)+ph;
-
-  if (bank == 6 && inputNr == 4) {
-      bank = 5;
-      inputNr = 1;
-  }
-  */
 }
 
 // Converts treble row/column to MIDI note number
@@ -233,6 +232,20 @@ int* getBassNoteNumbers(bool pull, int bankNr, int inputNr) {
   return noteNumbers;
 }
 
+int getLedNr(int row, int column) {
+  if (row == 0) {
+    return column;
+  } else if (row == 1) {
+    return 12 + column;
+  } else if (row == 2) {
+    return 12 + 13 + column;
+  } else if (row == 3) {
+    return 12 + 13 + 12 + column;
+  } else {
+    return 0;
+  }
+}
+
 // for native midi
 void noteOn(byte channel, byte pitch, byte velocity) {
   midiEventPacket_t noteOn = {0x09, 0x90 | channel, pitch, velocity};
@@ -313,9 +326,9 @@ void MIDImessage(int command, int MIDInote, int MIDIvelocity) {
 
 /* Send generic MIDI command consisting of two values: command and data. Could be anything as long as it follows the MIDI protocol.
  */
-void MIDImessage2(int command, int data) {
+void serialMIDImessage2(int command, int data) {
   if (NATIVE_MIDI) {
-    Serial.println("MIDImessage2 not implemented for native midi!");
+    Serial.println("serialMIDImessage2 not implemented for native midi!");
   } else {
     if (MIDI) {
       Serial.write(command);
@@ -333,9 +346,9 @@ void MIDImessage2(int command, int data) {
  * While it could be used for noteON/noteOFF commands, it is better to use the MIDImessage function for noteON/noteOFF as it then keeps track of the 
  * number of buttons playing the same note.
  */
-void MIDImessage3(int command, int data, int data2) {
+void serialMIDImessage3(int command, int data, int data2) {
   if (NATIVE_MIDI) {
-    Serial.println("MIDImessage3 not implemented for native midi!");
+    Serial.println("serialMIDImessage3 not implemented for native midi!");
   } else {
     if (MIDI) {
       Serial.write(command);
@@ -373,7 +386,7 @@ void setPatchAccordingToButtonState() {
   if (NATIVE_MIDI) {
     controlChange(instrumentSelect,patch,0);
   } else {
-    MIDImessage2(instrumentSelect,patch);
+    serialMIDImessage2(instrumentSelect,patch);
   }
 }
 
@@ -388,6 +401,10 @@ int turnTrebleButton(bool noteOn, int buttonNr, int myPullState) {
 
   int noteNumber = getNoteNumber(myPullState,row,column);
   MIDImessage(noteOn?noteON:noteOFF, noteNumber, noteOn?NOTE_ON_VELOCITY:NOTE_OFF_VELOCITY); // is native MIDI compatible
+
+  if (noteOn) {
+    decayTimeMs[buttonNr] = 0;
+  }
   return noteNumber;
 }
 
@@ -444,6 +461,7 @@ void manageSwitchPull() {
       // send note off on oldPullState and note on on pull
       turnTrebleButton(false,buttonNr,!pullState);
     }
+    decayTimeMs[buttonNr] = MAX_LED_DECAY_MS;
   }
 
   // pressed treble notes on
@@ -488,7 +506,10 @@ void manageTrebleButtons(int bankNr, bool sendMidiMessages) {
           Serial.print(" buttonNr=");
           Serial.print(buttonNr);
           Serial.print(" noteOn=");
-          Serial.println(digitalValue);
+          Serial.print(buttonState[buttonNr]);
+          Serial.print(" decayTimeMs=");
+          Serial.print(decayTimeMs[buttonNr]);
+          Serial.println();
         }
         int noteNumber = turnTrebleButton(digitalValue,buttonNr,pullState);
         if ((noteNumber == 0) && digitalValue) {
@@ -556,6 +577,11 @@ void resetAllButtons() {
 }
 
 void loop() {
+  static uint32_t lastTime = millis();
+  uint32_t tm = millis();
+  loopTime = tm - lastTime;
+  lastTime = tm;
+
   bool newMojcaMode = analogRead(MOJCA_MODE_PIN_A)<512;
   if (newMojcaMode != mojcaMode) {
     if (!MIDI) {
@@ -578,6 +604,22 @@ void loop() {
   }
 
   readButtons(true);
+
+  updateKeyDecay();
+
+  setLedsToActiveColor();
+
+  static int q;
+  if (q++ >= 100) {
+    q = 0;
+    /*
+    Serial.print("ButtonState[18]=");
+    Serial.print(buttonState[18]);
+    Serial.print(" decayTimeMs[18]=");
+    Serial.print(decayTimeMs[18]);
+    Serial.println();
+    */
+  }
 }
 
 void playMidiMessageTestProgram() {
@@ -618,12 +660,17 @@ void playSingleBankTestProgram() {
 
 
 void setup() {
-  Serial.begin(115200);
   pinMode(DIRECTION_BUTTON_PIN,INPUT_PULLUP); // direction pushbutton
 
 #ifdef MIDI_MESSAGE_TEST_PROGRAM
   playMidiMessageTestProgram(); // this won't return
 #endif
+
+  setupLeds();
+
+  for (int keyNr=0;keyNr<48;keyNr++) {
+      decayTimeMs[keyNr]=0;
+  }
 
   // Bank pins
   for (int i=0; i<BANK_COUNT; i++) {
@@ -664,6 +711,10 @@ void setup() {
   }
 
   autoDetectTrebleBassInverted();
+
+  //updateLeds();
+  //testLeds();
+  setLedsToNoteColor();
 }
 
 void autoDetectTrebleBassInverted() {
@@ -697,20 +748,6 @@ void autoDetectTrebleBassInverted() {
   }
 }
 
-/*
-void showAnalog() {
-  digitalWrite(outputPinNr[2],HIGH);
-  for (int inputNr=0;inputNr<8;inputNr++) {
-    int analogValue = analogRead(inputNr);
-    int digitalValue = !digitalRead(inputPinNr[inputNr]);
-    Serial.print(analogValue);
-    Serial.print('/');
-    Serial.print(digitalValue);
-    Serial.print(' ');
-  }
-  Serial.println();
-}
-*/
 
 void readPrintInputs() {
   for (int inputNr=0;inputNr<TREBLE_INPUT_NR_COUNT;inputNr++) {
@@ -737,3 +774,59 @@ void showAllButtons() {
   }
   Serial.println();
 }
+
+void setLedsToNoteColor() {
+  for (int keyNr = 0; keyNr < BANK_COUNT * TREBLE_INPUT_NR_COUNT; keyNr ++) {
+    int bank = keyNr / TREBLE_INPUT_NR_COUNT;
+    int inputNr = keyNr % TREBLE_INPUT_NR_COUNT;
+    int row;
+    int column;
+    sensorToCoordinate(bank, inputNr, row, column);
+    int midiNoteNumber = getNoteNumber(pullState, row, column);
+    int ledNr = getLedNr(row, column);
+    if (midiNoteNumber > 0) {
+      strip.setPixelColor(ledNr, strip.ColorHSV(noteHue[midiNoteNumber%12],255,30));
+    } else {
+      strip.setPixelColor(ledNr, 0);
+    }
+  }
+  strip.show();
+}
+
+
+void setLedsToActiveColor() {
+  for (int keyNr = 0; keyNr < BANK_COUNT * TREBLE_INPUT_NR_COUNT; keyNr++) {
+    int bank = keyNr / TREBLE_INPUT_NR_COUNT;
+    int inputNr = keyNr % TREBLE_INPUT_NR_COUNT;
+    int row;
+    int column;
+    sensorToCoordinate(bank, inputNr, row, column);
+    int midiNoteNumber = getNoteNumber(pullState, row, column);
+    int ledNr = getLedNr(row, column);
+    if (midiNoteNumber > 0) {
+      uint32_t color;
+      if (buttonState[keyNr]) {
+        color = strip.ColorHSV(noteHue[midiNoteNumber%12],255,255);
+      } else if (decayTimeMs[keyNr] < MAX_LED_DECAY_MS) {
+        color = strip.ColorHSV(noteHue[midiNoteNumber%12],255,map(decayTimeMs[keyNr],0,MAX_LED_DECAY_MS,127,10));
+      } else {
+        color = strip.ColorHSV(noteHue[midiNoteNumber%12],255,10);
+      }
+      strip.setPixelColor(ledNr, color);
+    } else {
+      strip.setPixelColor(ledNr, 0);
+    }
+  }
+  strip.show();
+}
+
+void updateKeyDecay() {
+  for (int keyNr=0;keyNr<48;keyNr++) {
+    if (!buttonState[keyNr]) {
+      if (decayTimeMs[keyNr] < MAX_LED_DECAY_MS) {
+        decayTimeMs[keyNr] += loopTime;
+      }
+    }
+  }
+}
+
