@@ -26,8 +26,8 @@
 
 const int PATCH_COUNT = 16;
 int isSpecialInstrument[PATCH_COUNT] = {true,false,false,false,false,false,false,false,false,false,false,false,false,false,false,true}; // 0-based
-int trebleNoteOffsetPerPatch[PATCH_COUNT] = {-12,-12,0,12,12,12,0,0,12,0,0,0,0,0,0,0}; // 0-based
-int bassNoteOffsetPerPatch[PATCH_COUNT] =   {-12,-12,0,12,12,12,0,0,12,0,0,0,0,0,0,0}; // 0-based
+int trebleNoteOffsetPerPatch[PATCH_COUNT] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; // 0-based
+int bassNoteOffsetPerPatch[PATCH_COUNT] =   {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}; // 0-based
 
 
 
