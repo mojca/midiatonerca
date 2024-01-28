@@ -28,12 +28,11 @@
  * To restart the service: systemctl restart samplerbox.service
  */
 
+#include "MidiNotes.h"
+#include "InstrumentPatches.h"
+#include "AccordionLeds.h"
 
- #include "MidiNotes.h"
- #include "InstrumentPatches.h"
- #include "AccordionLeds.h"
-
- #include "MIDIUSB.h"
+#include "MIDIUSB.h"
 
  
 
@@ -46,8 +45,9 @@
 // true to send notes to Raspberry PI, false to send to console, both at 115200
 
 
-const bool MIDI = true; // set to false for debugging
+const bool MIDI = true; // set to false for debugging to Serial
 const bool NATIVE_MIDI = true; // if true then native MIDI is used
+const bool WAIT_FOR_SERIAL = false;
 
 bool bassInverted = false;
 bool trebleInverted = false; // If true then a "1" means note off, "0" is note on. Cherry treble: false. Optocouplers: true. Auto-detect.
@@ -576,51 +576,8 @@ void resetAllButtons() {
   turnAllBassButtonsOff();  
 }
 
-void loop() {
-  static uint32_t lastTime = millis();
-  uint32_t tm = millis();
-  loopTime = tm - lastTime;
-  lastTime = tm;
 
-  bool newMojcaMode = analogRead(MOJCA_MODE_PIN_A)<512;
-  if (newMojcaMode != mojcaMode) {
-    if (!MIDI) {
-      Serial.print("Mojca mode changed! New value: ");
-      Serial.println(newMojcaMode);
-    }
-    resetAllButtons();
-    mojcaMode = newMojcaMode;
-  }
 
-  bool newPullState = digitalRead(DIRECTION_BUTTON_PIN);
-  if (newPullState != pullState) {
-    if (!MIDI) {
-      Serial.print("Pull state changed! New value: ");
-      Serial.println(newPullState);
-    }
-    pullState = newPullState;
-    manageSwitchPull();
-    //Serial.println("Finished managing pull state.");
-  }
-
-  readButtons(true);
-
-  updateKeyDecay();
-
-  setLedsToActiveColor();
-
-  static int q;
-  if (q++ >= 100) {
-    q = 0;
-    /*
-    Serial.print("ButtonState[18]=");
-    Serial.print(buttonState[18]);
-    Serial.print(" decayTimeMs[18]=");
-    Serial.print(decayTimeMs[18]);
-    Serial.println();
-    */
-  }
-}
 
 void playMidiMessageTestProgram() {
   pinMode(13,OUTPUT);
@@ -643,7 +600,7 @@ void playMidiMessageTestProgram() {
 void playShowAllButtonsTestProgram() {
   while(1) {
     showAllButtons();
-    delay(200);
+    delay(50);
   }
 }
 
@@ -660,10 +617,16 @@ void playSingleBankTestProgram() {
 
 
 void setup() {
+  Serial.begin(115200);
+  if (WAIT_FOR_SERIAL) {
+    while (!Serial);
+  }
+  Serial.println("LeverHarmonica standard serial port");
+
   pinMode(DIRECTION_BUTTON_PIN,INPUT_PULLUP); // direction pushbutton
 
 #ifdef MIDI_MESSAGE_TEST_PROGRAM
-  playMidiMessageTestProgram(); // this won't return
+  playMidiMessageTestProgram(); // this repeatedly sends some MIDI messages and does never return
 #endif
 
   setupLeds();
@@ -712,9 +675,24 @@ void setup() {
 
   autoDetectTrebleBassInverted();
 
+  if (!MIDI) {
+    if (trebleInverted) {
+      Serial.println("Treble inverted: optocouplers are connected.");
+    } else {
+      Serial.println("Treble not inverted: cherries are connected.");
+    }
+    if (bassInverted) {
+      Serial.println("Bass inverted: optocouplers are connected.");
+    } else {
+      Serial.println("Bass not inverted: cherries are connected.");
+    }
+  }
+
   //updateLeds();
   //testLeds();
   setLedsToNoteColor();
+
+  Serial.println("Setup finished.");
 }
 
 void autoDetectTrebleBassInverted() {
@@ -726,6 +704,10 @@ void autoDetectTrebleBassInverted() {
     if (buttonState[i]) {
       buttonPressedCount++;
     }
+  }
+  if (!MIDI) {
+    Serial.print("Auto-detect treble inverted: button pressed count = ");
+    Serial.println(buttonPressedCount);
   }
   if (buttonPressedCount > BANK_COUNT*TREBLE_INPUT_NR_COUNT/2) {
     trebleInverted = true;
@@ -830,3 +812,49 @@ void updateKeyDecay() {
   }
 }
 
+void loop() {
+  static uint32_t lastTime = millis();
+  uint32_t tm = millis();
+  loopTime = tm - lastTime;
+  lastTime = tm;
+
+  bool newMojcaMode = analogRead(MOJCA_MODE_PIN_A)<512;
+  if (newMojcaMode != mojcaMode) {
+    if (!MIDI) {
+      Serial.print("Mojca mode changed! New value: ");
+      Serial.println(newMojcaMode);
+    }
+    resetAllButtons();
+    mojcaMode = newMojcaMode;
+  }
+
+  
+  bool newPullState = digitalRead(DIRECTION_BUTTON_PIN);
+  if (newPullState != pullState) {
+    if (!MIDI) {
+      Serial.print("Pull state changed! New value: ");
+      Serial.println(newPullState);
+    }
+    pullState = newPullState;
+    manageSwitchPull();
+    //Serial.println("Finished managing pull state.");
+  }
+
+  readButtons(true);
+
+  updateKeyDecay();
+
+  setLedsToActiveColor();
+
+  static int q;
+  if (q++ >= 100) {
+    q = 0;
+    /*
+    Serial.print("ButtonState[18]=");
+    Serial.print(buttonState[18]);
+    Serial.print(" decayTimeMs[18]=");
+    Serial.print(decayTimeMs[18]);
+    Serial.println();
+    */
+  }
+}
