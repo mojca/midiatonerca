@@ -216,8 +216,8 @@
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "U"
-				(at -10.16 13.97 0)
+			(property "Reference" "U1"
+				(at 2.1941 17.78 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -226,7 +226,7 @@
 				)
 			)
 			(property "Value" "PCM5102_breakout"
-				(at 3.81 13.97 0)
+				(at 2.1941 15.24 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -234,7 +234,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" ""
+			(property "Footprint" "Audio_Module:PCM5102_breakout"
 				(at -1.27 19.05 0)
 				(effects
 					(font
@@ -3142,7 +3142,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "06391d32-c8ad-4231-b545-6d8b4e6342a9")
-		(property "Reference" "J5"
+		(property "Reference" "J3"
 			(at 157.48 68.58 0)
 			(effects
 				(font
@@ -3194,7 +3194,7 @@
 		(instances
 			(project "rpi-audio-hat"
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
-					(reference "J5")
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -3612,7 +3612,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "3b69e682-d90d-47c2-9c65-dfcfb5f5cc2d")
-		(property "Reference" "J4"
+		(property "Reference" "J2"
 			(at 155.575 31.75 0)
 			(effects
 				(font
@@ -3667,7 +3667,7 @@
 		(instances
 			(project "rpi-audio-hat"
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
-					(reference "J4")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -4201,7 +4201,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "6633cf2c-773e-40d6-8731-90b7d82f7277")
-		(property "Reference" "J7"
+		(property "Reference" "J5"
 			(at 157.48 93.98 0)
 			(effects
 				(font
@@ -4253,7 +4253,7 @@
 		(instances
 			(project "rpi-audio-hat"
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
-					(reference "J7")
+					(reference "J5")
 					(unit 1)
 				)
 			)
@@ -4400,10 +4400,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "74eddffb-36bc-4352-8a80-46fa4db54385")
 		(property "Reference" "U2"
-			(at 124.1141 74.93 0)
+			(at 124.206 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4412,7 +4411,7 @@
 			)
 		)
 		(property "Value" "PAM8302A_Adafruit_Board"
-			(at 124.1141 77.47 0)
+			(at 124.206 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4420,7 +4419,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Audio_Module:PAM8302"
+		(property "Footprint" "MidiatonercaLibrary:PAM8302"
 			(at 121.92 87.63 0)
 			(effects
 				(font
@@ -4558,7 +4557,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "7fd04ac4-9e8d-4a2f-bc39-904c5be4bad3")
-		(property "Reference" "J6"
+		(property "Reference" "J4"
 			(at 157.48 81.28 0)
 			(effects
 				(font
@@ -4610,7 +4609,7 @@
 		(instances
 			(project "rpi-audio-hat"
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
-					(reference "J6")
+					(reference "J4")
 					(unit 1)
 				)
 			)
@@ -4760,24 +4759,24 @@
 		(dnp no)
 		(uuid "90f1f838-7191-4907-99ea-f3cea8c394d9")
 		(property "Reference" "U1"
-			(at 119.7259 29.21 0)
+			(at 125.222 64.77 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
 		(property "Value" "PCM5102_breakout"
-			(at 119.7259 31.75 0)
+			(at 124.968 67.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 			)
 		)
-		(property "Footprint" "Audio_Module:PCM5102_breakout"
+		(property "Footprint" "MidiatonercaLibrary:PCM5102_breakout"
 			(at 123.19 27.94 0)
 			(effects
 				(font
