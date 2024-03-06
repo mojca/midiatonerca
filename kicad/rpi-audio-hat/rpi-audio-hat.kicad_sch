@@ -2772,6 +2772,66 @@
 	)
 	(wire
 		(pts
+			(xy 153.67 130.81) (xy 153.67 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "003aa25e-022d-4239-ab12-ea203ee4ad1b")
+	)
+	(wire
+		(pts
+			(xy 166.37 134.62) (xy 157.48 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "02b727a9-19f1-4826-95a1-e0ae8f99cf97")
+	)
+	(wire
+		(pts
+			(xy 166.37 120.65) (xy 166.37 134.62)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f8a2ed5-aa0d-44cc-8847-1105cf2cc7eb")
+	)
+	(wire
+		(pts
+			(xy 153.67 127) (xy 140.97 127)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1702f032-70d7-44e0-864b-7b0d0d6cba9a")
+	)
+	(wire
+		(pts
+			(xy 157.48 118.11) (xy 171.45 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4da3c7a9-3639-4609-a7b5-3e024e2d89b6")
+	)
+	(wire
+		(pts
+			(xy 147.32 116.84) (xy 147.32 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5c0418c1-33c5-47d5-a119-1156c742541d")
+	)
+	(wire
+		(pts
 			(xy 160.02 49.53) (xy 160.02 52.07)
 		)
 		(stroke
@@ -2779,6 +2839,56 @@
 			(type default)
 		)
 		(uuid "71f8883e-7162-4d2e-913d-3c2187501bcd")
+	)
+	(wire
+		(pts
+			(xy 140.97 127) (xy 140.97 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "87766755-2f62-4db7-853e-a4ce68726450")
+	)
+	(wire
+		(pts
+			(xy 171.45 120.65) (xy 166.37 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b30be817-02eb-4a71-ac6f-765b694eef57")
+	)
+	(wire
+		(pts
+			(xy 140.97 119.38) (xy 123.19 119.38)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "be1d14a3-e624-4ebf-a924-459073926e39")
+	)
+	(wire
+		(pts
+			(xy 123.19 116.84) (xy 147.32 116.84)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cde2fb6a-dbec-4c9c-bc0e-ee855c76ee81")
+	)
+	(wire
+		(pts
+			(xy 147.32 114.3) (xy 153.67 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f6eb8e9a-c4d4-4c04-a55d-fbbc023d885c")
 	)
 	(global_label "A-"
 		(shape input)
@@ -3202,7 +3312,7 @@
 	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 162.56 100.33 270)
+		(at 193.04 92.71 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3211,7 +3321,7 @@
 		(fields_autoplaced yes)
 		(uuid "0d640294-e4dc-4419-8e3a-482cb3ca7464")
 		(property "Reference" "#PWR0119"
-			(at 158.75 100.33 0)
+			(at 189.23 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3220,7 +3330,7 @@
 			)
 		)
 		(property "Value" "+5V"
-			(at 166.37 100.33 90)
+			(at 196.85 92.71 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3229,7 +3339,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 100.33 0)
+			(at 193.04 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3238,7 +3348,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 100.33 0)
+			(at 193.04 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3247,7 +3357,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 162.56 100.33 0)
+			(at 193.04 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3470,7 +3580,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 162.56 102.87 90)
+		(at 193.04 95.25 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3479,7 +3589,7 @@
 		(fields_autoplaced yes)
 		(uuid "26e986ef-273a-4d3a-85e4-da1a40381bf3")
 		(property "Reference" "#PWR0120"
-			(at 168.91 102.87 0)
+			(at 199.39 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3488,7 +3598,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 166.37 102.87 90)
+			(at 196.85 95.25 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3497,7 +3607,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 162.56 102.87 0)
+			(at 193.04 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3506,7 +3616,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 162.56 102.87 0)
+			(at 193.04 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3515,7 +3625,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 162.56 102.87 0)
+			(at 193.04 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3597,6 +3707,72 @@
 			(project "rpi-audio-hat"
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
 					(reference "#PWR0112")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 153.67 121.92 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "393fdf8c-c969-4a2f-be01-252a8b40bba5")
+		(property "Reference" "#PWR055"
+			(at 153.67 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 153.67 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 153.67 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.67 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 153.67 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7dba2c3d-337b-4477-ba78-e56fd9607c87")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(reference "#PWR055")
 					(unit 1)
 				)
 			)
@@ -4192,33 +4368,33 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:Screw_Terminal_01x02")
-		(at 157.48 102.87 180)
+		(lib_id "Device:R_Potentiometer")
+		(at 153.67 134.62 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
-		(on_board yes)
-		(dnp no)
+		(on_board no)
+		(dnp yes)
 		(fields_autoplaced yes)
-		(uuid "6633cf2c-773e-40d6-8731-90b7d82f7277")
-		(property "Reference" "J5"
-			(at 157.48 93.98 0)
+		(uuid "61049757-434d-473b-b44e-78b66b32976c")
+		(property "Reference" "RV3"
+			(at 149.86 134.62 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "Screw_Terminal_01x02"
-			(at 157.48 96.52 0)
+		(property "Value" "R_Volume_Control"
+			(at 147.32 134.62 90)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type101_RT01602HBWC_1x02_P5.08mm_Horizontal"
-			(at 157.48 102.87 0)
+		(property "Footprint" ""
+			(at 153.67 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4227,7 +4403,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 157.48 102.87 0)
+			(at 153.67 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4236,7 +4412,78 @@
 			)
 		)
 		(property "Description" ""
-			(at 157.48 102.87 0)
+			(at 153.67 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f1659aca-cf2f-498e-97e3-fdd1e0d9d4ca")
+		)
+		(pin "2"
+			(uuid "168e85b0-87ef-4b01-8fe1-d3595bad4bb8")
+		)
+		(pin "3"
+			(uuid "5d65ab44-0ee1-4918-b688-3bea36976b10")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(reference "RV3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Screw_Terminal_01x02")
+		(at 187.96 95.25 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "6633cf2c-773e-40d6-8731-90b7d82f7277")
+		(property "Reference" "J5"
+			(at 187.96 86.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Screw_Terminal_01x02"
+			(at 187.96 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "TerminalBlock_MetzConnect:TerminalBlock_MetzConnect_Type101_RT01602HBWC_1x02_P5.08mm_Horizontal"
+			(at 187.96 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 187.96 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 187.96 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4990,6 +5237,77 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Potentiometer")
+		(at 153.67 118.11 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board no)
+		(dnp yes)
+		(fields_autoplaced yes)
+		(uuid "a5e4fcd7-ea40-4e69-a971-9c27e8adb866")
+		(property "Reference" "RV2"
+			(at 149.86 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "R_Volume_Control"
+			(at 147.32 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 153.67 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 153.67 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 153.67 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1e6c412a-96da-47e2-a7d2-9bc11030cf7d")
+		)
+		(pin "2"
+			(uuid "cd135ea2-6ad6-44a5-b2c7-e23c6c744dfa")
+		)
+		(pin "3"
+			(uuid "f26d30e4-d79d-42ee-bf7a-b062ae09af8f")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(reference "RV2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 194.31 46.99 270)
 		(unit 1)
@@ -5324,6 +5642,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 153.67 138.43 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ed2c4bb3-f7d2-4ef3-b6b3-f76ed5e7966b")
+		(property "Reference" "#PWR056"
+			(at 153.67 144.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 153.67 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 153.67 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 153.67 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 153.67 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c9072069-873b-479f-b15c-04ccddf4bf70")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(reference "#PWR056")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+5VP")
 		(at 185.42 74.93 90)
 		(unit 1)
@@ -5523,6 +5907,238 @@
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
 					(reference "#PWR0107")
 					(unit 1)
+				)
+			)
+		)
+	)
+	(sheet
+		(at 110.49 113.03)
+		(size 12.7 8.89)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4623d4ad-657f-413c-85cf-0957d287aef0")
+		(property "Sheetname" "DAC"
+			(at 110.49 112.3184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "DAC.kicad_sch"
+			(at 110.49 122.5046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "DAC-L" output
+			(at 123.19 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a5cf9105-305e-4d97-9bd5-12d3418fd021")
+		)
+		(pin "DAC-R" output
+			(at 123.19 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c5f983ff-ba96-4f45-9481-bca2ed5f616b")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 171.45 113.03)
+		(size 21.59 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "a019f3eb-e85c-4bb4-b886-714009475f2e")
+		(property "Sheetname" "Stereo amplifier"
+			(at 171.45 112.3184 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Stereo amplifier.kicad_sch"
+			(at 171.45 126.3146 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(pin "IN-R" input
+			(at 171.45 120.65 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "fe6df2e6-fbf3-44dc-9e70-d462e4ce42a3")
+		)
+		(pin "IN-L" input
+			(at 171.45 118.11 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "e597b04e-0eb7-40cd-9374-077c9b9dbea0")
+		)
+		(pin "-OUT_L" output
+			(at 193.04 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "62e4416f-12dd-4c23-8d47-adcb3ad337ee")
+		)
+		(pin "+OUT_R" output
+			(at 193.04 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "7b2a5445-57d8-4416-87f8-d21c8393c2b8")
+		)
+		(pin "+OUT_L" output
+			(at 193.04 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "4042a090-bfb1-40b3-8607-ea7ca3d6bfe4")
+		)
+		(pin "-OUT_R" output
+			(at 193.04 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c808a143-6aa6-41d7-a6ce-c9feee572420")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 111.76 135.89)
+		(size 24.13 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d0ac3f21-db50-4e7b-8b35-74198b6a5fbf")
+		(property "Sheetname" "Power"
+			(at 111.76 135.1784 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 111.76 149.1746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 171.45 134.62)
+		(size 21.59 12.7)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "d8562431-632d-4286-81f2-7eb52abf27db")
+		(property "Sheetname" "Battery charger"
+			(at 171.45 133.9084 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Battery charger.kicad_sch"
+			(at 171.45 147.9046 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(page "3")
 				)
 			)
 		)

@@ -544,11 +544,35 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "LCSC Part #",
+          "name": "LCSC Part #",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "MPN",
+          "name": "MPN",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Beschreibung",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },
@@ -604,7 +628,23 @@
   "sheets": [
     [
       "25d551e4-1e32-4b11-b540-b33b7fa395f8",
-      "Root"
+      "Stammblatt"
+    ],
+    [
+      "4623d4ad-657f-413c-85cf-0957d287aef0",
+      "DAC"
+    ],
+    [
+      "d8562431-632d-4286-81f2-7eb52abf27db",
+      "Battery charger"
+    ],
+    [
+      "d0ac3f21-db50-4e7b-8b35-74198b6a5fbf",
+      "Power"
+    ],
+    [
+      "a019f3eb-e85c-4bb4-b886-714009475f2e",
+      "Stereo amplifier"
     ]
   ],
   "text_variables": {}
