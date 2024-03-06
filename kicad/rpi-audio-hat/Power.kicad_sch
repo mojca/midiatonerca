@@ -1471,12 +1471,6 @@
 		(uuid "70dfa678-4e67-48a6-8975-49f673efa914")
 	)
 	(junction
-		(at 52.07 50.8)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "72bb5d26-185f-42d6-82c7-c8fe7df632c1")
-	)
-	(junction
 		(at 110.49 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1487,6 +1481,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8d67d87e-fa0b-46c4-bbb0-92f136ffe79c")
+	)
+	(junction
+		(at 53.34 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "95bc89b6-c5e2-433f-8924-ef20e9d430b7")
 	)
 	(junction
 		(at 90.17 99.06)
@@ -1507,6 +1507,12 @@
 		(uuid "c7d5804f-fef2-458d-a166-4f5671968e43")
 	)
 	(junction
+		(at 52.07 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ce89a738-fed4-49a2-89e6-a06b2315d736")
+	)
+	(junction
 		(at 213.36 99.06)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1523,12 +1529,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ea8a6d26-2328-4811-86f8-e24f30d2b4f9")
-	)
-	(junction
-		(at 53.34 99.06)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f4dc42ac-b7f0-43f2-a2bb-bc72ffdfde49")
 	)
 	(junction
 		(at 153.67 99.06)
@@ -2120,6 +2120,72 @@
 			(project "rpi-audio-hat"
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8/d0ac3f21-db50-4e7b-8b35-74198b6a5fbf"
 					(reference "#PWR048")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 53.34 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "053ded27-2b34-43ae-b98b-36cc6b206fc4")
+		(property "Reference" "#PWR039"
+			(at 53.34 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+VBAT-SW"
+			(at 53.34 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 53.34 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 53.34 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 53.34 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96a1738c-808c-490d-93aa-104e74b24982")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8/d0ac3f21-db50-4e7b-8b35-74198b6a5fbf"
+					(reference "#PWR039")
 					(unit 1)
 				)
 			)
@@ -3153,72 +3219,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 52.07 50.8 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "59462f38-135a-4c2b-a085-e922df7a5dec")
-		(property "Reference" "#PWR039"
-			(at 52.07 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+VBAT"
-			(at 52.07 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 52.07 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 52.07 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 52.07 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e179a13d-55c4-4260-992e-dfe1fb2b79cf")
-		)
-		(instances
-			(project "rpi-audio-hat"
-				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8/d0ac3f21-db50-4e7b-8b35-74198b6a5fbf"
-					(reference "#PWR039")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:C_Small")
 		(at 190.5 101.6 0)
 		(unit 1)
@@ -3692,6 +3692,72 @@
 			(project "rpi-audio-hat"
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8/d0ac3f21-db50-4e7b-8b35-74198b6a5fbf"
 					(reference "#PWR041")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 52.07 50.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "822d044b-7c88-4a1e-be18-4d61cdc7c034")
+		(property "Reference" "#PWR063"
+			(at 52.07 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+VBAT-SW"
+			(at 52.07 45.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 52.07 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 52.07 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 52.07 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bb48f529-4b96-4715-b0b7-9c13644d63ec")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8/d0ac3f21-db50-4e7b-8b35-74198b6a5fbf"
+					(reference "#PWR063")
 					(unit 1)
 				)
 			)
@@ -4819,72 +4885,6 @@
 			(project "rpi-audio-hat"
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8/d0ac3f21-db50-4e7b-8b35-74198b6a5fbf"
 					(reference "#PWR052")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 53.34 99.06 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f46f1f5f-3ebe-4b55-8087-b78a24bbe4ac")
-		(property "Reference" "#PWR042"
-			(at 53.34 102.87 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+VBAT"
-			(at 53.34 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 53.34 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 53.34 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 53.34 99.06 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "1190e6ab-dd92-4fa6-a5e1-f4fac417ad77")
-		)
-		(instances
-			(project "rpi-audio-hat"
-				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8/d0ac3f21-db50-4e7b-8b35-74198b6a5fbf"
-					(reference "#PWR042")
 					(unit 1)
 				)
 			)

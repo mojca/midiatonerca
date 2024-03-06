@@ -951,6 +951,7 @@
 	(hierarchical_label "-OUT_L"
 		(shape output)
 		(at 156.21 93.98 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -974,6 +975,7 @@
 	(hierarchical_label "-OUT_R"
 		(shape output)
 		(at 156.21 104.14 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -985,6 +987,7 @@
 	(hierarchical_label "+OUT_L"
 		(shape output)
 		(at 156.21 91.44 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -996,6 +999,7 @@
 	(hierarchical_label "+OUT_R"
 		(shape output)
 		(at 156.21 106.68 0)
+		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)

@@ -2687,7 +2687,7 @@
 		(uuid "5da5693d-e538-44f0-bd4e-86d1bcbcc44b")
 	)
 	(no_connect
-		(at 195.58 72.39)
+		(at 242.57 115.57)
 		(uuid "62195185-aa75-4d34-b964-4203a13076a7")
 	)
 	(no_connect
@@ -2822,6 +2822,16 @@
 	)
 	(wire
 		(pts
+			(xy 242.57 120.65) (xy 250.19 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bec8f37-a5d3-4739-b6da-e9ae42697f83")
+	)
+	(wire
+		(pts
 			(xy 147.32 116.84) (xy 147.32 114.3)
 		)
 		(stroke
@@ -2849,6 +2859,16 @@
 			(type default)
 		)
 		(uuid "87766755-2f62-4db7-853e-a4ce68726450")
+	)
+	(wire
+		(pts
+			(xy 224.79 118.11) (xy 232.41 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f85d241-6c6d-4505-b711-1d9a3f7a8828")
 	)
 	(wire
 		(pts
@@ -2882,6 +2902,26 @@
 	)
 	(wire
 		(pts
+			(xy 250.19 119.38) (xy 250.19 120.65)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2316ed0-8a0e-47ee-a74a-44dc998416b5")
+	)
+	(wire
+		(pts
+			(xy 224.79 111.76) (xy 224.79 118.11)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ec534fc7-a6a8-4843-a2a3-5dfc53e753c4")
+	)
+	(wire
+		(pts
 			(xy 147.32 114.3) (xy 153.67 114.3)
 		)
 		(stroke
@@ -2889,6 +2929,38 @@
 			(type default)
 		)
 		(uuid "f6eb8e9a-c4d4-4c04-a55d-fbbc023d885c")
+	)
+	(rectangle
+		(start 218.44 91.44)
+		(end 259.08 127)
+		(stroke
+			(width 0)
+			(type dash)
+		)
+		(fill
+			(type none)
+		)
+		(uuid d941f76e-9d4f-4bfb-be5b-d9efb1ed25d6)
+	)
+	(text "Switches on every power consumer"
+		(exclude_from_sim no)
+		(at 239.522 99.568 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "06ebe7fa-afcb-48ba-a91c-e47510965c8d")
+	)
+	(text "Power switch"
+		(exclude_from_sim no)
+		(at 239.268 95.758 0)
+		(effects
+			(font
+				(size 3 3)
+			)
+		)
+		(uuid "a58273df-2e0d-4f82-8561-5ba8096a537d")
 	)
 	(global_label "A-"
 		(shape input)
@@ -4507,73 +4579,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 195.58 77.47 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "68195f7b-6b88-48d0-8e22-2aed87038c67")
-		(property "Reference" "#PWR0113"
-			(at 191.77 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 199.39 77.47 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 195.58 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 195.58 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 195.58 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "a50a2fe8-5301-4183-81b1-38c52769d9ce")
-		)
-		(instances
-			(project "rpi-audio-hat"
-				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
-					(reference "#PWR0113")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 121.92 64.77 0)
 		(unit 1)
@@ -5308,6 +5313,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+5V")
+		(at 224.79 111.76 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "a6493ded-990d-43c5-b580-9e9e8bdb6f11")
+		(property "Reference" "#PWR061"
+			(at 224.79 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+VBAT"
+			(at 224.79 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 224.79 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 224.79 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 224.79 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4ba9f8cb-d61f-43f1-ba7a-757b2b996baa")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(reference "#PWR061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:+3.3V")
 		(at 194.31 46.99 270)
 		(unit 1)
@@ -5503,6 +5574,72 @@
 			(project "rpi-audio-hat"
 				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
 					(reference "#PWR0115")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 250.19 119.38 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "cc8d829c-3674-4fb0-805f-a748d4603742")
+		(property "Reference" "#PWR062"
+			(at 250.19 123.19 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+VBAT-SW"
+			(at 250.19 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 250.19 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 250.19 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 250.19 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c0e1900f-a118-4dc3-b3f8-f030b485113f")
+		)
+		(instances
+			(project "rpi-audio-hat"
+				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
+					(reference "#PWR062")
 					(unit 1)
 				)
 			)
@@ -5708,75 +5845,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+5VP")
-		(at 185.42 74.93 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f1563a2d-0f64-44dc-939d-7edeeff3d720")
-		(property "Reference" "#PWR0101"
-			(at 189.23 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5VP"
-			(at 181.61 74.93 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 185.42 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5VP\""
-			(at 185.42 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8a9b58e3-d456-4a90-aa63-faf018242135")
-		)
-		(instances
-			(project "rpi-audio-hat"
-				(path "/25d551e4-1e32-4b11-b540-b33b7fa395f8"
-					(reference "#PWR0101")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Switch:SW_SPDT")
-		(at 190.5 74.93 0)
+		(at 237.49 118.11 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -5785,7 +5855,7 @@
 		(fields_autoplaced yes)
 		(uuid "f7255bd4-67f1-4707-adaa-05020f10dd65")
 		(property "Reference" "SW1"
-			(at 190.5 67.31 0)
+			(at 237.49 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5793,7 +5863,7 @@
 			)
 		)
 		(property "Value" "SW_SPDT"
-			(at 190.5 69.85 0)
+			(at 237.49 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5801,7 +5871,7 @@
 			)
 		)
 		(property "Footprint" "MidiatonercaLibrary:SW_3P_Mini_Toggle_B068BW_SPDT"
-			(at 190.5 74.93 0)
+			(at 237.49 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5810,7 +5880,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 190.5 74.93 0)
+			(at 237.49 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5819,7 +5889,7 @@
 			)
 		)
 		(property "Description" "Switch, single pole double throw"
-			(at 190.5 74.93 0)
+			(at 237.49 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
