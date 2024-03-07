@@ -744,7 +744,7 @@
 				)
 			)
 		)
-		(symbol "Regulator_Linear:LT1963AxST-3.3"
+		(symbol "Regulator_Linear:TLV76150DCY"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -757,7 +757,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "LT1963AxST-3.3"
+			(property "Value" "TLV76150DCY"
 				(at -1.27 6.35 0)
 				(effects
 					(font
@@ -775,7 +775,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/1963aff.pdf"
+			(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv761.pdf"
 				(at 0 -13.97 0)
 				(effects
 					(font
@@ -784,7 +784,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "3.3V, 1.5A, Low Noise, Fast Transient Response LDO Regulator, SOT-223"
+			(property "Description" "5.0V, 1A, Low Noise, High-PSRR LDO Regulator, 2.5V...16V input, SOT-223"
 				(at 0 0 0)
 				(effects
 					(font
@@ -793,7 +793,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "LDO voltage regulator fixed"
+			(property "ki_keywords" "voltage fixed low-dropout"
 				(at 0 0 0)
 				(effects
 					(font
@@ -811,10 +811,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "LT1963AxST-3.3_0_1"
+			(symbol "TLV76150DCY_0_1"
 				(rectangle
-					(start -7.62 5.08)
-					(end 7.62 -5.08)
+					(start -5.08 -5.08)
+					(end 5.08 1.905)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -824,11 +824,11 @@
 					)
 				)
 			)
-			(symbol "LT1963AxST-3.3_1_1"
+			(symbol "TLV76150DCY_1_1"
 				(pin power_in line
-					(at -10.16 2.54 0)
+					(at 0 -7.62 90)
 					(length 2.54)
-					(name "IN"
+					(name "GND"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -843,10 +843,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -7.62 90)
+				(pin power_out line
+					(at 7.62 0 180)
 					(length 2.54)
-					(name "GND"
+					(name "VO"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -861,10 +861,10 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 10.16 2.54 180)
+				(pin power_in line
+					(at -7.62 0 0)
 					(length 2.54)
-					(name "OUT"
+					(name "VI"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1772,7 +1772,7 @@
 	)
 	(wire
 		(pts
-			(xy 180.34 99.06) (xy 190.5 99.06)
+			(xy 177.8 99.06) (xy 190.5 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1839,6 +1839,16 @@
 			(type default)
 		)
 		(uuid "9b50d074-1ec3-4cbe-8381-a8f7c554a08c")
+	)
+	(wire
+		(pts
+			(xy 170.18 106.68) (xy 170.18 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa23fbbf-d7d0-4856-b2c6-d8b3d422e6e6")
 	)
 	(wire
 		(pts
@@ -1942,7 +1952,7 @@
 	)
 	(wire
 		(pts
-			(xy 153.67 99.06) (xy 160.02 99.06)
+			(xy 153.67 99.06) (xy 162.56 99.06)
 		)
 		(stroke
 			(width 0)
@@ -2681,8 +2691,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Regulator_Linear:LT1963AxST-3.3")
-		(at 170.18 101.6 0)
+		(lib_id "Regulator_Linear:TLV76150DCY")
+		(at 170.18 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2691,7 +2701,7 @@
 		(fields_autoplaced yes)
 		(uuid "41d32c5a-e084-4cd4-9092-432b95c30742")
 		(property "Reference" "U8"
-			(at 170.18 91.44 0)
+			(at 170.18 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2699,7 +2709,7 @@
 			)
 		)
 		(property "Value" "TLV76150DCYR"
-			(at 170.18 93.98 0)
+			(at 170.18 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2707,6 +2717,15 @@
 			)
 		)
 		(property "Footprint" "Package_TO_SOT_SMD:SOT-223-3_TabPin2"
+			(at 170.18 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.ti.com/lit/ds/symlink/tlv761.pdf"
 			(at 170.18 113.03 0)
 			(effects
 				(font
@@ -2715,17 +2734,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/1963aff.pdf"
-			(at 170.18 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "3.3V, 1.5A, Low Noise, Fast Transient Response LDO Regulator, SOT-223"
-			(at 170.18 101.6 0)
+		(property "Description" "5.0V, 1A, Low Noise, High-PSRR LDO Regulator, 2.5V...16V input, SOT-223"
+			(at 170.18 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
