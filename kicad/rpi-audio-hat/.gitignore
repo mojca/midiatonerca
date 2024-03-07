@@ -1,0 +1,4 @@
+*.lck
+_autosave*
+\#auto*
+*-backups
